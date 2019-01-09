@@ -2866,6 +2866,9 @@ footer ul.menu li.menu-item a{
 	color: #FFFFFF;
 	font-size: 12px;
 }
+footer ul.menu li.menu-item a:hover{
+	box-shadow: none;
+}
 .site-footer .widget-area{
 	text-align: left;
 }
