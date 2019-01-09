@@ -661,6 +661,7 @@ footer input[type="submit"],
 .white.line-image-frame{
 	border: 2px solid #FFFFFF;
 	position: relative;
+	z-index: 0;
 }
 .line-image-frame:before{
 	height: 33px;
