@@ -12,6 +12,7 @@
  * @version 1.2
  */
 
+$theme_url = get_bloginfo('template_url');
 ?>
 <?php
 
@@ -60,7 +61,7 @@ if( have_rows('team', $team_page) ):
 									echo '</ul>
 								</div>						
 								<p class="clearfix">'.get_sub_field('bio').'</p>
-								<a href="#" class="btn btn-transparent btn-icon"><img src="/wp-content/themes/transformationspace/assets/images/talk-icon.svg">talk to Victor</a>
+								<a href="#" class="btn btn-transparent btn-icon"><img src="'.$theme_url.'/assets/images/talk-icon.svg">talk to Victor</a>
 							</div>
 						</div>
 				</div>';

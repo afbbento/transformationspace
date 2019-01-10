@@ -2503,7 +2503,7 @@ span.yellow-circle {
 	margin-bottom: 0;
 }
 .page-template-about section.about-section{
-	background-image: url('/wp-content/themes/transformationspace/images/section-about-bg.png');
+	background-image: url('../images/section-about-bg.png');
 }
 section.about-section {
 	padding: 138px 0 100px;
