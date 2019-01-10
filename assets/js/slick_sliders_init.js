@@ -87,7 +87,6 @@ jQuery(document).ready(function(){
 
 //IMPORTANT:Remove "Fade", if it's a slide effect 
 /*Blog Text Slider*/
-/* need fix */
 jQuery(document).ready(function(){
   jQuery('#banner-slider').slick({
       dots: false,
