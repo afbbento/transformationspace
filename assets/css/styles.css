@@ -2805,7 +2805,7 @@ footer .row.address [class*="col-"]{
 }
 
 footer{
-	background-image: url('http://localhost/transformation-space/wp-content/uploads/bg-footer.png');
+	background-image: url('../assets/images/bg-footer.png');
 }
 .footer-bottom-menu ul li a{
 	border-bottom: none;
