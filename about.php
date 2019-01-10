@@ -235,8 +235,8 @@ if( $image_banner ):
 						<p class="small"><strong>'.get_sub_field('address').'</strong>
 						<br>'.get_sub_field('postal_code').'</p>
 
-						<p class="small phone"><img src="'.get_template_directory_uri().'/images/phone.png">'.get_sub_field('phone').'</p>
-						<p class="small email"><img src="'.get_template_directory_uri().'/images/mail.png">'.get_sub_field('email').'</p>
+						<p class="small phone"><img src="'.get_template_directory_uri().'/assets/images/phone.png">'.get_sub_field('phone').'</p>
+						<p class="small email"><img src="'.get_template_directory_uri().'/assets/images/mail.png">'.get_sub_field('email').'</p>
 					</div>
 				</div>
 				<div class="col-md-4 location_1" style="height: 211px;background-image: url('.get_sub_field('image_1').')"></div>
