@@ -458,7 +458,7 @@ if( $bootcamp_description ):
 	<div class="container">
 		<div class="row align-vertical">
 			<div class="col-md-6 text-center">
-				<img src="/wp-content/uploads/certificacao.png">
+				<img src="<?php echo _wp_upload_dir_baseurl(); ?>/certificacao.png">
 			</div>
 			<div class="col-md-4">
 				<h3>We are certified by Dgert Entidade</h3>

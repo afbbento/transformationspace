@@ -94,8 +94,8 @@ jQuery(document).ready(function(){
       slidesToShow: 1,
       arrows: true,
       slidesToScroll: 1,
-      prevArrow: '<button class="slick-btn-left"><img src="/wp-content/uploads/arrow-prev.png"></button>',
-      nextArrow: '<button class="slick-btn-right"><img src="/wp-content/uploads/arrow-next.png"></button>',
+      prevArrow: "<button class='slick-btn-left'><img src='" + GLOBAL_URL + "'/wp-content/uploads/arrow-prev.png></button>",
+      nextArrow: "<button class='slick-btn-right'><img src='" + GLOBAL_URL + "'/wp-content/uploads/arrow-next.png></button>",
       responsive: [
       {
         breakpoint: 992,

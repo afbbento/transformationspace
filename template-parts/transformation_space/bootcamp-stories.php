@@ -23,11 +23,11 @@
                               <div class="play-button"></div>
                            </a>
                         </div>
-                        <img src="/wp-content/uploads/video-thumb.jpg" >				
+                        <img src="<?php echo _wp_upload_dir_baseurl(); ?>/video-thumb.jpg" >				
                      </div>
                      <p class="small extra-bold">How to be a UX&UI Architect</p>
                       <div class="post-meta">
-			 				<p class="x-small">November 07, 2018 <span class="bookmark"><img src="/wp-content/uploads/bookmark.svg"></span>
+			 				<p class="x-small">November 07, 2018 <span class="bookmark"><img src="<?php echo _wp_upload_dir_baseurl(); ?>/bookmark.svg"></span>
 			 				</p>
 			 			</div>	
                   </div>
@@ -39,14 +39,14 @@
                                  <div class="play-button"></div>
                               </a>
                            </div>
-                           <img src="/wp-content/uploads/video-thumb.jpg" >				
+                           <img src="<?php echo _wp_upload_dir_baseurl(); ?>/video-thumb.jpg" >				
                         </div>                      
                      </div>
                      <div class="text">
                         <p class="x-small title"><span>How to be a UX&UI Architect whithout losing your soul</span><span class="time">2:47</span></p>
                         <p class="x-small">Structured, bootcamp training programs in software developmentand  ux design for career-minded people.</p>
                         <div class="post-meta">
-			 				<p class="x-small">November 07, 2018 <span class="bookmark"><img src="/wp-content/uploads/bookmark.svg"></span>
+			 				<p class="x-small">November 07, 2018 <span class="bookmark"><img src="<?php echo _wp_upload_dir_baseurl(); ?>/bookmark.svg"></span>
 			 				</p>
 			 			</div>	
                      </div>
@@ -61,7 +61,7 @@
 							  		<div class="play-button"></div>
 								</a>
 							</div>
-						  	<img src="/wp-content/uploads/video-thumb.jpg" >				
+						  	<img src="<?php echo _wp_upload_dir_baseurl(); ?>/video-thumb.jpg" >				
 						</div>	
 			 		</div>
 			 		<div class="text">

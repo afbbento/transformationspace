@@ -25,6 +25,14 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
  * as indicating support for post thumbnails.
  */
 function twentyseventeen_setup() {
+
+	function _wp_upload_dir_baseurl(){
+		_deprecated_function(__FUNCTION__, '4.5', 'wp_get_upload_dir()');
+		$upload_dir = wp_get_upload_dir();
+		
+		return $upload_dir['baseurl'];
+	}
+	
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/twentyseventeen

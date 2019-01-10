@@ -71,13 +71,13 @@
 
 								?>
 							<div class="col-md-3 col-sm-6">
-								<div class="lead1 upper text-left"><?php echo get_sub_field('location'); ?></div>
+								<div class="lead1 upper text-left"><?php echo get_sub_field('location'); ?></div>	
 								<div class="address-box">	
-									<p class="small address"><img src="/wp-content/uploads/location-icon.svg"><strong><a href="https://www.google.com/maps/place/EDIT.+-+Disruptive+Digital+Education/@38.7359268,-9.1315457,17.38z/data=!4m5!3m4!1s0x0:0xac0c1f4d67894d63!8m2!3d38.7367839!4d-9.1298077" target="_blank"><?php echo get_sub_field('address'); ?></a></strong>
+									<p class="small address"><img src="<?php echo _wp_upload_dir_baseurl(); ?>/location-icon.svg"><strong><a href="https://www.google.com/maps/place/EDIT.+-+Disruptive+Digital+Education/@38.7359268,-9.1315457,17.38z/data=!4m5!3m4!1s0x0:0xac0c1f4d67894d63!8m2!3d38.7367839!4d-9.1298077" target="_blank"><?php echo get_sub_field('address'); ?></a></strong>
 									</p><p><?php echo get_sub_field('postal_code'); ?></p>
 
-									<p class="small phone"><img src="http://localhost:8888/wp-content/themes/transformationspace/images/phone.png"><?php echo get_sub_field('phone'); ?></p>
-									<p class="small email"><img src="http://localhost:8888/wp-content/themes/transformationspace/images/mail.png"><?php echo get_sub_field('email'); ?></p>
+									<p class="small phone"><img src="<?php bloginfo('template_url'); ?>/assets/images/phone.png"><?php echo get_sub_field('phone'); ?></p>
+									<p class="small email"><img src="<?php bloginfo('template_url'); ?>/assets/images/mail.png"><?php echo get_sub_field('email'); ?></p>
 								</div>
 							</div>
 							<?php endwhile; ?>
@@ -110,6 +110,8 @@
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
+
+
 
 </body>
 </html>

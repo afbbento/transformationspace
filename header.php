@@ -23,6 +23,10 @@
 <meta name="viewport" content="width=device-width, user-scalable=no" />
 <?php wp_head(); ?>
 
+<script>
+      window.GLOBAL_URL = "<?php bloginfo('template_url');?>";
+</script>
+	
 </head>
 <?php 
 		$post = get_post();
