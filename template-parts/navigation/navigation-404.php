@@ -38,7 +38,7 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
   			<div class="col-md-6 hidden-xs">
   				<form class="search" action="/" method="get">				  
 				    <input class="borderless-input" type="text" name="s" id="search" placeholder="Search" value="<?php the_search_query(); ?>" />
-				    <input type="image" alt="Search" src="<?php bloginfo( 'template_url' ); ?>/images/search.png" />
+				    <input type="image" alt="Search" src="<?php bloginfo( 'template_url' ); ?>/assets/images/search.png" />
 				</form>
   			
 				<div class="newsletter-box bordered-box">
@@ -65,8 +65,8 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 						  }
 						});
 						</script>
-				<div class="dot" style="background-image: url('<?php bloginfo( 'template_url' ); ?>/images/dot.svg');">UX experience Architech <input type="button" class="btn btn-yellow btn-shadow open-btn" value="open"/></div>
-				<div class="message" style="background-image: url('<?php bloginfo( 'template_url' ); ?>/images/message.svg');">questions? we are online</div>
+				<div class="dot" style="background-image: url('<?php bloginfo( 'template_url' ); ?>/assets/images/dot.svg');">UX experience Architech <input type="button" class="btn btn-yellow btn-shadow open-btn" value="open"/></div>
+				<div class="message" style="background-image: url('<?php bloginfo( 'template_url' ); ?>/assets/images/message.svg');">questions? we are online</div>
   			</div>
 
   		</div>
@@ -94,7 +94,7 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 				<?php endif; ?>
 
 					<div class="logo-spaces hidden-xs">
-						<img src="<?php bloginfo( 'template_url' ); ?>/images/spaces.svg">
+						<img src="<?php bloginfo( 'template_url' ); ?>/assets/images/spaces.svg">
 					</div>
 				</div>
 
