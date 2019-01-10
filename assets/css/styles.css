@@ -200,7 +200,7 @@ span.circle-line{
 	width: 158px;
 	height: 81px;
 	margin-top: 30px;
-	background-image: url('http://localhost/transformation-space/wp-content/uploads/logo-white.png');
+	background-image: url('../../images/logo-white.png');
 	background-repeat: no-repeat;
 	background-size: 125px;
 }
@@ -249,7 +249,7 @@ span.circle-line{
 	-moz-box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);
 }
 .scrolled-nav .custom-logo{
-	background-image:url('http://localhost/transformation-space/wp-content/uploads/logo-black.png');
+	background-image:url('../../images/logo-black.png');
 }
 #top-menu li.enroll-btn a{
 	font-family: Raleway;
@@ -2503,7 +2503,7 @@ span.yellow-circle {
 	margin-bottom: 0;
 }
 .page-template-about section.about-section{
-	background-image: url('http://localhost/transformation-space/wp-content/themes/transformationspace/images/section-about-bg.png');
+	background-image: url('/wp-content/themes/transformationspace/images/section-about-bg.png');
 }
 section.about-section {
 	padding: 138px 0 100px;
