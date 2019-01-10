@@ -43,7 +43,7 @@ if ( ! empty( $categories ) || $template_name ) {
 </nav>
 <div class="right-nav">
 	<div class="logo-menu-mobile">
-		<img class="visible-xs logo-mobile" src="/wp-content/uploads/logo-mobile.svg">	
+		<img class="visible-xs logo-mobile" src="<?php echo _wp_upload_dir_baseurl(); ?>/logo-mobile.svg">	
 	</div>
 	<button class="hamburger hamburger--collapse" type="button">
   <span class="hamburger-box">

@@ -200,7 +200,7 @@ span.circle-line{
 	width: 158px;
 	height: 81px;
 	margin-top: 30px;
-	background-image: url('/wp-content/uploads/logo-white.png');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/logo-white.png');
 	background-repeat: no-repeat;
 	background-size: 125px;
 }
@@ -249,7 +249,7 @@ span.circle-line{
 	-moz-box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);
 }
 .scrolled-nav .custom-logo{
-	background-image:url('/wp-content/uploads/logo-black.png');
+	background-image:url('http://localhost/transformation-space/wp-content/uploads/logo-black.png');
 }
 #top-menu li.enroll-btn a{
 	font-family: Raleway;
@@ -304,7 +304,7 @@ span.circle-line{
 	color: #FFFFFF;
 }
 .white-menu .custom-logo{
-	background-image: url('/wp-content/uploads/logo-black.png'); 
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/logo-black.png'); 
 }
 .right-nav{
 	width: 50px;
@@ -398,7 +398,7 @@ span.circle-line{
 }
 #menu-right-nav-menu li a:hover{
 	background: #FAFF00;
-	background-image: url('/wp-content/themes/transformationspace/images/checkmark.svg');
+	background-image: url('http://localhost/transformation-space/wp-content/themes/transformationspace/images/checkmark.svg');
 	background-repeat: no-repeat;
 	background-position: 28px center;
 	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
@@ -924,7 +924,7 @@ input[type="button"].btn-black:hover, .btn-black:hover{
 	text-align: left;
 }
 .Button__icon__close {
-	background: url("/wp-content/uploads/close-cross.svg") no-repeat center center #FAFF00;
+	background: url("http://localhost/transformation-space/wp-content/uploads/close-cross.svg") no-repeat center center #FAFF00;
   	box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);
   	height: 50px;
 	width: 50px;
@@ -958,18 +958,18 @@ input[type="button"].open-btn{
 	padding: 5px 10px;
 }
 .slick-dots li button.black-dots::before {
-	content:  url('/wp-content/themes/transformationspace/images/dot-black-inactive.svg');
+	content:  url('http://localhost/transformation-space/wp-content/themes/transformationspace/images/dot-black-inactive.svg');
 	opacity: 1;
 }
 .slick-dots li.slick-active button.black-dots::before {
-	content:  url('/wp-content/themes/transformationspace/images/dot-black.svg');
+	content:  url('http://localhost/transformation-space/wp-content/themes/transformationspace/images/dot-black.svg');
 }
 .slick-dots li button.white-dots::before {
-	content:  url('/wp-content/themes/transformationspace/images/dot-inactive.svg');
+	content:  url('http://localhost/transformation-space/wp-content/themes/transformationspace/images/dot-inactive.svg');
 	opacity: 1;
 }
 .slick-dots li.slick-active button.white-dots::before {
-	content:  url('/wp-content/themes/transformationspace/images/dot.svg');
+	content:  url('http://localhost/transformation-space/wp-content/themes/transformationspace/images/dot.svg');
 }
 .prev, .next{
 	background: transparent;
@@ -1499,7 +1499,7 @@ ul.social-links li a{
 	transform: translateY(-10px);
 }
 section.bootcamps{
-	background-image: url('/wp-content/uploads/bg-events.jpg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/bg-events.jpg');
     padding: 100px 0;
 }
 .bootcamp-box{
@@ -1731,7 +1731,7 @@ section.stories .slick-dots, section.stories .slick-dots li {
 	left: 0;
 }
 section.blog{
-	background-image: url('http://thetransformation.space/wp-content/uploads/2018/10/bg-homepage.png');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/2018/10/bg-homepage.png');
     padding: 59px 0;
     background-size: cover;
 	background-position: center;
@@ -1800,7 +1800,7 @@ section.text-slider{
 	margin-top: -44px;
 }
 .single-post section.text-slider{
-	background-image: url('/wp-content/uploads/dots-bg.png');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/dots-bg.png');
 	background-repeat: no-repeat;
     margin-top: 0;
 }
@@ -1886,7 +1886,7 @@ section.info-banner {
 	margin-bottom: 10px;
 }
 section.events{
-	background-image: url('/wp-content/uploads/bg-events.jpg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/bg-events.jpg');
     padding: 100px 0;
 }
 section.events .btn-large, 
@@ -2044,7 +2044,7 @@ section.programme h3{
 	margin-bottom: 70px;
 }
 section.programme{
-	background-image: url('/wp-content/uploads/dots-bg.png');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/dots-bg.png');
 	background-repeat: no-repeat;	
 }
 
@@ -2503,7 +2503,7 @@ span.yellow-circle {
 	margin-bottom: 0;
 }
 .page-template-about section.about-section{
-	background-image: url('wp-content/themes/transformationspace/images/section-about-bg.png');
+	background-image: url('http://localhost/transformation-space/wp-content/themes/transformationspace/images/section-about-bg.png');
 }
 section.about-section {
 	padding: 138px 0 100px;
@@ -2729,7 +2729,7 @@ div.banner-image .simple-line:after{
 .bootstrap-tagsinput {
 	line-height:40px;
 	display:block !important;
-	background-image: url('/wp-content/uploads/event-filter.png');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/event-filter.png');
 	background-repeat: no-repeat;
     background-position: right;
     border-right: 22px solid transparent;
@@ -2766,7 +2766,7 @@ span.twitter-typeahead {
 }
 section.financial{
 	padding: 100px 0;
-	background-image: url('/wp-content/uploads/bg-events.jpg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/bg-events.jpg');
 }
 section.financial .button-container {
     position: absolute;
@@ -2805,7 +2805,7 @@ footer .row.address [class*="col-"]{
 }
 
 footer{
-	background-image: url('/wp-content/uploads/bg-footer.png');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/bg-footer.png');
 }
 .footer-bottom-menu ul li a{
 	border-bottom: none;
@@ -2904,9 +2904,9 @@ footer .newsletter-box p{
 header.blog{
 	height: 492px;
 	margin-bottom: 
-	background: -moz-linear-gradient(top, rgba(0,0,0,0.7) 33%, rgba(0,0,0,0) 100%, transparent),  url("/wp-content/uploads/header-blog.jpg") no-repeat center; /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, rgba(0,0,0,0.7) 33%, rgba(0,0,0,0) 100%, transparent),  url("/wp-content/uploads/header-blog.jpg") no-repeat center; /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(0,0,0,0.7) 33%, rgba(0,0,0,0) 100%, transparent),  url("/wp-content/uploads/header-blog.jpg") no-repeat center; ; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.7) 33%, rgba(0,0,0,0) 100%, transparent),  url("http://localhost/transformation-space/wp-content/uploads/header-blog.jpg") no-repeat center; /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.7) 33%, rgba(0,0,0,0) 100%, transparent),  url("http://localhost/transformation-space/wp-content/uploads/header-blog.jpg") no-repeat center; /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0,0,0,0.7) 33%, rgba(0,0,0,0) 100%, transparent),  url("http://localhost/transformation-space/wp-content/uploads/header-blog.jpg") no-repeat center; ; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 	background-size: cover;
 }
@@ -2953,26 +2953,26 @@ header.blog p.x-small{
 	background-repeat: no-repeat;
 }
 .post-meta ul li.likes{
-	background-image: url('/wp-content/uploads/yellow-heart.svg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/yellow-heart.svg');
 	background-position: left 7px;
 	padding-left: 22px;
 }
 .post-meta.black ul li.likes{
-	background-image: url('/wp-content/uploads/heart-black.svg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/heart-black.svg');
 }
 .post-meta.grey ul li.likes {
-    background-image: url('/wp-content/uploads/heart-grey.svg');
+    background-image: url('http://localhost/transformation-space/wp-content/uploads/heart-grey.svg');
 }
 .post-meta ul li.read-time{
-	background-image: url('/wp-content/uploads/yellow-clock.svg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/yellow-clock.svg');
 	background-position: left 7px;
 	padding-left: 22px;
 }
 .post-meta.black ul li.read-time{
-	background-image: url('/wp-content/uploads/clock-black.svg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/clock-black.svg');
 }
 .post-meta.grey ul li.read-time{
-	background-image: url('/wp-content/uploads/clock-grey.svg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/clock-grey.svg');
 }
 .author-col{
 	color: #FFFFFF;
@@ -3092,7 +3092,7 @@ aside li a{
 	clear: both;
 }
 .wp_ulike_is_liked .round-btn.like{
-	background-image: url('/wp-content/uploads/heart-yellow.svg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/heart-yellow.svg');
 	background-color: #4B5FF7;
 }
 .wpulike-robeen svg{
@@ -3299,16 +3299,16 @@ a.round-btn{
 	background-position: center;
 }
 a.round-btn.like{
-	background-image: url('/wp-content/uploads/heart-blue.svg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/heart-blue.svg');
 }
 a.round-btn.like:hover{
-	background-image: url('/wp-content/uploads/heart-white.svg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/heart-white.svg');
 }
 a.round-btn.bookmark{
-	background-image: url('/wp-content/uploads/bookmark-blue.svg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/bookmark-blue.svg');
 }
 a.round-btn.bookmark:hover{
-	background-image: url('/wp-content/uploads/bookmark-white.svg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/bookmark-white.svg');
 }
 /*RELATED POSTS*/
 .container.related-posts{
@@ -3984,7 +3984,7 @@ body.tag .row.title{
 	padding: 9px 22px;
 	height: 50px;
 	width: 400px;
-	background-image: url('/wp-content/uploads/select-arrow.svg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/select-arrow.svg');
 	background-repeat: no-repeat;
 	background-position: right 17px center;
 }
@@ -3993,7 +3993,7 @@ body.tag .row.title{
 }
 .tagify{
 	width: 85%;
-	background-image: url('/wp-content/uploads/event-filter.png');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/event-filter.png');
 	background-repeat: no-repeat;
 	background-position: right 17px center;
 	float: right;
@@ -4060,7 +4060,7 @@ body.tag .blog-posts-main{
 
 /*404*/
 .error404{
-	background-image: url('/wp-content/uploads/not-found-bg.jpg');
+	background-image: url('http://localhost/transformation-space/wp-content/uploads/not-found-bg.jpg');
 	background-repeat: no-repeat;
 	text-align: center;
 	font-family: Raleway;

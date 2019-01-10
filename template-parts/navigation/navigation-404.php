@@ -25,7 +25,7 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
 <div class="overlay">
 	<div class="container">
-		<div class="logo-menu-overlay"><img src="/wp-content/uploads/2018/10/logo-menu-right.png"></div>
+		<div class="logo-menu-overlay"><img src="<?php echo _wp_upload_dir_baseurl(); ?>/2018/10/logo-menu-right.png"></div>
 		<div class="row">
 			<div class="col-md-6">
   				<nav class="overlay-menu">

@@ -13,7 +13,7 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 <div class="footer-bottom">
 	<div class="row text-center">
 		<div class="col-md-12">
-			<a href="/"><img width="55" height="55" src="/wp-content/uploads/logo-mobile.svg"></a>
+			<a href="/"><img width="55" height="55" src="<?php echo _wp_upload_dir_baseurl(); ?>/logo-mobile.svg"></a>
 		</div>
 	</div>
 	<div class="row">

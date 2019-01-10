@@ -4,9 +4,10 @@ Template Name: About
 Template Post Type: post, page, event
 */
 
-get_header(); ?>
-
-<div class="header-section" style="background-image:url('/wp-content/uploads/2018/10/bg-homepage.png');">
+get_header(); 
+$uploads_url = _wp_upload_dir_baseurl();
+?>
+<div class="header-section" style="background-image:url('<?php echo _wp_upload_dir_baseurl(); ?>/2018/10/bg-homepage.png');">
 	<div class="home-slider-container">
 
 		<div class="home-slider" id="about-slider">
@@ -44,9 +45,9 @@ get_header(); ?>
 		    				
 		    				if ($rows_count>1){
 		    					echo '<div class="slider-nav">		    							
-			    							<button class="prev"><img src="/wp-content/uploads/prev.png"></button>
+			    							<button class="prev"><img src="'. $uploads_url .'/prev.png"></button>
 											<p><span class="yellow-circle current-slide"></span></p>
-											<button class="next"><img src="/wp-content/uploads/next.png"></button>								
+											<button class="next"><img src="'. $uploads_url .'/next.png"></button>								
 									</div>';
 		    				}
 

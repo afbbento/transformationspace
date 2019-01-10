@@ -49,7 +49,7 @@
 						</div>
 					</div>	
 					<div class="col-md-3 author-col">
-						<img src="/wp-content/uploads/blog-author.png" alt="Avatar" >
+						<img src="<?php echo _wp_upload_dir_baseurl(); ?>/blog-author.png" alt="Avatar" >
 						<p><?php 
 
 							$author_id = get_post_field( 'post_author', get_the_ID() );
@@ -123,7 +123,7 @@
 						</div>
 					</div>
 					<div class="blog-bottom">
-						<img src="/wp-content/uploads/blog-bottom-1.png">
+						<img src="<?php echo _wp_upload_dir_baseurl(); ?>/blog-bottom-1.png">
 					</div>
 					<div class="author-meta">
 						<div class="row">
