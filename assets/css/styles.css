@@ -3984,7 +3984,7 @@ body.tag .row.title{
 	padding: 9px 22px;
 	height: 50px;
 	width: 400px;
-	background-image: url('http://localhost/transformation-space/wp-content/uploads/select-arrow.svg');
+	background-image: url('../images/select-arrow.svg');
 	background-repeat: no-repeat;
 	background-position: right 17px center;
 }
@@ -3993,7 +3993,7 @@ body.tag .row.title{
 }
 .tagify{
 	width: 85%;
-	background-image: url('http://localhost/transformation-space/wp-content/uploads/event-filter.png');
+	background-image: url('../images/event-filter.png');
 	background-repeat: no-repeat;
 	background-position: right 17px center;
 	float: right;
