@@ -109,8 +109,7 @@
 						if( have_rows('events', 404) ):
 					
 							while ( have_rows('events', 404 ) ) : the_row();   
-							$select = get_sub_field_object('tags');
-      						$item_id = $select['name'];
+							
 							switch (strtolower(get_sub_field('city'))) {
 							    case 'lisboa':
 							        $bg = 'black';
@@ -124,14 +123,16 @@
 							}
 						
 							while( have_rows('tags_repeater') ): the_row();
-
+									$select = get_sub_field_object('select');
+									$value = $select['value'];
+									
 									$tags .= get_sub_field('tags');
 									
-									$tags .= ',';
+									$tags .= ' ';
 								 endwhile; 
 						?>
 
-						<div id="<?php echo $item_id; ?>" data-tags="<?php echo $tags; ?>" class="event-item bordered-box">
+						<div class="event-item bordered-box <?php echo $tags; ?>">
 							<div class="event-location <?php echo $bg; ?>"><?php echo get_sub_field('city'); ?></div>
 							<div class="row align-vertical">
 								<div class="col-md-3">
