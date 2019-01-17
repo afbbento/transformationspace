@@ -126,9 +126,9 @@ get_header(); ?>
 						<?php endif; ?> 
 	 				<div class="col-md-6 col-sm-12 col-xs-12">
 	 					<div class="lead2">
-						<?php pll('Looking for the right career move?'); ?>
+						<?php pll_e('Looking for the right career move?'); ?>
 						 </div>
-	 					<label><?php pll('Enter your email'); ?></label>
+	 					<label><?php pll_e('Enter your email'); ?></label>
 	 					<form action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?" method="get" id="newsletter-header" name="mc-embedded-subscribe-form" class="form-inline validate form-newsletter newsletter-header" target="_blank">	  				  
 					    	<input id="mce-EMAIL" name="EMAIL" type="email" required="" placeholder="<?php pll_e('Your e-mail here'); ?>" > 
 					    	<input class="btn btn-big btn-black submit" name="subscribe" type="submit" value="
