@@ -1499,7 +1499,7 @@ ul.social-links li a{
 	transform: translateY(-10px);
 }
 section.bootcamps{
-	background-image: url('http://localhost/transformation-space/wp-content/uploads/bg-events.jpg');
+	background-image: url('../images/bg-events.jpg');
     padding: 100px 0;
 }
 .bootcamp-box{
@@ -1886,7 +1886,7 @@ section.info-banner {
 	margin-bottom: 10px;
 }
 section.events{
-	background-image: url('http://localhost/transformation-space/wp-content/uploads/bg-events.jpg');
+	background-image: url('../images/bg-events.jpg');
     padding: 100px 0;
 }
 section.events .btn-large, 
@@ -2766,7 +2766,7 @@ span.twitter-typeahead {
 }
 section.financial{
 	padding: 100px 0;
-	background-image: url('http://localhost/transformation-space/wp-content/uploads/bg-events.jpg');
+	background-image: url('../images/bg-events.jpg');
 }
 section.financial .button-container {
     position: absolute;
