@@ -48,7 +48,7 @@ get_header(); ?>
 				    				<h1><?php the_sub_field('title'); ?></h1>
 									<p><?php the_sub_field('paragraph'); ?></p>
 									<div class="button-wrapper hidden-xs hidden-sm">
-									  <div class="button"><?php pll_e('Explore our Bootcamps'); ?></div>
+									  <a href="<?php echo get_site_url(); ?>/bootcamps" class="button"><?php pll_e('Explore our Bootcamps'); ?></a>
 									</div>
 				    			</div>
 				    			<div class="col-md-6">
@@ -90,7 +90,6 @@ get_header(); ?>
 						));
 						if( $posts ):
 							foreach( $posts as $post ): 
-		
 								setup_postdata( $post );
 						?>
 
