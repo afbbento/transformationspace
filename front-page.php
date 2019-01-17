@@ -39,16 +39,16 @@ get_header(); ?>
 						
 						while ( have_rows('header_slider') ) : the_row();
 
-						echo '
+						?>
 				    	<div>
 				    	
 				    		<div class="row">
 				    			<div class="col-md-6 home-slider-left">
-				    				<p class="sup-title">'.get_sub_field('lead').'</p>
-				    				<h1>'.get_sub_field('title').'</h1>
-									<p>'.get_sub_field('paragraph').'</p>
+				    				<p class="sup-title"><?php the_sub_field('lead'); ?></p>
+				    				<h1><?php the_sub_field('title'); ?></h1>
+									<p><?php the_sub_field('paragraph'); ?></p>
 									<div class="button-wrapper hidden-xs hidden-sm">
-									  <div class="button">explore our programs</div>
+									  <div class="button"><?php pll_e('Explore our Bootcamps'); ?></div>
 									</div>
 				    			</div>
 				    			<div class="col-md-6">
@@ -58,13 +58,14 @@ get_header(); ?>
 				    					</div>
 				    				</div>
 				    				<div class="button-wrapper visible-xs visible-sm">
-									  <div class="button">explore our programs</div>
+									  <div class="button"><?php pll_e('Explore our Bootcamps'); ?></div>
 									</div>
 				    			</div>
 				    		</div>
 				    		
 						
-					</div>';
+					</div>
+					<?php
 						endwhile;
 					else :
 					    // no rows found
