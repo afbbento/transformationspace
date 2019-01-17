@@ -54,7 +54,7 @@ get_header(); ?>
 				    			<div class="col-md-6">
 				    				<div class="slider-image">
 				    					<div class="frame">
-				    						<img src="<?php get_sub_field('image') ?>">
+				    						<img src="<?php the_sub_field('image') ?>">
 				    					</div>
 				    				</div>
 				    				<div class="button-wrapper visible-xs visible-sm">
