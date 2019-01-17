@@ -102,16 +102,12 @@ get_header(); ?>
 							<?php 
 								$bootcamp_description = get_field('bootcamp_description');	
 								if( $bootcamp_description ):
-							?><p>
-							<?php
-						
-								echo create_excerpt($bootcamp_description['text'], 122);
-							?></p>
-							
+							?>
+							<p><?php echo create_excerpt($bootcamp_description['text'], 122); ?></p>
 	 					</div>
 	 					<?php
 	 						$imgid = get_field('homepage_video');
-							
+
 	 					?>
 	 					<div class="highlight-image">
 	 						<img src="<?php echo get_field('featured_video_cover'); ?>">
@@ -129,8 +125,10 @@ get_header(); ?>
 
 						<?php endif; ?> 
 	 				<div class="col-md-6 col-sm-12 col-xs-12">
-	 					<div class="lead2">Looking for the right career move?</div>
-	 					<label>Enter your email</label>
+	 					<div class="lead2">
+						<?php pll('Looking for the right career move?'); ?>
+						 </div>
+	 					<label><?php pll('Enter your email'); ?></label>
 	 					<form action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?" method="get" id="newsletter-header" name="mc-embedded-subscribe-form" class="form-inline validate form-newsletter newsletter-header" target="_blank">	  				  
 					    	<input id="mce-EMAIL" name="EMAIL" type="email" required="" placeholder="<?php pll_e('Your e-mail here'); ?>" > 
 					    	<input class="btn btn-big btn-black submit" name="subscribe" type="submit" value="

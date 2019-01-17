@@ -740,6 +740,9 @@ function create_excerpt($excerpt, $count){
 }
 
 add_action('init', function() {
+  pll_register_string('Button newsletter', 'Get started');
+  pll_register_string('input newsletter', 'Enter your email');
+  pll_register_string('Text newsletter', 'Looking for the right career move?');
   pll_register_string('Button Explore', 'Explore our Bootcamps');
   pll_register_string('Banner Info Title', 'Get more info');
   pll_register_string('Banner Info Paragraph', 'So many things we can share with you. Let your e-mail here');
