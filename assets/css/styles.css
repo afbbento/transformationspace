@@ -1732,7 +1732,7 @@ section.stories .slick-dots, section.stories .slick-dots li {
 	left: 0;
 }
 section.blog{
-	background-image: url('http://localhost/transformation-space/wp-content/uploads/2018/10/bg-homepage.png');
+	background-image: url('../images/abstract-dark-bg.jpg');
     padding: 59px 0;
     background-size: cover;
 	background-position: center;
