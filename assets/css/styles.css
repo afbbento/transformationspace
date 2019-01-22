@@ -1197,9 +1197,14 @@ div.separator p{
 	transform: translateY(-33px);
 	text-align: center;
 }
-.separator .btn{
+.separator .btn, 
+.separator-left .btn{
 	font-weight: bold;
 	letter-spacing: 1px;
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 30px;
 }
 .separator button:before{
 	content: "";

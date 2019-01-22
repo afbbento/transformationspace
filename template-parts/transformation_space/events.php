@@ -15,7 +15,7 @@
 <section class="events">
 	<div class="container">
 		<div class="bordered-box">
-			<div class="button-container">
+			<div class="button-container separator-left">
 				<button class="btn btn-black btn-large btn-shadow btn-lines">events</button>
 			</div>
 			<div class="row">
