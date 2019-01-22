@@ -614,10 +614,6 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
 add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 
-function enqueue_parent_styles() {
-   wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
-}
-
 wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', null, true);
 
 wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(), true );
