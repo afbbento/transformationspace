@@ -612,11 +612,24 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
-add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 
-wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', null, true);
 
-wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(), true );
+
+function my_scripts() {
+	
+	
+	//wp_enqueue_script( 'slick_scripts', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js', null, true );
+	//wp_enqueue_script( 'gsap', 'https://cdn.jsdelivr.net/npm/gsap@2.0.2/umd/TweenMax.min.js', null, true );
+	//wp_enqueue_script( 'slick_sliders_init', get_template_directory_uri() . '/assets/js/slick-init.js', null, true );
+	//wp_enqueue_script( 'fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js', null, true );
+	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), true );
+	wp_enqueue_script( 'canvasloader', 'https://cdn.jsdelivr.net/gh/heartcode/CanvasLoader@0.9.1/js/heartcode-canvasloader-min.min.js', null, true );
+	
+}
+add_action( 'wp_enqueue_scripts', 'my_scripts', 40 );
+
+
+
 
 
 function wpb_add_google_fonts() {

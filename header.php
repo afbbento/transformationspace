@@ -36,13 +36,15 @@
 		   	$category = $category.'-template-page';
 		}
 	?>
-<body <?php body_class($category); ?>>
+<body <?php body_class($category); ?> onload="init()">
 	
 	<?php 
 		if (is_404()){
 			get_template_part( 'template-parts/navigation/navigation', '404' ); 	
 		}else{
+			get_template_part( 'template-parts/header/site', 'loading' ); 
 			get_template_part( 'template-parts/navigation/navigation', 'top' ); 
+			
 		}
 
 	?>
