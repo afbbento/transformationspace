@@ -271,10 +271,12 @@ jQuery(document).ready(function ( $ ) {
 		console.log(href);
 		console.log($target);
 		var $targetOffset;
-
+		
+		<?php
+		// run scroll to anchor if on homepage
+		if ( is_front_page() ) : ?>
 		if(/#/.test(href)) { // .test() returns a boolean
 			/* do not run AJAX function */ 
-			console.log("anchor");
 			e.preventDefault(); // prevent hard jump, the default behavior
 			if (href == "#footer") {
 			$targetOffset = $target.position().top + 200;
@@ -299,6 +301,9 @@ jQuery(document).ready(function ( $ ) {
 			//console.log(" not anchor");
 		}
 
+		<?php
+endif; 
+?>
 		
 	});
 });
