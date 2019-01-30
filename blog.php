@@ -54,7 +54,7 @@ get_header();
 					<div class="col-md-12">
 						<form class="search" action="/" method="get">				  
 					   		<input class="borderless-input" type="text" name="s" id="search" placeholder="Search" value="">
-					   	 	<input type="image" alt="Search" src="/wp-content/themes/transformationspace/images/search.png">
+					   	 	<input type="image" alt="Search" src="<?php bloginfo('template_url'); ?>/assets/images/search.png">
 						</form>
 					</div>
 				</div>
