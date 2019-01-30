@@ -62,7 +62,7 @@
 						  }
 						});
 						</script>
-						<div class="row address">
+						<div id="contacts" class="row address">
 								<?php 
 									$contact_locations_page = 165;
 									$variable = get_field('locations', $contact_locations_page);
