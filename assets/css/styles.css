@@ -304,9 +304,7 @@ span.circle-line{
 
 
 #top-menu .anchor-link.current_page_item .menu-item-link,
-#top-menu .anchor-link.current_menu_item .menu-item-link,
-.scrolled-nav #top-menu .current_page_item.anchor-link .menu-item-link,
-.scrolled-nav #top-menu .current_menu_item.anchor-link .menu-item-link {
+.scrolled-nav #top-menu .current_page_item.anchor-link .menu-item-link {
 	border-bottom: 0;
 	font-weight: normal;
 }
