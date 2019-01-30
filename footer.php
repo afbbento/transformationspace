@@ -16,7 +16,7 @@
 
 		</div><!-- #content -->
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
+		<footer id="footer" class="site-footer" role="contentinfo">
 			<div class="container">
 				<div class="row text-center">
 					<div class="col-lg-10 col-lg-offset-1 col-md-12">
@@ -106,7 +106,7 @@
 
 				<?php get_template_part( 'template-parts/footer/footer', 'bottom' ); ?>				
 			</div><!-- .wrap -->
-		</footer><!-- #colophon -->
+		</footer><!-- #footer -->
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
