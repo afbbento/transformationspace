@@ -195,7 +195,9 @@ if( $bootcamp_description ):
 <div class="separator">
 	<div class="line"></div>
 	<div class="button-container">
-		<button class="btn btn-black btn-large btn-shadow">education team & partners</button>
+		<button class="btn btn-black btn-large btn-shadow">
+			education team & partners
+		</button>
 	</div>
 	<div class="container">
 		<div class="row">
@@ -307,9 +309,9 @@ if( $bootcamp_description ):
 </section>
 <?php endif; ?>
 
-<section class="banner yellow banner-enroll">
+<section class="banner yellow banner-enroll full container-fluid">
 	<div class="row">
-		<div class="col-md-5 col-md-offset-4">
+		<div class="col-md-5 col-centered">
 			<h1>Change your career</h1>
 			<p>At half-past eight the door opened, the policeman appeared, and, requesting them to follow him, led the way to an adjoining hall. It was evidently a court-room.</p>
 			<a href="#" class="btn btn-black">enroll now</a><a href="#" class="btn btn-transparent">download</a>

@@ -68,8 +68,8 @@ function twentyseventeen_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'top'    => __( 'Top Menu', 'twentyseventeen' ),
-		'social' => __( 'Social Links Menu', 'twentyseventeen' ),
+		'top'    => __( 'Top Menu', 'transformation-space' ),
+		'social' => __( 'Social Links Menu', 'transformation-space' ),
 	) );
 
 	/*
@@ -416,22 +416,7 @@ function twentyseventeen_pingback_header() {
 }
 add_action( 'wp_head', 'twentyseventeen_pingback_header' );
 
-/**
- * Display custom color CSS.
- */
-function twentyseventeen_colors_css_wrap() {
-	if ( 'custom' !== get_theme_mod( 'colorscheme' ) && ! is_customize_preview() ) {
-		return;
-	}
 
-	require_once( get_parent_theme_file_path( '/inc/color-patterns.php' ) );
-	$hue = absint( get_theme_mod( 'colorscheme_hue', 250 ) );
-?>
-	<style type="text/css" id="custom-theme-colors" <?php if ( is_customize_preview() ) { echo 'data-hue="' . $hue . '"'; } ?>>
-		<?php echo twentyseventeen_custom_colors_css(); ?>
-	</style>
-<?php }
-add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
 
 /**
  * Enqueue scripts and styles.
@@ -470,9 +455,7 @@ function twentyseventeen_scripts() {
 
 
 	function menu_link_classes($classes, $item, $args) {
-		// if($args->theme_location == 'top') {
-		// 	$classes['class'] = 'menu-item-link menu-item-js';
-		// }
+
 		$classes['class'] = 'menu-item-link menu-item-js';
 		return $classes;
 	  }
@@ -614,19 +597,6 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
-
-
-
-// function add_specific_menu_location_atts( $atts, $item, $args ) {
-// 	// add the desired attributes:
-
-// 	if( $args->theme_location == 'top' ) {
-// 	  $atts['class'] = 'menu-item-link menu-item-js';
-// 	  return $atts;
-//   }
-
-// }
-// add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
 
 
 function my_scripts() {
