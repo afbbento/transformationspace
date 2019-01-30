@@ -264,39 +264,40 @@
 <script>
 
 jQuery(document).ready(function ( $ ) {
-	$('.menu-item-js').bind('click', function(e) {
-		e.preventDefault(); // prevent hard jump, the default behavior
+	$('.menu-item-js').on('click', function(e) {
 		
-		console.log("clicked");
-
+		var href = jQuery(this).attr('href');
 		var $target = jQuery(this.hash); // Set the target as variable
 		var $targetOffset;
 		var href = jQuery(this).attr('href');
 
-		console.log($target);
-
-		//$("html, body").animate({ scrollTop: $($target).scrollTop() }, 1000);
-
-
-		if (href == "#footer") {
+		if(/^#/.test(href)) { // .test() returns a boolean
+			/* do not run AJAX function */ 
+			//console.log("anchor");
+			e.preventDefault(); // prevent hard jump, the default behavior
+			if (href == "#footer") {
 			$targetOffset = $target.position().top + 200;
 			} else {
 			$targetOffset = $target.position().top - 115;
 		}
 
-
-
 		// if target is valid, scroll to
 		if($target && $targetOffset != ''){
-		jQuery('html, body').animate({
-		scrollTop: $targetOffset
+			jQuery('html, body').animate({
+			scrollTop: $targetOffset
 		}, {
-		easing: 'easeInOutQuart',
-		duration: 850,
-		complete: function(){
+			easing: 'easeInOutQuart',
+			duration: 850,
+			complete: function(){
 			}
 		});
 		} 
+
+		} else {
+			/* run the AJAX function */ 
+			//console.log(" not anchor");
+		}
+
 		
 	});
 });
