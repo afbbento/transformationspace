@@ -766,18 +766,31 @@ function create_excerpt($excerpt, $count){
   	return $excerpt;
 }
 
-add_action('init', function() {
-  pll_register_string('Button newsletter', 'Get started');
-  pll_register_string('input newsletter', 'Enter your email');
-  pll_register_string('Text newsletter', 'Looking for the right career move?');
-  pll_register_string('Button Explore', 'Explore our Bootcamps');
-  pll_register_string('Banner Info Title', 'Get more info');
-  pll_register_string('Banner Info Paragraph', 'So many things we can share with you. Let your e-mail here');
-  pll_register_string('Banner Info Name Label', 'Name');
-  pll_register_string('Banner Info Name Placeholder', 'Your name here');
-  pll_register_string('Banner Info Email Placeholder', 'Your e-mail here');
-  pll_register_string('Banner Info Button', 'Get amazingness');
-});
+
+
+
+function your_prefix_after_setup_theme() {
+
+	// register our translatable strings - again first check if function exists.
+ 
+	 if ( function_exists( 'pll_register_string' ) ) {
+ 
+		pll_register_string('Button newsletter', 'Get started');
+		pll_register_string('input newsletter', 'Enter your email');
+		pll_register_string('Text newsletter', 'Looking for the right career move?');
+		pll_register_string('Button Explore', 'Explore our Bootcamps');
+		pll_register_string('Banner Info Title', 'Get more info');
+		pll_register_string('Banner Info Paragraph', 'So many things we can share with you. Let your e-mail here');
+		pll_register_string('Banner Info Name Label', 'Name');
+		pll_register_string('Banner Info Name Placeholder', 'Your name here');
+		pll_register_string('Banner Info Email Placeholder', 'Your e-mail here');
+		pll_register_string('Banner Info Button', 'Get amazingness');
+ 
+	 }
+ }
+  add_action( 'after_setup_theme', 'your_prefix_after_setup_theme' );
+
+
 
 function last_word_blue($string){
   $permalink = get_permalink($post->ID);
