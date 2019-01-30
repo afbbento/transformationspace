@@ -3619,9 +3619,7 @@ body.category .scrolled-nav #top-menu li.enroll-btn a{
 
 .ajax-load-more-wrap ul.alm-listing li.grid-item{
    border: 1px solid #efefef;
-   width: 47%;
    margin: 0 1.5% 3%;
-   float: left;
    display: inline;
    padding-left: 0;
 }
@@ -4003,7 +4001,6 @@ body.tag .row.title{
 	border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    -webkit-box-sizing: none;
 }
 
 .tagify__dropdown__item{
