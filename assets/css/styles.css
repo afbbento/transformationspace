@@ -298,11 +298,17 @@ span.circle-line{
 .white-menu #top-menu .menu-item-link {
 	color: #000000;
 }
+
 #top-menu .current_page_item a{
 	font-weight: bold;
 	border-bottom: 2px solid #FFFFFF;
 	color: #FFFFFF;
 }
+
+.white-menu #top-menu .current_page_item a{
+	border-color: #000;
+}
+
 .white-menu .custom-logo{
 	background-image: url('../images/logo-black.png'); 
 }

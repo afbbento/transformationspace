@@ -5,7 +5,7 @@ Template Post Type: post, page, event
 */
 
 get_header(); ?>
-<header style="background-image: url('/wp-content/uploads/bg-events.jpg');">
+<header style="background-image: url('<?php bloginfo('template_url'); ?>/assets/images/bg-events.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">

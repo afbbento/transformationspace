@@ -5,7 +5,7 @@ Template Post Type: post, page, event
 */
 
 ?>
-<header class="bootcamp" style="background-image: url('/wp-content/uploads/bg-bootcamp.jpg');">
+<header class="bootcamp" style="background-image: url('<?php bloginfo('template_url'); ?>/assets/images/bg-bootcamp.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
