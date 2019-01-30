@@ -264,20 +264,33 @@
 <script>
 
 jQuery(document).ready(function ( $ ) {
-	$('.menu-item-js').on('click', function(e) {
+
+	var navList = $('#top-menu');
+	navList.find(".current-menu-item").removeClass("current-menu-item");
+
+	$(navList).on('click', 'a:not(.selected)', function(e) {
 		
+		navList.find(".selected").removeClass("selected");
+		$(e.currentTarget).addClass("selected");
+
 		var href = jQuery(this).attr('href');
 		var $target = jQuery(this.hash); // Set the target as variable
-		console.log(href);
-		console.log($target);
+		// console.log(href);
+		// console.log($target);
+
 		var $targetOffset;
 		
 		<?php
 		// run scroll to anchor if on homepage
 		if ( is_front_page() ) : ?>
-		if(/#/.test(href)) { // .test() returns a boolean
+
+		
+		// test if has anchor
+		if(/#/.test(href)) { 
 			/* do not run AJAX function */ 
 			e.preventDefault(); // prevent hard jump, the default behavior
+			
+
 			if (href == "#footer") {
 			$targetOffset = $target.position().top + 200;
 			} else {

@@ -243,16 +243,76 @@ span.circle-line{
     color: #FFFFFF;
 }
 
-.scrolled-nav #top-menu .menu-item-link:hover{
-	border-bottom: 2px solid #000000;
+
+#top-menu li.enroll-btn a{
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: bold;
+	color: #FAFF00;
+}
+#top-menu li.enroll-btn{
+	border: 1px solid #FAFF00;
 }
 
-.scrolled-nav #top-menu .current_page_item .menu-item-link  {
+.social-navigation a {
+    background-color: transparent;
+}
+
+.social-navigation a:hover {
+    background-color: transparent;
+}
+
+.white-menu{
+	box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.white-menu #top-menu li.enroll-btn a{
+	color: #4B5FF7;
+}
+
+.white-menu #top-menu li.enroll-btn {
+    border: 1px solid #4B5FF7;
+}
+
+.white-menu ~ header{
+	padding-top: 115px;
+	background-size: cover;
+}
+
+.navbar-default.white-menu{
+	background-color: #FFFFFF;
+}
+
+.white-menu #top-menu .menu-item-link:hover{
+	font-weight: bold;
+	border-bottom: 2px solid #4B5FF7;
+	color: #4B5FF7;
+}
+
+.white-menu #top-menu .menu-item-link {
+	color: #000000;
+}
+
+#top-menu .menu-item-link.selected,
+#top-menu .current_page_item .menu-item-link {
+	font-weight: bold;
+	border-bottom: 2px solid #FFFFFF;
+	color: #FFFFFF;
+}
+
+.scrolled-nav #top-menu .menu-item-link.selected,
+.scrolled-nav #top-menu .current_page_item .menu-item-link {
 	border-color: #000;
 }
 
 .scrolled-nav #top-menu .menu-item-link {
 	color: #000000;
+}
+
+.scrolled-nav #top-menu .menu-item-link:hover{
+	border-bottom: 2px solid #000000;
 }
 
 .navbar.scrolled-nav{
@@ -264,67 +324,22 @@ span.circle-line{
 .scrolled-nav .custom-logo{
 	background-image:url('../images/logo-black.png');
 }
-#top-menu li.enroll-btn a{
-	font-family: Raleway;
-	font-style: normal;
-	font-weight: bold;
-	color: #FAFF00;
-}
-#top-menu li.enroll-btn{
-	border: 1px solid #FAFF00;
-}
+
 .scrolled-nav #top-menu li.enroll-btn a{
 	color: #4B5FF7;
 }
 .scrolled-nav #top-menu li.enroll-btn{
 	border: 1px solid #4B5FF7;
 }
-.social-navigation a {
-    background-color: transparent;
-}
-.social-navigation a:hover {
-    background-color: transparent;
-}
-.white-menu{
-	box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);
-	-webkit-box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);
-}
-.white-menu #top-menu li.enroll-btn a{
-	color: #4B5FF7;
-}
-.white-menu #top-menu li.enroll-btn {
-    border: 1px solid #4B5FF7;
-}
-.white-menu ~ header{
-	padding-top: 115px;
-	background-size: cover;
-}
-.navbar-default.white-menu{
-	background-color: #FFFFFF;
-}
-.white-menu #top-menu .menu-item-link:hover{
-	font-weight: bold;
-	border-bottom: 2px solid #4B5FF7;
-	color: #4B5FF7;
-}
-.white-menu #top-menu .menu-item-link {
-	color: #000000;
-}
 
-#top-menu .current_page_item a{
-	font-weight: bold;
-	border-bottom: 2px solid #FFFFFF;
-	color: #FFFFFF;
-}
-
-.white-menu #top-menu .current_page_item a{
+.white-menu #top-menu .current_page_item .menu-item-link {
 	border-color: #000;
 }
 
 .white-menu .custom-logo{
 	background-image: url('../images/logo-black.png'); 
 }
+
 .right-nav{
 	width: 50px;
 	position: fixed;
@@ -336,12 +351,15 @@ span.circle-line{
 	-webkit-box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);	
 }
+
 .right-nav .newsletter-box{
 	padding: 29px;
 }
+
 .right-nav .social-navigation a{
 	background-color:transparent;
 }
+
 #top-menu li.enroll-btn a:hover{
 	border-bottom: none;
 }
