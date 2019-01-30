@@ -16,7 +16,7 @@ $cat_name = $categories[0]->name;
 
 if ( ! empty( $categories ) || $template_name ) {
 	if ($cat_name == 'Bootcamp' || $template_name =='bootcamps.php' || $template_name == 'general-info.php'){
-		$menu_color = 'white-menu';
+		$menu_color = 'navbar--white-bg';
 	}
 }
 

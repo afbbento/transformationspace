@@ -265,13 +265,16 @@
 
 jQuery(document).ready(function ( $ ) {
 
-	var navList = $('#top-menu');
-	navList.find(".current-menu-item").removeClass("current-menu-item");
+	var navList = $('.anchor-link');
+	//navList.find(".current-menu-item").removeClass("current-menu-item");
+
+
 
 	$(navList).on('click', 'a:not(.selected)', function(e) {
 		
-		navList.find(".selected").removeClass("selected");
-		$(e.currentTarget).addClass("selected");
+		navList.removeClass("selected");
+		$(e.currentTarget).parent().addClass("selected");
+		
 
 		var href = jQuery(this).attr('href');
 		var $target = jQuery(this.hash); // Set the target as variable
