@@ -279,7 +279,7 @@ jQuery(document).ready(function ( $ ) {
 
 
 		if (href == "#footer") {
-			$targetOffset = $target.position().top + 400;
+			$targetOffset = $target.position().top + 200;
 			} else {
 			$targetOffset = $target.position().top - 115;
 		}
