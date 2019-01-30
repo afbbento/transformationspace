@@ -12,7 +12,7 @@
  * @version 1.2
  */
 ?>
-<section class="events">
+<section id="events" class="events">
 	<div class="container">
 		<div class="bordered-box">
 			<div class="button-container separator-left">

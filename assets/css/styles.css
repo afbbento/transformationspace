@@ -218,7 +218,7 @@ span.circle-line{
 	float: left;
 	padding: 10px 20px;
 }
-#top-menu li a, 
+#top-menu .menu-item-link, 
 .footer-bottom-menu ul li a{
 	font-family: Raleway;
 	font-style: normal;
@@ -231,15 +231,15 @@ span.circle-line{
 	text-decoration: none;
 	padding: 0 0 4px 0;
 }
-#top-menu li a:hover {
+#top-menu .menu-item-link:hover {
     font-weight: bold;
     border-bottom: 2px solid #FFFFFF;
     color: #FFFFFF;
 }
-.scrolled-nav #top-menu li a:hover{
+.scrolled-nav #top-menu .menu-item-link:hover{
 	border-bottom: 2px solid #000000;
 }
-.scrolled-nav #top-menu li a{
+.scrolled-nav #top-menu .menu-item-link{
 	color: #000000;
 }
 .navbar.scrolled-nav{
@@ -290,12 +290,12 @@ span.circle-line{
 .navbar-default.white-menu{
 	background-color: #FFFFFF;
 }
-.white-menu #top-menu li a:hover{
+.white-menu #top-menu .menu-item-link:hover{
 	font-weight: bold;
 	border-bottom: 2px solid #4B5FF7;
 	color: #4B5FF7;
 }
-.white-menu #top-menu li a {
+.white-menu #top-menu .menu-item-link {
 	color: #000000;
 }
 #top-menu .current_page_item a{
@@ -3429,10 +3429,10 @@ body.tag .navbar{
 	margin-bottom: 15px;	
 	color: #000000;
 }
-.page-template-blog .scrolled-nav #top-menu li a,
-body.category .scrolled-nav #top-menu li a,
-body.tag .scrolled-nav #top-menu li a,
-.page-template-stories .scrolled-nav #top-menu li a{
+.page-template-blog .scrolled-nav #top-menu .menu-item-link,
+body.category .scrolled-nav #top-menu .menu-item-link,
+body.tag .scrolled-nav #top-menu .menu-item-link,
+.page-template-stories .scrolled-nav #top-menu .menu-item-link{
 	color: #FFFFFF;
 }
 body.category .scrolled-nav #top-menu li.enroll-btn {

@@ -261,6 +261,37 @@
 	});
 </script>
 
+<script>
+
+jQuery(document).ready(function ( $ ) {
+	$('.menu-item-js').bind('click', function(e) {
+		e.preventDefault(); // prevent hard jump, the default behavior
+		
+		console.log("clicked");
+
+		var $target = jQuery(this.hash); // Set the target as variable
+		var $targetOffset;
+		var href = jQuery(this).attr('href');
+
+		console.log($target);
+		$targetOffset = $target.position().top - 115;
+	
+
+		// if target is valid, scroll to
+		if($target && $targetOffset != ''){
+		jQuery('html, body').animate({
+		scrollTop: $targetOffset
+		}, {
+		easing: 'easeInOutQuart',
+		duration: 850,
+		complete: function(){
+		}
+	});
+	} 
+	});
+});
+</script>
+
 
 </body>
 </html>

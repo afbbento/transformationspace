@@ -615,13 +615,26 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 
 
+function add_specific_menu_location_atts( $atts, $item, $args ) {
+	// add the desired attributes:
+
+	if( $args->theme_location == 'top' ) {
+	  $atts['class'] = 'menu-item-link menu-item-js';
+	  return $atts;
+  }
+
+}
+add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
+
+
 function my_scripts() {
-	
 	
 	//wp_enqueue_script( 'slick_scripts', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js', null, true );
 	//wp_enqueue_script( 'gsap', 'https://cdn.jsdelivr.net/npm/gsap@2.0.2/umd/TweenMax.min.js', null, true );
 	//wp_enqueue_script( 'slick_sliders_init', get_template_directory_uri() . '/assets/js/slick-init.js', null, true );
 	//wp_enqueue_script( 'fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js', null, true );
+	wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/assets/js/jquery.ui.widget.js', array( 'jquery' ), true );
+	wp_enqueue_script( 'jquery-easing', get_template_directory_uri() . '/assets/js/jquery.easing.1.3.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'canvasloader', 'https://cdn.jsdelivr.net/gh/heartcode/CanvasLoader@0.9.1/js/heartcode-canvasloader-min.min.js', null, true );
 	
