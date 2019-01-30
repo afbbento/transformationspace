@@ -339,13 +339,11 @@ template {
 
 .alignleft {
 	display: inline;
-	float: left;
 	margin-right: 1.5em;
 }
 
 .alignright {
 	display: inline;
-	float: right;
 	margin-left: 1.5em;
 }
 
@@ -1245,7 +1243,6 @@ a .nav-title,
 }
 
 .post-thumbnail a img {
-	-webkit-backface-visibility: hidden;
 	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 }
@@ -3996,8 +3993,6 @@ p > object:only-child {
 		margin: 0 0.5em;
 		display: inline;
 		visibility: visible;
-		height: auto;
-		width: auto;
 	}
 
 	/* Gallery Columns */

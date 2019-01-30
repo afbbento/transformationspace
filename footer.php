@@ -268,12 +268,13 @@ jQuery(document).ready(function ( $ ) {
 		
 		var href = jQuery(this).attr('href');
 		var $target = jQuery(this.hash); // Set the target as variable
+		console.log(href);
+		console.log($target);
 		var $targetOffset;
-		var href = jQuery(this).attr('href');
 
-		if(/^#/.test(href)) { // .test() returns a boolean
+		if(/#/.test(href)) { // .test() returns a boolean
 			/* do not run AJAX function */ 
-			//console.log("anchor");
+			console.log("anchor");
 			e.preventDefault(); // prevent hard jump, the default behavior
 			if (href == "#footer") {
 			$targetOffset = $target.position().top + 200;
