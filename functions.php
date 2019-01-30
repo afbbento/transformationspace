@@ -468,12 +468,17 @@ function twentyseventeen_scripts() {
 		'quote'          => twentyseventeen_get_svg( array( 'icon' => 'quote-right' ) ),
 	);
 
-	if ( has_nav_menu( 'top' ) ) {
-		wp_enqueue_script( 'twentyseventeen-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
-		$twentyseventeen_l10n['expand']         = __( 'Expand child menu', 'twentyseventeen' );
-		$twentyseventeen_l10n['collapse']       = __( 'Collapse child menu', 'twentyseventeen' );
-		$twentyseventeen_l10n['icon']           = twentyseventeen_get_svg( array( 'icon' => 'angle-down', 'fallback' => true ) );
-	}
+
+	function menu_link_classes($classes, $item, $args) {
+		// if($args->theme_location == 'top') {
+		// 	$classes['class'] = 'menu-item-link menu-item-js';
+		// }
+		$classes['class'] = 'menu-item-link menu-item-js';
+		return $classes;
+	  }
+	  add_filter('nav_menu_link_attributes', 'menu_link_classes', 1, 3);
+
+
 
 	wp_enqueue_script( 'twentyseventeen-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '1.0', true );
 
@@ -615,16 +620,16 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 
 
-function add_specific_menu_location_atts( $atts, $item, $args ) {
-	// add the desired attributes:
+// function add_specific_menu_location_atts( $atts, $item, $args ) {
+// 	// add the desired attributes:
 
-	if( $args->theme_location == 'top' ) {
-	  $atts['class'] = 'menu-item-link menu-item-js';
-	  return $atts;
-  }
+// 	if( $args->theme_location == 'top' ) {
+// 	  $atts['class'] = 'menu-item-link menu-item-js';
+// 	  return $atts;
+//   }
 
-}
-add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
+// }
+// add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
 
 
 function my_scripts() {

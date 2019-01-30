@@ -62,7 +62,7 @@
 						  }
 						});
 						</script>
-						<div id="contacts" class="row address">
+						<div class="row address">
 								<?php 
 									$contact_locations_page = 165;
 									$variable = get_field('locations', $contact_locations_page);
@@ -274,8 +274,17 @@ jQuery(document).ready(function ( $ ) {
 		var href = jQuery(this).attr('href');
 
 		console.log($target);
-		$targetOffset = $target.position().top - 115;
-	
+
+		//$("html, body").animate({ scrollTop: $($target).scrollTop() }, 1000);
+
+
+		if (href == "#footer") {
+			$targetOffset = $target.position().top + 400;
+			} else {
+			$targetOffset = $target.position().top - 115;
+		}
+
+
 
 		// if target is valid, scroll to
 		if($target && $targetOffset != ''){
@@ -285,9 +294,10 @@ jQuery(document).ready(function ( $ ) {
 		easing: 'easeInOutQuart',
 		duration: 850,
 		complete: function(){
-		}
-	});
-	} 
+			}
+		});
+		} 
+		
 	});
 });
 </script>
