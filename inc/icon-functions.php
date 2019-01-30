@@ -10,7 +10,7 @@
 /**
  * Add SVG definitions to the footer.
  */
-function twentyseventeen_include_svg_icons() {
+function transformationspace_include_svg_icons() {
 	// Define SVG sprite file.
 	$svg_icons = get_parent_theme_file_path( '/assets/images/svg-icons.svg' );
 
@@ -19,7 +19,7 @@ function twentyseventeen_include_svg_icons() {
 		require_once( $svg_icons );
 	}
 }
-add_action( 'wp_footer', 'twentyseventeen_include_svg_icons', 9999 );
+add_action( 'wp_footer', 'transformationspace_include_svg_icons', 9999 );
 
 /**
  * Return SVG markup.
@@ -33,15 +33,15 @@ add_action( 'wp_footer', 'twentyseventeen_include_svg_icons', 9999 );
  * }
  * @return string SVG markup.
  */
-function twentyseventeen_get_svg( $args = array() ) {
+function transformationspace_get_svg( $args = array() ) {
 	// Make sure $args are an array.
 	if ( empty( $args ) ) {
-		return __( 'Please define default parameters in the form of an array.', 'twentyseventeen' );
+		return __( 'Please define default parameters in the form of an array.', 'transformationspace' );
 	}
 
 	// Define an icon.
 	if ( false === array_key_exists( 'icon', $args ) ) {
-		return __( 'Please define an SVG icon filename.', 'twentyseventeen' );
+		return __( 'Please define an SVG icon filename.', 'transformationspace' );
 	}
 
 	// Set defaults.
@@ -66,9 +66,9 @@ function twentyseventeen_get_svg( $args = array() ) {
 	 *
 	 * However, child themes can use the title and description to add information to non-decorative SVG icons to improve accessibility.
 	 *
-	 * Example 1 with title: <?php echo twentyseventeen_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ) ) ); ?>
+	 * Example 1 with title: <?php echo transformationspace_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ) ) ); ?>
 	 *
-	 * Example 2 with title and description: <?php echo twentyseventeen_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ), 'desc' => __( 'This is the description', 'textdomain' ) ) ); ?>
+	 * Example 2 with title and description: <?php echo transformationspace_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ), 'desc' => __( 'This is the description', 'textdomain' ) ) ); ?>
 	 *
 	 * See https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/.
 	 */
@@ -123,22 +123,22 @@ function twentyseventeen_get_svg( $args = array() ) {
  * @param  array   $args        wp_nav_menu() arguments.
  * @return string  $item_output The menu item output with social icon.
  */
-function twentyseventeen_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
+function transformationspace_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 	// Get supported social icons.
-	$social_icons = twentyseventeen_social_links_icons();
+	$social_icons = transformationspace_social_links_icons();
 
 	// Change SVG icon inside social links menu if there is supported URL.
 	if ( 'social' === $args->theme_location ) {
 		foreach ( $social_icons as $attr => $value ) {
 			if ( false !== strpos( $item_output, $attr ) ) {
-				$item_output = str_replace( $args->link_after, '</span>' . twentyseventeen_get_svg( array( 'icon' => esc_attr( $value ) ) ), $item_output );
+				$item_output = str_replace( $args->link_after, '</span>' . transformationspace_get_svg( array( 'icon' => esc_attr( $value ) ) ), $item_output );
 			}
 		}
 	}
 
 	return $item_output;
 }
-add_filter( 'walker_nav_menu_start_el', 'twentyseventeen_nav_menu_social_icons', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'transformationspace_nav_menu_social_icons', 10, 4 );
 
 /**
  * Add dropdown icon if menu item has children.
@@ -149,25 +149,25 @@ add_filter( 'walker_nav_menu_start_el', 'twentyseventeen_nav_menu_social_icons',
  * @param  int     $depth Depth of menu item. Used for padding.
  * @return string  $title The menu item's title with dropdown icon.
  */
-function twentyseventeen_dropdown_icon_to_menu_link( $title, $item, $args, $depth ) {
+function transformationspace_dropdown_icon_to_menu_link( $title, $item, $args, $depth ) {
 	if ( 'top' === $args->theme_location ) {
 		foreach ( $item->classes as $value ) {
 			if ( 'menu-item-has-children' === $value || 'page_item_has_children' === $value ) {
-				$title = $title . twentyseventeen_get_svg( array( 'icon' => 'angle-down' ) );
+				$title = $title . transformationspace_get_svg( array( 'icon' => 'angle-down' ) );
 			}
 		}
 	}
 
 	return $title;
 }
-add_filter( 'nav_menu_item_title', 'twentyseventeen_dropdown_icon_to_menu_link', 10, 4 );
+add_filter( 'nav_menu_item_title', 'transformationspace_dropdown_icon_to_menu_link', 10, 4 );
 
 /**
  * Returns an array of supported social links (URL and icon name).
  *
  * @return array $social_links_icons
  */
-function twentyseventeen_social_links_icons() {
+function transformationspace_social_links_icons() {
 	// Supported social links icons.
 	$social_links_icons = array(
 		'behance.net'     => 'behance',
@@ -216,5 +216,5 @@ function twentyseventeen_social_links_icons() {
 	 *
 	 * @param array $social_links_icons Array of social links icons.
 	 */
-	return apply_filters( 'twentyseventeen_social_links_icons', $social_links_icons );
+	return apply_filters( 'transformationspace_social_links_icons', $social_links_icons );
 }

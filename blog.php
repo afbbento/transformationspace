@@ -21,14 +21,14 @@ get_header();
 						<h1>we have some 
 								news for you</h1>
 
-						<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentyseventeen' ); ?>">
+						<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'transformationspace' ); ?>">
 							<?php
 								wp_nav_menu( array(
 									'theme_location' => 'social',
 									'menu_class'     => 'social-links-menu',
 									'depth'          => 1,
 									'link_before'    => '<span class="screen-reader-text">',
-									'link_after'     => '</span>' . twentyseventeen_get_svg( array( 'icon' => 'chain' ) ),
+									'link_after'     => '</span>' . transformationspace_get_svg( array( 'icon' => 'chain' ) ),
 								) );
 							?>
 						</nav><!-- .social-navigation -->
@@ -91,7 +91,7 @@ get_header();
 									<li>
 										<p class="x-small">
 											<span class="posted-on">												
-												<time class="entry-date published" datetime="2018-11-27T11:42:52+00:00"><?php echo twentyseventeen_posted_on(); ?></time>
+												<time class="entry-date published" datetime="2018-11-27T11:42:52+00:00"><?php echo transformationspace_posted_on(); ?></time>
 											</span>
 										</p>
 									</li>

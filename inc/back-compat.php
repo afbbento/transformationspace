@@ -18,12 +18,12 @@
  *
  * @since Twenty Seventeen 1.0
  */
-function twentyseventeen_switch_theme() {
+function transformationspace_switch_theme() {
 	switch_theme( WP_DEFAULT_THEME );
 	unset( $_GET['activated'] );
-	add_action( 'admin_notices', 'twentyseventeen_upgrade_notice' );
+	add_action( 'admin_notices', 'transformationspace_upgrade_notice' );
 }
-add_action( 'after_switch_theme', 'twentyseventeen_switch_theme' );
+add_action( 'after_switch_theme', 'transformationspace_switch_theme' );
 
 /**
  * Adds a message for unsuccessful theme switch.
@@ -35,8 +35,8 @@ add_action( 'after_switch_theme', 'twentyseventeen_switch_theme' );
  *
  * @global string $wp_version WordPress version.
  */
-function twentyseventeen_upgrade_notice() {
-	$message = sprintf( __( 'Twenty Seventeen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'twentyseventeen' ), $GLOBALS['wp_version'] );
+function transformationspace_upgrade_notice() {
+	$message = sprintf( __( 'Twenty Seventeen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'transformationspace' ), $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
 
@@ -47,12 +47,12 @@ function twentyseventeen_upgrade_notice() {
  *
  * @global string $wp_version WordPress version.
  */
-function twentyseventeen_customize() {
-	wp_die( sprintf( __( 'Twenty Seventeen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'twentyseventeen' ), $GLOBALS['wp_version'] ), '', array(
+function transformationspace_customize() {
+	wp_die( sprintf( __( 'Twenty Seventeen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'transformationspace' ), $GLOBALS['wp_version'] ), '', array(
 		'back_link' => true,
 	) );
 }
-add_action( 'load-customize.php', 'twentyseventeen_customize' );
+add_action( 'load-customize.php', 'transformationspace_customize' );
 
 /**
  * Prevents the Theme Preview from being loaded on WordPress versions prior to 4.7.
@@ -61,9 +61,9 @@ add_action( 'load-customize.php', 'twentyseventeen_customize' );
  *
  * @global string $wp_version WordPress version.
  */
-function twentyseventeen_preview() {
+function transformationspace_preview() {
 	if ( isset( $_GET['preview'] ) ) {
-		wp_die( sprintf( __( 'Twenty Seventeen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'twentyseventeen' ), $GLOBALS['wp_version'] ) );
+		wp_die( sprintf( __( 'Twenty Seventeen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'transformationspace' ), $GLOBALS['wp_version'] ) );
 	}
 }
-add_action( 'template_redirect', 'twentyseventeen_preview' );
+add_action( 'template_redirect', 'transformationspace_preview' );

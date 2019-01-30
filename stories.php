@@ -21,14 +21,14 @@ get_header();
 						<h1>see what we are 
 								talking about</h1>
 
-						<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentyseventeen' ); ?>">
+						<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'transformationspace' ); ?>">
 							<?php
 								wp_nav_menu( array(
 									'theme_location' => 'social',
 									'menu_class'     => 'social-links-menu',
 									'depth'          => 1,
 									'link_before'    => '<span class="screen-reader-text">',
-									'link_after'     => '</span>' . twentyseventeen_get_svg( array( 'icon' => 'chain' ) ),
+									'link_after'     => '</span>' . transformationspace_get_svg( array( 'icon' => 'chain' ) ),
 								) );
 							?>
 						</nav><!-- .social-navigation -->
@@ -279,7 +279,7 @@ jQuery(".get-stories").click(function(event){
 		                  <h1><?php the_title(); ?>
 		                  </h1>
 		                  
-		                  <div class="post-meta"><?php echo twentyseventeen_posted_on(); ?></div>
+		                  <div class="post-meta"><?php echo transformationspace_posted_on(); ?></div>
 		                  <p class="small"><?php the_field('text'); ?></p>
 		               </div>
 		            </div>
@@ -325,7 +325,7 @@ jQuery(".get-stories").click(function(event){
 		 			<p class="x-small"><?php the_field('text'); ?></p>
 		 		</div>
 		 		<div class="post-meta">
-		 			<p class="x-small"><?php echo twentyseventeen_posted_on(); ?></p>
+		 			<p class="x-small"><?php echo transformationspace_posted_on(); ?></p>
 		 		</div>		 		
 		 	</div>
 

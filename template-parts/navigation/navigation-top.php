@@ -108,14 +108,14 @@ if ( ! empty( $categories ) || $template_name ) {
 			
 
 				if ( has_nav_menu( 'social' ) ) : ?>
-					<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentyseventeen' ); ?>">
+					<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'transformationspace' ); ?>">
 						<?php
 							wp_nav_menu( array(
 								'theme_location' => 'social',
 								'menu_class'     => 'social-links-menu',
 								'depth'          => 1,
 								'link_before'    => '<span class="screen-reader-text">',
-								'link_after'     => '</span>' . twentyseventeen_get_svg( array( 'icon' => 'chain' ) ),
+								'link_after'     => '</span>' . transformationspace_get_svg( array( 'icon' => 'chain' ) ),
 							) );
 						?>
 					</nav><!-- .social-navigation -->

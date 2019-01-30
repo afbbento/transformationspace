@@ -42,7 +42,7 @@ foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); ?>
 	
 	<div class="col-md-4">
 		<div class="related-image"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>"><?php the_post_thumbnail('full'); ?></a></div>
-		<div class="post-date"><?php echo twentyseventeen_posted_on(); ?></div>
+		<div class="post-date"><?php echo transformationspace_posted_on(); ?></div>
 		<div class="post-title"><p><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>"><?php the_title(); ?></a></p></div>
 		<div class="simple-line"></div>
 		<div class="post-excerpt"><p class="lead3"><?php echo create_excerpt(get_the_content(), 157); ?></p></div>

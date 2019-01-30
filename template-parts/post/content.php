@@ -21,7 +21,7 @@
 	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
+				<?php the_post_thumbnail( 'transformationspace-featured-image' ); ?>
 			</a>
 		</div><!-- .post-thumbnail -->
 	<?php endif; ?>
@@ -30,12 +30,12 @@
 		<?php
 		/* translators: %s: Name of current post */
 		the_content( sprintf(
-			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'transformationspace' ),
 			get_the_title()
 		) );
 
 		wp_link_pages( array(
-			'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+			'before'      => '<div class="page-links">' . __( 'Pages:', 'transformationspace' ),
 			'after'       => '</div>',
 			'link_before' => '<span class="page-number">',
 			'link_after'  => '</span>',

@@ -34,7 +34,7 @@
 						<h1 class="blog-title"><?php echo get_the_title(); ?></h1>
 						<div class="post-meta">
 							<ul>
-								<li><p class="x-small"><?php echo twentyseventeen_posted_on(); ?></p></li>
+								<li><p class="x-small"><?php echo transformationspace_posted_on(); ?></p></li>
 								<li class="likes"><p class="x-small">
 									<?php 
 										if (function_exists('wp_ulike_get_post_likes')):
@@ -99,9 +99,9 @@
 						endwhile;
 
 						the_posts_pagination( array(
-							'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
-							'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
-							'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
+							'prev_text' => transformationspace_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'transformationspace' ) . '</span>',
+							'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'transformationspace' ) . '</span>' . transformationspace_get_svg( array( 'icon' => 'arrow-right' ) ),
+							'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'transformationspace' ) . ' </span>',
 						) );
 
 					else :
