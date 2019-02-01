@@ -12,9 +12,12 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
 $template_name = get_page_template_slug( $post->ID );
 $categories = get_the_category();
-$cat_name = $categories[0]->name;
+
+$menu_color = '';
 
 if ( ! empty( $categories ) || $template_name ) {
+	$cat_name = $categories[0]->name;
+	
 	if ($cat_name == 'Bootcamp' || $template_name =='bootcamps.php' || $template_name == 'general-info.php'){
 		$menu_color = 'navbar--white-bg';
 	}

@@ -109,6 +109,12 @@
 		</footer><!-- #footer -->
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
+
+<?php get_template_part( 'template-parts/modals/modal', 'moreinfo' ); ?>
+<?php get_template_part( 'template-parts/modals/modal', 'bootcamp' ); ?>
+<?php get_template_part( 'template-parts/modals/modal', 'data-policy' ); ?>
+
+
 <?php wp_footer(); ?>
 
 

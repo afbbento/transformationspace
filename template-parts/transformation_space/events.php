@@ -23,7 +23,7 @@
 					<p>transformation.space is a Global EDTECH & Career Acceleration Company with campuses in São Paulo, Barcelona, Madrid, Lisbon & Oporto. </p>
 					<div class="event-search">
 						<?php 
-
+						$taglist = '';
 						if( have_rows('events', 404) ):
 							$i=0;
 							$taglist .= '[';
@@ -97,7 +97,9 @@
 						
 						});		
 						</script>
-
+						<?php	
+						$tags_values = '';
+						?>
 						<form id="tags"  method="post">						 
 							<input name="tags" placeholder="" value="<?php echo $tags_values; ?>">						
 						</form>
@@ -121,14 +123,16 @@
 							        $bg = 'blue';
 							        break;
 							}
-						
+							$tags = '';
 							while( have_rows('tags_repeater') ): the_row();
 									$select = get_sub_field_object('select');
 									$value = $select['value'];
 									
+									if(get_sub_field('tags')) {
 									$tags .= get_sub_field('tags');
-									
 									$tags .= ' ';
+									}
+									
 								 endwhile; 
 						?>
 

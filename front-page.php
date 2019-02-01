@@ -229,7 +229,7 @@ if( $bootcamps_section ):
 
 
 <?php
-//$education_section = get_field('education_section');
+$education_section = get_field('education_section');
 if( $education_section ):
 ?>
 <div class="separator">

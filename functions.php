@@ -27,10 +27,17 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 function transformationspace_setup() {
 
 	function _wp_upload_dir_baseurl(){
-		_deprecated_function(__FUNCTION__, '4.5', 'wp_get_upload_dir()');
+	
 		$upload_dir = wp_get_upload_dir();
 		
 		return $upload_dir['baseurl'];
+	}
+	
+	add_action( 'admin_menu', 'my_admin_menu' );
+
+	function my_admin_menu() {
+		//add_menu_page( 'Locations', 'Locations', 'manage_options', '/post.php?post=165&action=edit', 'myplguin_admin_page', 'dashicons-location', 6  );
+		add_menu_page(__('Locations'), __('Locations'), 'edit_posts', 'post.php?post=165&action=edit', '', 'dashicons-location', 6);
 	}
 	
 	/*
@@ -695,13 +702,14 @@ add_shortcode( 'bootcamps', 'get_bootcamps' );
 
 
 function get_excerpt($count){
-  $permalink = get_permalink($post->ID);
+//  $permalink = get_permalink($post->ID);
   $excerpt = get_the_content();
   $excerpt = strip_tags($excerpt);
   $excerpt = substr($excerpt, 0, $count);
   $excerpt = $excerpt.'...';
   return $excerpt;
 }
+
 function vimeoVideoDuration($video_id) {
 
    $json_url = 'http://vimeo.com/api/v2/video/' . $video_id . '.xml';

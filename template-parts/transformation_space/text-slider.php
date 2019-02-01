@@ -45,11 +45,12 @@ if ( ! empty( $terms ) ) {
 
 			<?php 
 			$my_query = new WP_query(array('category__and' => $terms)); 
-				while ($my_query->have_posts()) : $my_query->the_post(); 
+				while ($my_query->have_posts()):
+					$my_query->the_post(); 
 					$categories = get_the_category();
-					if ( ! empty( $categories ) ) {
+					if ( ! empty( $categories ) ):
 					    $category = esc_html( $categories[0]->name );   
-					}
+					endif;
 			?>
 
 			<div class="col-md-6 borderless-box">
@@ -58,7 +59,7 @@ if ( ! empty( $terms ) ) {
 				<div class="line"></div>
 				<p class="normal"><?php echo get_excerpt(155); ?></p>
 				<div class="button-container">
-					<a href="#" class="btn btn-black shadow">read more</a>
+					<a href="<?php the_permalink(); ?>" class="btn btn-black shadow">read more</a>
 				</div>				
 			</div>
 
