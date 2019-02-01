@@ -317,6 +317,7 @@ span.circle-line{
 .scrolled-nav #top-menu .current_page_item.anchor-link.selected .menu-item-link,
 .scrolled-nav #top-menu .current_page_item .menu-item-link,
 .scrolled-nav #top-menu .menu-item-link:hover{
+	font-weight: bold;
 	border-bottom: 2px solid #000;
 }
 
