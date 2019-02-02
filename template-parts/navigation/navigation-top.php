@@ -3,7 +3,7 @@
  * Displays top navigation
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage transformationspace
  * @since 1.0
  * @version 1.2
  */
@@ -15,10 +15,17 @@ $categories = get_the_category();
 
 $menu_color = '';
 
-if ( ! empty( $categories ) || $template_name ) {
+if (!empty($template_name)) {
+	$menu_color = 'navbar--white-bg';
+	if ($template_name =='bootcamps.php' || $template_name == 'general-info.php'){
+		$menu_color = 'navbar--white-bg';
+	}
+}
+
+if(!empty( $categories)) {
 	$cat_name = $categories[0]->name;
-	
-	if ($cat_name == 'Bootcamp' || $template_name =='bootcamps.php' || $template_name == 'general-info.php'){
+	$menu_color = 'navbar--white-bg';
+	if ($cat_name == 'Bootcamp') {
 		$menu_color = 'navbar--white-bg';
 	}
 }
@@ -38,6 +45,7 @@ if ( ! empty( $categories ) || $template_name ) {
 	        <?php wp_nav_menu( array(
 					'theme_location' => 'top',
 					'menu_id'        => 'top-menu',
+					'menu_class'     => 'top-menu'
 					)); 
 			?>
         	</div><!--/.nav-collapse -->
@@ -61,7 +69,8 @@ if ( ! empty( $categories ) || $template_name ) {
 			<div class="col-md-6">
   				<nav class="overlay-menu">
           			<?php wp_nav_menu( array(
-						'menu' => 'Right Nav Menu'
+						'menu' => 'Right Nav Menu',
+						'menu_class' => 'menu-right-nav-menu'
 						) ); ?>
        
   				</nav>

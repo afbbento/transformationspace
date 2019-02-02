@@ -3,7 +3,7 @@
  * Additional features to allow styling of the templates
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage transformationspace
  * @since 1.0
  */
 

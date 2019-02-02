@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage transformationspace
  * @since 1.0
  */
 
@@ -469,8 +469,6 @@ function transformationspace_scripts() {
 	  add_filter('nav_menu_link_attributes', 'menu_link_classes', 1, 3);
 
 
-	wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.2', true );
-
 	wp_localize_script( 'transformationspace-skip-link-focus-fix', 'transformationspaceScreenReaderText', $transformationspace_l10n );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -607,14 +605,12 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 
 function my_scripts() {
-	
-	//wp_enqueue_script( 'slick_scripts', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js', null, true );
-	//wp_enqueue_script( 'gsap', 'https://cdn.jsdelivr.net/npm/gsap@2.0.2/umd/TweenMax.min.js', null, true );
-	//wp_enqueue_script( 'slick_sliders_init', get_template_directory_uri() . '/assets/js/slick-init.js', null, true );
-	//wp_enqueue_script( 'fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js', null, true );
+	wp_enqueue_script( 'tag_scripts', get_template_directory_uri() . '/assets/js/jQuery.tagify.min.js' );
+	wp_enqueue_script( 'fancybox-js', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js' );
 	wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/assets/js/jquery.ui.widget.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'jquery-easing', get_template_directory_uri() . '/assets/js/jquery.easing.1.3.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), true );
+//	wp_enqueue_script( 'custom-lp', get_template_directory_uri() . '/assets/js/custom-lp.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'canvasloader', 'https://cdn.jsdelivr.net/gh/heartcode/CanvasLoader@0.9.1/js/heartcode-canvasloader-min.min.js', null, true );
 	
 }
@@ -622,65 +618,37 @@ add_action( 'wp_enqueue_scripts', 'my_scripts', 40 );
 
 
 
-
-
-function wpb_add_google_fonts() {
-	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,900', false );
-}
-add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
-
-
 function my_assets() {
-	wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/assets/css/hamburgers.min.css' );
-	//wp_enqueue_style( 'reset', get_stylesheet_directory_uri() . '/reset.css' );
-
-	//wp_enqueue_script( 'owl-carousel', get_stylesheet_directory_uri() . '/owl.carousel.js', array( 'jquery' ) );
-	//wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/website-scripts.js', array( 'owl-carousel', 'jquery' ), '1.0', true );
+	$ts_theme_version = '5.2';
+	wp_enqueue_style( 'Raleway-font', 'https://fonts.googleapis.com/css?family=Raleway:400,700,900' );
+	wp_enqueue_style( 'Abhaya-font', 'https://fonts.googleapis.com/css?family=Abhaya+Libre:400,600' );
+	wp_enqueue_style( 'hamburgers-style', get_template_directory_uri() . '/assets/css/hamburgers.min.css' );
+	wp_enqueue_style( 'tag-style-theme', get_template_directory_uri() . '/assets/css/tagify.css' );
+	wp_enqueue_style( 'fancybox-style', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css' );
+	wp_enqueue_style( 'trasformation-space-styles', get_template_directory_uri() . '/assets/css/styles.css', '', $ts_theme_version);
+	wp_enqueue_style( 'landing-style', get_template_directory_uri() . '/assets/css/style-landing-page.css', '', $ts_theme_version);	
 }
 
 add_action( 'wp_enqueue_scripts', 'my_assets' );
 
 
 
-function tag_it() {
-	wp_enqueue_style( 'tag-style-theme', get_template_directory_uri() . '/assets/css/tagify.css' );
-	wp_enqueue_script( 'tag_scripts', get_template_directory_uri() . '/assets/js/jQuery.tagify.min.js' );
-	
-}
-
-add_action( 'wp_enqueue_scripts', 'tag_it' );
-
 
 function slick_slider() {
-	wp_enqueue_style( 'trasformation-space-styles', get_template_directory_uri() . '/assets/css/styles.css' );
 	wp_enqueue_style( 'slick-style-theme', get_template_directory_uri() . '/assets/css/slick-theme.css' );
 	wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/assets/css/slick.css' );
-	wp_enqueue_script( 'slick_scripts', get_template_directory_uri() . '/assets/js/slick.min.js' );
-	wp_enqueue_script( 'slick_sliders_init', get_template_directory_uri() . '/assets/js/slick_sliders_init.js' );
-
-	
+	wp_enqueue_script( 'slick_scripts', get_template_directory_uri() . '/assets/js/slick.min.js', array( 'jquery' ), true );
+	wp_enqueue_script( 'slick_sliders_init', get_template_directory_uri() . '/assets/js/slick_sliders_init.js', array( 'jquery' ), true );
 }
-
 add_action( 'wp_enqueue_scripts', 'slick_slider' );
 
-
-function fancybox() {
-	wp_enqueue_style( 'fancybox-theme', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css' );
-	wp_enqueue_script( 'fancybox-js', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js' );
-
-	
-}
-
-add_action( 'wp_enqueue_scripts', 'fancybox' );
 
 
 function tag_search() {
 	wp_enqueue_script( 'tagsinput-js', plugins_url() . '/search-tag/bootstrap-tagsinput.js' );	
-	wp_enqueue_script( 'typehead-js', plugins_url() . '/search-tag/typeahead.js' );	
+	wp_enqueue_script( 'typehead-js', plugins_url() . '/search-tag/typeahead.js', array( 'jquery' ), true );
 	wp_enqueue_style( 'tagsinput-style',  plugins_url() . '/search-tag/bootstrap-tagsinput.css' );
-	wp_enqueue_style( 'typehead-style',  plugins_url() . '/search-tag/typeahead.css' );
-	
-	
+	wp_enqueue_style( 'typehead-style',  plugins_url() . '/search-tag/typeahead.css' );	
 }
 add_action( 'wp_enqueue_scripts', 'tag_search' );
 
@@ -692,7 +660,7 @@ function get_bootcamps( $atts ) {
   	$recent_posts = wp_get_recent_posts($args);
 	$output = '<ul class="menu">';
 		foreach( $recent_posts as $recent ){
-			$output .= '<li class="menu-item"><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+			$output .= '<li class="menu-item"><a class="menu-item-link" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
 		}
 	$output .='</ul>';
 	return $output;

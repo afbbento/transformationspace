@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage transformationspace
  * @since 1.0
  * @version 1.2
  */
@@ -16,7 +16,7 @@
 
 		</div><!-- #content -->
 
-		<footer id="footer" class="site-footer" role="contentinfo">
+		<footer id="footer" class="footer" role="contentinfo">
 			<div class="container">		
 				<?php get_template_part( 'template-parts/footer/footer', 'bottom' ); ?>			
 			</div><!-- .wrap -->

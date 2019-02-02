@@ -91,7 +91,10 @@ jQuery(document).ready(function() {
 ?>
 
 <?php 
-$transformation_content = get_field('transformation_section');	
+$transformation_content = get_field('transformation_section');
+$transformation_content2 = get_field('transformation_section_title_blue');
+var_dump($transformation_content);
+var_dump($transformation_content2);
 if( $transformation_content ):
 ?>
 
@@ -99,8 +102,11 @@ if( $transformation_content ):
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <h1><?php echo $transformation_content['title']; ?><br><span
-                        class="blue"><?php echo $transformation_content['title_blue']; ?></span></h1>
+                <h1><?php echo $transformation_content['title']; ?><br>
+                <span class="blue">
+                    <?php echo $transformation_content['title_blue'];?>
+                </span>
+                </h1>
                 <p class="small"><?php echo $transformation_content['paragraph']; ?></p>
                 <div class="image-container"><img src="<?php echo $transformation_content['image']; ?>"></div>
                 <div class="row">
@@ -234,16 +240,21 @@ if( $image_banner ):
                 <div class="col-md-4">
                     <div class="address-box">
                         <div class="location"><?php the_sub_field('location'); ?></div>
-                        <p class="small"><strong><?php the_sub_field('address'); ?></strong>
-                            <br><?php the_sub_field('postal_code'); ?></p>
+                        <p class="small">
+                            <strong><?php the_sub_field('address'); ?></strong>
+                            <br><?php the_sub_field('postal_code'); ?>
+                        </p>
 
                         <p class="small phone">
                             <img src="<?php bloginfo('template_url'); ?>/assets/images/phone.png">
-                            <?php the_sub_field('phone'); ?>
+                            <a class="link" href="tel:<?php echo get_sub_field('phone'); ?>">
+                                <?php echo get_sub_field('phone'); ?>
+                            </a>
                         </p>
-                        <p class="small email">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/images/mail.png">
-                            <?php the_sub_field('email'); ?>
+                        <p class="small email"><img src="<?php bloginfo('template_url'); ?>/assets/images/mail.png">
+                            <a class="link" href="mailto:<?php echo get_sub_field('email'); ?>">
+                                <?php echo get_sub_field('email'); ?>
+                            </a>
                         </p>
                     </div>
                 </div>

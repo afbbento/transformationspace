@@ -3,7 +3,7 @@
  * SVG icons related functions and filters
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage transformationspace
  * @since 1.0
  */
 

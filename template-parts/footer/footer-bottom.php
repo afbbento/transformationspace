@@ -3,7 +3,7 @@
  * Displays footer bottom
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage transformationspace
  * @since 1.0
  * @version 1.0
  */
@@ -20,7 +20,7 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 		<?php if ( is_active_sidebar( 'footer-bottom-menu' ) ) : ?>
 		<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
 			<?php dynamic_sidebar( 'footer-bottom-menu' ); ?>
-			<div class="copyright">Copyright © 2018 | EDIT. - Disruptive Digital Education</div>
+			<div class="copyright">Copyright © 2019 | EDIT. - Disruptive Digital Education</div>
 		</div><!-- #primary-sidebar -->
 		<?php endif; ?>
 	</div>
