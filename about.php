@@ -92,9 +92,6 @@ jQuery(document).ready(function() {
 
 <?php 
 $transformation_content = get_field('transformation_section');
-$transformation_content2 = get_field('transformation_section_title_blue');
-var_dump($transformation_content);
-var_dump($transformation_content2);
 if( $transformation_content ):
 ?>
 
