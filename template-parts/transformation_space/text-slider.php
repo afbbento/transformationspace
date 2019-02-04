@@ -56,7 +56,7 @@ if ( ! empty( $terms ) ) {
 			<div class="col-md-6 borderless-box">
 				<div class="lead3"><?php echo $category; ?></div>
 				<h3><?php echo the_title(); ?></h3>
-				<div class="line"></div>
+				<div class="simple-line"></div>
 				<p class="normal"><?php echo get_excerpt(155); ?></p>
 				<div class="button-container">
 					<a href="<?php the_permalink(); ?>" class="btn btn-black shadow">read more</a>

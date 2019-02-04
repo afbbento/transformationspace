@@ -26,12 +26,5 @@ if ($category=='bootcamp'){
 	get_template_part( 'blog-post', get_post_format() );
 }
 
-	
-
-	
-	
-
-
-
 
 get_footer();

@@ -1018,36 +1018,7 @@ input + input[type="submit"] {
 	padding: 0.75em 2em;
 }
 
-button.secondary,
-input[type="reset"],
-input[type="button"].secondary,
-input[type="reset"].secondary,
-input[type="submit"].secondary {
-	background-color: #ddd;
-	color: #222;
-}
 
-button:hover,
-button:focus,
-input[type="button"]:hover,
-input[type="button"]:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-	background: #767676;
-}
-
-button.secondary:hover,
-button.secondary:focus,
-input[type="reset"]:hover,
-input[type="reset"]:focus,
-input[type="button"].secondary:hover,
-input[type="button"].secondary:focus,
-input[type="reset"].secondary:hover,
-input[type="reset"].secondary:focus,
-input[type="submit"].secondary:hover,
-input[type="submit"].secondary:focus {
-	background: #bbb;
-}
 
 /* Placeholder text color -- selectors need to be separate to work. */
 ::-webkit-input-placeholder {
@@ -1168,7 +1139,6 @@ a:focus {
 
 a:hover,
 a:active {
-	color: #000;
 	outline: 0;
 }
 
@@ -1386,21 +1356,6 @@ a:active {
 /*--------------------------------------------------------------
 13.0 Layout
 --------------------------------------------------------------*/
-
-html {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	-webkit-box-sizing: inherit;
-	-moz-box-sizing: inherit;
-	box-sizing: inherit;
-}
 
 body {
 	background: #fff;

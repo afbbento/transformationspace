@@ -1,34 +1,5 @@
 jQuery(document).ready(function ($) {
 
-  /* set select value when open bootCampModal */
-
-  $('.bootcamp-js').click(function () {
-    //console.log("clicked");
-    $("#select-bootcamp").val("User Experience Architect");
-    $(".select-selected").text("User Experience Architect");
-
-    $(".select-items div").removeClass("same-as-selected");
-    $(".select-items div.1").addClass("same-as-selected");
-
-  });
-
-  $('.bootcamp-js2').click(function () {
-    //console.log("clicked2");
-    $("#select-bootcamp").val("Fullstack Development Engineer");
-    $(".select-selected").text("Fullstack Development Engineer");
-    $(".select-items div").removeClass("same-as-selected");
-    $(".select-items div.2").addClass("same-as-selected");
-  });
-
-  $('.bootcamp-js3').click(function () {
-    //console.log("clicked3");
-    $("#select-bootcamp").val("Data & Machine Learning Architect");
-    $(".select-selected").text("Data & Machine Learning Architect");
-    $(".select-items div").removeClass("same-as-selected");
-    $(".select-items div.3").addClass("same-as-selected");
-  });
-
-
   document.addEventListener('wpcf7submit', function (e) {
 
     if ($("input").hasClass("wpcf7-not-valid")) {
@@ -159,7 +130,7 @@ jQuery(document).ready(function ($) {
         if (data.result === 'success') {
           // Yeahhhh Success
           console.log(data.msg)
-          jQuery('#mce-EMAIL').css('borderColor', '#ffffff')
+       //   jQuery('#mce-EMAIL').css('borderColor', '#ffffff')
           jQuery('#subscribe-result').css('color', 'rgb(53, 114, 210)')
           jQuery('#subscribe-result').html('<p>Thank you for subscribing. We have sent you a confirmation email.</p>')
           jQuery('#mce-EMAIL').val('')

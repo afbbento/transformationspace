@@ -138,29 +138,24 @@ textarea:focus {
 }
 
 #mc_embed_signup input[type="submit"] {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans";
+  font-style: normal;
   font-weight: bold;
-  font-size: 16px;
-  text-align: center;
-  line-height: 48px;
-  padding: 0 30px;
-  border: 0;
-  outline: 0;
+  line-height: normal;
+  font-size: 13px;
+  text-transform: lowercase; 
 }
 
-.btn-yellow {
-  color: #4b5ff7;
-  background-color: #eef301;
-}
-
-.btn-yellow:hover {
-  background: #000000;
-  color: #faff00;
+.btn-green {
+  background: #41CC7B;
+  color: #FFFFFF;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .plus,
 .button,
-.btn {
+.btn,
+.enroll-btn {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   transition-property: all;
@@ -431,11 +426,6 @@ textarea:focus {
   margin-bottom: 0;
 }
 
-.header-section-bottom {
-  background: #fff;
-  border: none;
-  margin-top: -29px;
-}
 
 .bootcamp-location {
   width: auto;
@@ -465,26 +455,6 @@ textarea:focus {
   margin: 0 auto;
 }
 
-.header-section-bottom .col-md-6 {
-  padding-bottom: 0;
-}
-
-.header-section-bottom .col-md-6:nth-child(1) p,
-.header-section-bottom .col-md-6:nth-child(2) p {
-  font-family: Raleway;
-
-  font-weight: 500;
-  line-height: 23px;
-  font-size: 14px;
-  color: #75757d;
-  opacity: 0.9;
-}
-
-.header-section-bottom .col-md-6:nth-child(1),
-.header-section-bottom .col-md-6:nth-child(2) {
-  padding-right: 15px;
-  padding-left: 15px;
-}
 
 /* footer */
 
@@ -965,7 +935,7 @@ label.message {
   padding-bottom: 5px;
 }
 
-.wpcf7-form-control-wrap.select-bootcamp {
+.wpcf7-form-control-wrap.dynamicselect-585 {
   display: none;
 }
 
@@ -1195,9 +1165,7 @@ label.phone {
 
 
 @media only screen and (max-width: 992px) {
-  .header-section-bottom .col-md-6 {
-    padding-bottom: 20px;
-  }
+
 
   .form-inline .form-group {
     margin-bottom: 15px;
@@ -1282,9 +1250,6 @@ label.phone {
     padding-bottom: 20px;
   }
 
-  .header-section-bottom {
-    margin-top: 51px;
-  }
 
   .bootcamp-item .plus {
     text-align: center;

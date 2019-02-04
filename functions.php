@@ -9,13 +9,13 @@
  * @since 1.0
  */
 
-/**
- * Twenty Seventeen only works in WordPress 4.7 or later.
- */
-if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
-	require get_template_directory() . '/inc/back-compat.php';
-	return;
-}
+
+/////////////////////////////////////////
+// Library includes
+////////////////////////////////////////
+
+
+ include_once dirname(__FILE__) . "/libs/custom-post-type.php";	
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -25,6 +25,50 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
  * as indicating support for post thumbnails.
  */
 function transformationspace_setup() {
+
+
+
+
+	/* add a shortcode for dynamic select using functions and hooks */
+	function dynamic_select($choices, $args = array()) {
+
+		global $post;
+		$bootCampTitle = $post->post_title;
+
+		$args = array(
+			'post_type' => 'Bootcamps',
+			'post_status' => 'publish',
+		);
+		
+		$the_query = new WP_Query( $args );
+		
+		while ( $the_query->have_posts() ) :
+		$the_query->the_post();
+		$output[get_the_title()] = get_the_title();
+		endwhile;
+		
+
+		foreach ($output as $myString) {
+			$outputDecoded[] = html_entity_decode($myString);
+		}
+		//var_dump($outputDecoded);
+		
+	
+		if (in_array($bootCampTitle, $outputDecoded)) {
+		//echo "Match found";
+		$choices = array($bootCampTitle => $bootCampTitle);
+		$choices = array_merge($choices, $output);
+		} else {
+		//echo "Match not found";
+		$choices = array('Select a bootcamp' => '');
+		$choices = array_merge($choices, $output);
+		}
+
+		return $choices;
+
+		}
+		add_filter('wpcf7_dynamic_select', 'dynamic_select', 10, 2);
+
 
 	function _wp_upload_dir_baseurl(){
 	
@@ -36,8 +80,8 @@ function transformationspace_setup() {
 	add_action( 'admin_menu', 'my_admin_menu' );
 
 	function my_admin_menu() {
-		//add_menu_page( 'Locations', 'Locations', 'manage_options', '/post.php?post=165&action=edit', 'myplguin_admin_page', 'dashicons-location', 6  );
 		add_menu_page(__('Locations'), __('Locations'), 'edit_posts', 'post.php?post=165&action=edit', '', 'dashicons-location', 6);
+		add_menu_page(__('Team'), __('Team'), 'edit_posts', 'post.php?post=187&action=edit', '', 'dashicons-admin-users', 6);
 	}
 	
 	/*
@@ -610,7 +654,7 @@ function my_scripts() {
 	wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/assets/js/jquery.ui.widget.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'jquery-easing', get_template_directory_uri() . '/assets/js/jquery.easing.1.3.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), true );
-//	wp_enqueue_script( 'custom-lp', get_template_directory_uri() . '/assets/js/custom-lp.js', array( 'jquery' ), true );
+	wp_enqueue_script( 'custom-lp', get_template_directory_uri() . '/assets/js/custom-lp.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'canvasloader', 'https://cdn.jsdelivr.net/gh/heartcode/CanvasLoader@0.9.1/js/heartcode-canvasloader-min.min.js', null, true );
 	
 }
@@ -655,7 +699,11 @@ add_action( 'wp_enqueue_scripts', 'tag_search' );
 function get_bootcamps( $atts ) {
 	$limit = $atts['limit'];
 	
-	$args = array( 'numberposts' => $limit, 'category' => 14 );
+	$args = array( 
+			'post_type' => 'Bootcamps',
+			'post_status' => 'publish',
+			'numberposts' => $limit
+		);
    		
   	$recent_posts = wp_get_recent_posts($args);
 	$output = '<ul class="menu">';
@@ -712,12 +760,13 @@ function create_excerpt($excerpt, $count){
 
 
 
-function your_prefix_after_setup_theme() {
+function transformationspace_after_setup_theme() {
 
 	// register our translatable strings - again first check if function exists.
  
 	 if ( function_exists( 'pll_register_string' ) ) {
- 
+		pll_register_string('Button bootcamp single', 'enroll now');
+		pll_register_string('Button bootcamp list', 'know more');
 		pll_register_string('Button newsletter', 'Get started');
 		pll_register_string('input newsletter', 'Enter your email');
 		pll_register_string('Text newsletter', 'Looking for the right career move?');
@@ -731,7 +780,7 @@ function your_prefix_after_setup_theme() {
  
 	 }
  }
-  add_action( 'after_setup_theme', 'your_prefix_after_setup_theme' );
+  add_action( 'after_setup_theme', 'transformationspace_after_setup_theme' );
 
 
 

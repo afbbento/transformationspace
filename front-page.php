@@ -84,9 +84,8 @@ get_header(); ?>
 	 				<?php 
 						$posts = get_posts(array(
 							'posts_per_page'	=> 1,
-							'post_type'			=> 'post',
-							'orderby'        => 'rand',
-							'category' => 14
+							'post_type'			=> 'Bootcamps',
+							'orderby'        => 'rand'
 						));
 						if( $posts ):
 							foreach( $posts as $post ): 

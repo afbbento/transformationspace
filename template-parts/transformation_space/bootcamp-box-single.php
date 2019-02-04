@@ -25,7 +25,7 @@
                         <div class="line visible-xs"></div>
                         <p class="x-small">dates:</p>                        
                         <div class="dates"><?php the_field('start_date'); ?> to <br> <?php the_field('end_date'); ?></div>
-                        <a href="<?php the_permalink(); ?>" class="btn btn-blue btn-shadow hidden-xs"> enroll now</a>
+                        <a data-fancybox data-src="#bootCampModal" href="javascript:;" class="btn btn-blue btn-shadow hidden-xs <?php echo $post->post_name; ?>"><?php pll_e('enroll now'); ?></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -33,7 +33,7 @@
                         <h3><?php the_field('weeks'); ?> weeks <br><?php the_field('days'); ?> days <span>a week</span></h3>
                         <div class="time"><?php the_field('schedule'); ?></div>
                         <div class="weekdays"><?php the_field('days_of_the_week'); ?></div>
-                        <a href="<?php the_permalink(); ?>" class="btn btn-blue btn-shadow visible-xs"> enroll now</a>
+                        <a data-fancybox data-src="#bootCampModal" href="javascript:;" class="btn btn-blue btn-shadow visible-xs"><?php pll_e('enroll now'); ?></a>
                     </div>
                 </div>
             </div>

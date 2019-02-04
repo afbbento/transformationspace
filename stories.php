@@ -69,7 +69,7 @@ get_header();
 			<div class="col-md-10 col-md-offset-1">
 				<?php 
 		         		$args = array(
-						    'category_name' => 'Bootcamp'						    
+						    'post_type' => 'Bootcamps'						    
 						);
 						// query
 						$the_query = new WP_Query( $args );

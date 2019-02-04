@@ -138,22 +138,24 @@
 						?>
 
                         <div class="event-item bordered-box <?php echo $tags; ?>">
-                            <div class="event-location <?php echo $bg; ?>"><?php echo get_sub_field('city'); ?></div>
+                            <div class="event-location <?php echo $bg; ?>">
+                                <?php the_sub_field('city'); ?>
+                            </div>
                             <div class="row align-vertical">
                                 <div class="col-md-3">
-                                    <div class="event-day"><?php echo get_sub_field('day'); ?></div>
-                                    <div class="event-month"><?php echo get_sub_field('month'); ?></div>
+                                    <div class="event-day"><?php the_sub_field('day'); ?></div>
+                                    <div class="event-month"><?php the_sub_field('month'); ?></div>
                                 </div>
                                 <div class="col-md-7">
                                     <div class="event-item-text">
-                                        <div class="lead3"><?php echo get_sub_field('title'); ?></div>
-                                        <p class="small"><?php echo get_sub_field('text'); ?></p>
+                                        <div class="lead3"><?php the_sub_field('title'); ?></div>
+                                        <p class="small"><?php the_sub_field('text'); ?></p>
                                     </div>
                                 </div>
                                 <div class="col-md-2 align-center link-event">
-                                    <a id="bootcampModal" data-fancybox data-src="#bootCampModal" href="javascript:;"
-                                        class="button bootcamp-js btn-plus">
-										<i class="fas fa-plus"></i>
+                                    <a id="eventModal" data-fancybox data-src="#eventModal" href="javascript:;"
+                                        class="button events-js btn-plus">
+                                        <i class="fa fa-plus"></i>
                                     </a>
                                 </div>
                             </div>

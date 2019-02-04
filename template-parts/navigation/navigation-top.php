@@ -13,26 +13,28 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 $template_name = get_page_template_slug( $post->ID );
 $categories = get_the_category();
 
-$menu_color = '';
+$color_theme = 'theme--dark-alt';
+$nav_theme = 'theme--dark';
 
 if (!empty($template_name)) {
-	$menu_color = 'navbar--white-bg';
-	if ($template_name =='bootcamps.php' || $template_name == 'general-info.php'){
-		$menu_color = 'navbar--white-bg';
+	if ($template_name =='bootcamps.php' || $template_name == 'general-info.php' ){
+		$color_theme = $nav_theme = 'theme--light';
+	}
+	if ($template_name =='stories.php' || $template_name =='blog.php'){
+		$color_theme = 'theme--dark';
 	}
 }
 
 if(!empty( $categories)) {
 	$cat_name = $categories[0]->name;
-	$menu_color = 'navbar--white-bg';
 	if ($cat_name == 'Bootcamp') {
-		$menu_color = 'navbar--white-bg';
+		$color_theme = $nav_theme = 'theme--light';
 	}
 }
 
 ?>
 
-<nav class="navbar navbar-default navbar-fixed-top <?php echo $menu_color; ?>">
+<nav class="navbar navbar-default navbar-fixed-top <?php echo $color_theme; ?>">
     <div class="container">
       	<div class="row">
       	<?php 
@@ -52,7 +54,7 @@ if(!empty( $categories)) {
       	</div>
     </div>
 </nav>
-<div class="right-nav">
+<div class="right-nav <?php echo $nav_theme; ?>">
 	<div class="logo-menu-mobile">
 		<img class="visible-xs logo-mobile" src="<?php echo _wp_upload_dir_baseurl(); ?>/logo-mobile.svg">	
 	</div>

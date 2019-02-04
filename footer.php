@@ -16,7 +16,7 @@
 
 </div><!-- #content -->
 
-<footer id="footer" class="footer" role="contentinfo">
+<footer id="footer" class="footer theme--dark" role="contentinfo">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 col-md-12">
@@ -75,7 +75,7 @@
                         ?>
                     <div class="col-md-3 col-sm-6">
                         <div class="lead1 upper text-left"><?php echo get_sub_field('location'); ?></div>
-                        <div class="address-box">
+                        <div class="address-box theme--light">
                             <p class="small address">
                                 <img src="<?php echo _wp_upload_dir_baseurl(); ?>/location-icon.svg">
                                 <strong><?php echo get_sub_field('address'); ?></strong>
@@ -186,7 +186,7 @@ for (i = 0; i < x.length; i++) {
     /*for each element, create a new DIV that will act as the selected item:*/
     a = document.createElement("DIV");
     a.setAttribute("class", "select-selected");
-    //a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
     x[i].appendChild(a);
     /*for each element, create a new DIV that will contain the option list:*/
     b = document.createElement("DIV");
@@ -284,7 +284,7 @@ jQuery(document).ready(function($) {
 <script>
 jQuery(document).ready(function($) {
     $(".enroll-btn .menu-item-js").attr('data-fancybox', '');
-    $(".enroll-btn .menu-item-js").attr('data-src', '#moreInfoModal');
+    $(".enroll-btn .menu-item-js").attr('data-src', '#bootCampModal');
 
 });
 </script>

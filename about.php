@@ -235,7 +235,7 @@ if( $image_banner ):
 				?>
             <div class="row row-location">
                 <div class="col-md-4">
-                    <div class="address-box">
+                    <div class="address-box theme-light">
                         <div class="location"><?php the_sub_field('location'); ?></div>
                         <p class="small">
                             <strong><?php the_sub_field('address'); ?></strong>
