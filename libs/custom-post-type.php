@@ -14,7 +14,29 @@
 ////////////////////////////////////////
 
 function register_post_types() {
-	
+
+	$args = array(
+		'label' => 'Locations',
+        'description' => '',
+        'taxonomies' => array('category','post_tag'),
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'capability_type' => 'post',
+		'hierarchical' => true,
+		'menu_icon' => 'dashicons-location',
+		'query_var' => true,
+		'supports' => array(
+		  'title',
+		  'editor',
+		  'trackbacks',
+		  'custom-fields',
+		  'comments',
+		  'author'
+		) 
+	  );
+	register_post_type( 'Locations', $args );
+
 	$args = array(
 		'label' => 'Bootcamps',
 		'description' => '',
@@ -33,7 +55,8 @@ function register_post_types() {
 		  'trackbacks',
 		  'custom-fields',
 		  'comments',
-		  'author'
+			'author',
+			'thumbnail'
 		) 
 	  );
     register_post_type( 'Bootcamps', $args );
@@ -78,7 +101,8 @@ function register_post_types() {
 		  'trackbacks',
 		  'custom-fields',
 		  'comments',
-		  'author'
+			'author',
+			'thumbnail'
 		) 
 	  );
     register_post_type( 'Blog', $args );
@@ -100,10 +124,36 @@ function register_post_types() {
 		  'trackbacks',
 		  'custom-fields',
 		  'comments',
-		  'author'
+			'author',
+			'thumbnail'
 		) 
 	  );
 	register_post_type( 'Stories', $args );
+
+	$args = array(
+		'label' => 'Events',
+        'description' => '',
+        'taxonomies' => array('category','post_tag'),
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'capability_type' => 'post',
+		'hierarchical' => true,
+		'menu_icon' => 'dashicons-calendar-alt',
+		'query_var' => true,
+		'supports' => array(
+		  'title',
+		  'editor',
+		  'trackbacks',
+		  'custom-fields',
+		  'comments',
+			'author',
+			'thumbnail'
+		) 
+	  );
+	register_post_type( 'Events', $args );
+
+
 
 	}
 	add_action( 'init', 'register_post_types' );

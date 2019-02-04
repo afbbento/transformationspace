@@ -26,7 +26,10 @@
  */
 function transformationspace_setup() {
 
-
+	function remove_admin_login_header() {
+		remove_action('wp_head', '_admin_bar_bump_cb');
+	}
+	add_action('get_header', 'remove_admin_login_header');
 
 
 	/* add a shortcode for dynamic select using functions and hooks */
@@ -80,8 +83,7 @@ function transformationspace_setup() {
 	add_action( 'admin_menu', 'my_admin_menu' );
 
 	function my_admin_menu() {
-		add_menu_page(__('Locations'), __('Locations'), 'edit_posts', 'post.php?post=165&action=edit', '', 'dashicons-location', 6);
-		add_menu_page(__('Team'), __('Team'), 'edit_posts', 'post.php?post=187&action=edit', '', 'dashicons-admin-users', 6);
+		//add_menu_page(__('Locations'), __('Locations'), 'edit_posts', 'post.php?post=165&action=edit', '', 'dashicons-location', 6);
 	}
 	
 	/*
@@ -648,6 +650,23 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 
+function my_assets() {
+	$ts_theme_version = '5.2';
+	wp_enqueue_style( 'Raleway-font', 'https://fonts.googleapis.com/css?family=Raleway:400,700,900' );
+	wp_enqueue_style( 'Abhaya-font', 'https://fonts.googleapis.com/css?family=Abhaya+Libre:400,600' );
+	wp_enqueue_style( 'hamburgers-style', get_template_directory_uri() . '/assets/css/hamburgers.min.css' );
+	wp_enqueue_style( 'slick-style-theme', get_template_directory_uri() . '/assets/css/slick-theme.css' );
+	wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/assets/css/slick.css' );
+	wp_enqueue_style( 'tag-style-theme', get_template_directory_uri() . '/assets/css/tagify.css' );
+	wp_enqueue_style( 'tagsinput-style',  plugins_url() . '/search-tag/bootstrap-tagsinput.css' );
+	wp_enqueue_style( 'typehead-style',  plugins_url() . '/search-tag/typeahead.css' );
+	wp_enqueue_style( 'fancybox-style', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css' );
+	wp_enqueue_style( 'styles', get_template_directory_uri() . '/assets/css/styles.css', '', $ts_theme_version);
+	wp_enqueue_style( 'landing-style', get_template_directory_uri() . '/assets/css/style-landing-page.css', '', $ts_theme_version);	
+}
+
+add_action( 'wp_enqueue_scripts', 'my_assets' );
+
 function my_scripts() {
 	wp_enqueue_script( 'tag_scripts', get_template_directory_uri() . '/assets/js/jQuery.tagify.min.js' );
 	wp_enqueue_script( 'fancybox-js', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js' );
@@ -656,45 +675,14 @@ function my_scripts() {
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'custom-lp', get_template_directory_uri() . '/assets/js/custom-lp.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'canvasloader', 'https://cdn.jsdelivr.net/gh/heartcode/CanvasLoader@0.9.1/js/heartcode-canvasloader-min.min.js', null, true );
-	
+	wp_enqueue_script( 'slick_scripts', get_template_directory_uri() . '/assets/js/slick.min.js', array( 'jquery' ), true );
+	wp_enqueue_script( 'slick_sliders_init', get_template_directory_uri() . '/assets/js/slick_sliders_init.js', array( 'jquery' ), true );
+	wp_enqueue_script( 'tagsinput-js', plugins_url() . '/search-tag/bootstrap-tagsinput.js' );	
+	wp_enqueue_script( 'typehead-js', plugins_url() . '/search-tag/typeahead.js', array( 'jquery' ), true );	
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts', 40 );
 
 
-
-function my_assets() {
-	$ts_theme_version = '5.2';
-	wp_enqueue_style( 'Raleway-font', 'https://fonts.googleapis.com/css?family=Raleway:400,700,900' );
-	wp_enqueue_style( 'Abhaya-font', 'https://fonts.googleapis.com/css?family=Abhaya+Libre:400,600' );
-	wp_enqueue_style( 'hamburgers-style', get_template_directory_uri() . '/assets/css/hamburgers.min.css' );
-	wp_enqueue_style( 'tag-style-theme', get_template_directory_uri() . '/assets/css/tagify.css' );
-	wp_enqueue_style( 'fancybox-style', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css' );
-	wp_enqueue_style( 'trasformation-space-styles', get_template_directory_uri() . '/assets/css/styles.css', '', $ts_theme_version);
-	wp_enqueue_style( 'landing-style', get_template_directory_uri() . '/assets/css/style-landing-page.css', '', $ts_theme_version);	
-}
-
-add_action( 'wp_enqueue_scripts', 'my_assets' );
-
-
-
-
-function slick_slider() {
-	wp_enqueue_style( 'slick-style-theme', get_template_directory_uri() . '/assets/css/slick-theme.css' );
-	wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/assets/css/slick.css' );
-	wp_enqueue_script( 'slick_scripts', get_template_directory_uri() . '/assets/js/slick.min.js', array( 'jquery' ), true );
-	wp_enqueue_script( 'slick_sliders_init', get_template_directory_uri() . '/assets/js/slick_sliders_init.js', array( 'jquery' ), true );
-}
-add_action( 'wp_enqueue_scripts', 'slick_slider' );
-
-
-
-function tag_search() {
-	wp_enqueue_script( 'tagsinput-js', plugins_url() . '/search-tag/bootstrap-tagsinput.js' );	
-	wp_enqueue_script( 'typehead-js', plugins_url() . '/search-tag/typeahead.js', array( 'jquery' ), true );
-	wp_enqueue_style( 'tagsinput-style',  plugins_url() . '/search-tag/bootstrap-tagsinput.css' );
-	wp_enqueue_style( 'typehead-style',  plugins_url() . '/search-tag/typeahead.css' );	
-}
-add_action( 'wp_enqueue_scripts', 'tag_search' );
 
 function get_bootcamps( $atts ) {
 	$limit = $atts['limit'];
@@ -795,8 +783,7 @@ function last_word_blue($string){
 
 function get_newsletter_sidebar( $atts ) {
 
-	$output .='
-		<p class="extra-bold newsletter-sidebar-title">Subscribe our newsletter</p>
+	$output ='<p class="extra-bold newsletter-sidebar-title">Subscribe our newsletter</p>
 				<p>Find out about upcoming programs and events</p>
 					<div id="mc_embed_signup">
 							<form action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?" method="get" id="newsletter-blog" name="mc-embedded-subscribe-form" class="form-inline validate newsletter-sidebar newsletter-blog" target="_blank">	
@@ -816,7 +803,7 @@ add_shortcode( 'newsletter_sidebar', 'get_newsletter_sidebar' );
 
 
 function get_career_sidebar( $atts ) {
-	$output .='<div class="widget-career"><h1>looking for a new career?</h1><img src="/wp-content/uploads/widget-career-bg.png" /><div class="button-container"><a class="btn btn-black shadow" tabindex="0" href="#">get your chance</a></div></div>';
+	$output ='<div class="widget-career"><h1>looking for a new career?</h1><img src="'.get_template_directory_uri().'/assets/images/widget-career-bg.png" /><div class="button-container"><a class="btn btn-black shadow" tabindex="0" href="#">get your chance</a></div></div>';
 	return $output;
 }
 
@@ -824,9 +811,9 @@ add_shortcode( 'career_sidebar', 'get_career_sidebar' );
 
 
 function get_started_sidebar( $atts ) {
-	$output .= '
-			<div class="get-started-widget">
-				<img src="/wp-content/uploads/get-started.jpg" />
+
+	$output = '<div class="get-started-widget">
+				<img src="'.get_template_directory_uri().'/assets/images/get-started.jpg" />
 				<h1>Get Started</h1>
 				<p>15-Day free trial. Get set up in 5 minutes.</p>
 				<div class="button-container">

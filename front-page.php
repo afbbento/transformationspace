@@ -318,7 +318,6 @@ if( $blog_section ):
 <section class="blog">
 	<div class="container">
 		<?php
-
 			get_template_part( 'template-parts/transformation_space/article-slider');
 		?>
 	</div>

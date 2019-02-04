@@ -13,15 +13,16 @@
  */
 // args
 $args = array(
-    'category_name' => 'Blog',
+    'post_type' => 'Blog',
 );
 // query
 $the_query = new WP_Query( $args );
-
+//var_dump($the_query);
 ?>
 <div class="article-slider vertical-nav-right white-text">
 <?php if( $the_query->have_posts() ): ?>
-	<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+	<?php while( $the_query->have_posts() ) : 
+		$the_query->the_post(); ?>
 		<div>
 			<div class="container">
 		 		<div class="row">

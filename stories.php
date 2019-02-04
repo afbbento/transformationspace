@@ -170,7 +170,7 @@ get_header();
 		                        <p class="x-small title"><span><?php echo $post_title; ?></span><span class="time"><?php echo vimeoVideoDuration($video_ID); ?></span></p>
 		                        <p class="x-small"><?php echo $text; ?></p>
 		                        <div class="post-meta">
-					 				<p class="x-small"><?php echo transformation_time_link($story->ID); ?>
+					 				<p class="x-small"><?php echo transformation_time_link($story->ID, $post_date); ?>
 					 				</p>
 					 			</div>	
 		                     </div>

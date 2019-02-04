@@ -194,7 +194,7 @@ function transformationspace_categorized_blog() {
 	return $category_count > 1;
 }
 
-function transformation_time_link($post_id) {
+function transformation_time_link($post_id, $post_date) {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	
 
