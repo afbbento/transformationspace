@@ -110,8 +110,9 @@ get_header();
         						<div class="col-md-12">
         							<div class="row">  
 					<?php
-						
-						$stories = get_posts(array(							
+
+						$stories = get_posts(array(	
+							'post_type'	 => 'Stories',						
 							'meta_query' => array(
 								array(
 									'key' => 'related_bootcamp', // name of custom field
@@ -120,12 +121,14 @@ get_header();
 								)
 							)
 						));
+						//var_dump($stories);
 
 				 		if( $stories ): 
 					 
 						$i = 0;
 						foreach( $stories as $story ): 
 
+						
 						$post_title = $story->post_title;
 						$text = get_field('text', $story->ID);
 						$video_ID = get_field('vimeo_video_id', $story->ID);
@@ -255,7 +258,7 @@ jQuery(".get-stories").click(function(event){
 		         <div class="bordered-box lined-box">
 		         	<?php 
 		         		$args = array(
-						    'category_name' => 'Stories',
+						    'post_type' => 'Stories',
 						    'posts_per_page'   => 1,
 						);
 						// query
@@ -296,7 +299,7 @@ jQuery(".get-stories").click(function(event){
 	 	<div class="col-md-10 col-md-offset-1">
 	 		<?php 
 	      		$args = array(
-				    'category_name' => 'Stories',
+				    'post_type' => 'Stories',
 				    'offset'        => 1,
 					);
 					// query
