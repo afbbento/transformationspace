@@ -68,11 +68,13 @@
 	 	   			<div class="lead1">more stories</div>
 	 	   			<div class="stories-slider">
 
-	 	   			<?php 
-		         		$args = array(
-						    'category_name' => 'Stories'
+						<?php
+						// query 
+						$args = array(
+							'post_type' => 'Stories',
+							'post_status' => 'publish',
 						);
-						// query
+						
 						$the_query = new WP_Query( $args );
 					 if( $the_query->have_posts() ): 
 						 while( $the_query->have_posts() ) : $the_query->the_post(); 

@@ -21,7 +21,8 @@ function register_post_types() {
 		'public' => true,
 		'show_ui' => true,
 		'show_in_menu' => true,
-		'capability_type' => 'post',
+        'capability_type' => 'post',
+        'taxonomies' => array('category','post_tag'),
 		'hierarchical' => true,
 		'menu_icon' => 'dashicons-calendar',
 		//'rewrite' => array('slug' => '/bootcamps/'),
@@ -80,7 +81,7 @@ function register_post_types() {
 		  'author'
 		) 
 	  );
-    register_post_type( 'Stories', $args );
+    register_post_type( 'Blog', $args );
     
     $args = array(
 		'label' => 'Stories',
@@ -102,7 +103,7 @@ function register_post_types() {
 		  'author'
 		) 
 	  );
-	register_post_type( 'Blog', $args );
+	register_post_type( 'Stories', $args );
 
 	}
 	add_action( 'init', 'register_post_types' );
