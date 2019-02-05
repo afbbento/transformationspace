@@ -312,36 +312,13 @@ textarea:focus {
   padding: 3px;
 }
 
-.slick-dots li.slick-active button.black-dots {
-  background: #4958fb;
-}
+
 
 .slick-prev,
 .slick-next {
   top: calc(50% + 19px);
 }
 
-.slick-prev:before,
-.slick-next:before {
-  content: none;
-}
-
-.slick-prev,
-.slick-prev:hover {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32.6 52.5'%3E%3Cpath d='M4.2 26.2l22-22 2.1 2.1L8.4 26.2l19.9 19.9-2.1 2.1-22-22z' fill='none' stroke='%234B5FF7' stroke-width='6' stroke-miterlimit='10'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-}
-
-.slick-next,
-.slick-next:hover {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32.6 52.5'%3E%3Cpath d='M28.3 26.2l-22 22-2.1-2.1 19.9-19.9L4.2 6.3l2.1-2.1 22 22z' fill='none' stroke='%234B5FF7' stroke-width='6' stroke-miterlimit='10'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-}
-
-.slick-prev:hover,
-.slick-next:hover {
-  opacity: 1;
-}
 
 #slider-bootcamp .slick-list {
   cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAmCAYAAAC29NkdAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAjdJREFUeNrsmDtywjAQhv1gqOw0SRMOYHo4QDgA5ACuUkEPF6BKFXIADsABgqtUPkBIkzT4AKFKZSqqSDOrzI5GMpIlGWcmO/OPX/L600rWrh16YlsQ3RAV3oWtIzi3JBrDfkmUtwkQwx2Jvmr4jIkSoiGMwA46Wsv8CrhpjSGm96REEXd+DdK20DIcVVdwbQh+P+pEEMPpGI5Kj+gFXSsAiNoAdTxF04buzwV+D0Qz1i6oCccixgz7yODhLKIZnI+4dnOJ31vcrgMOxlwPDgqAb5LzW8GxKAjPRCOJjwwDLrkoxLAOul4DN6BKC9BLgodiDUuFbevr3hBwy4xryNgEUASZWoDauUh1JczBbRtzMbWV1xILvJbbP+BfA0wg/SWmL4kri1COPkIxvINtWVVumdoQxPIon8vpknWCqoeVY12IJM3HD7C9RvWAVgRpBpiAkwQeuIdso1It5+jTYYQUccOfoNKMtl/5Cs5pr58k84YVtyNUfs00socM9jfyKoAbhUldoDY6gGdhA4WbMNw70T3k6IIbHlPLIc1O8BwMFJYFXOJPoRQvIFIuasYS1wDnAPsVVUnpEFJ5od6j/VTSW6eQ5wBx1O7Q50FjkCqAGff11ihkqPh29dALk8Ax/8+GZopXom/Yt5KZQo0lQBXyZCFw2oA6kN6lAJuErA3YFKQRYBVk4Rn8C0S2YKWXb+hoKfnvcjRYcgb4wLfQWxmkDStsVNQ5VB9XqAqJDX3SEfgkevwRYACkVY5Q/VzGsgAAAABJRU5ErkJggg=="),
@@ -468,6 +445,7 @@ section.banner {
 }
 
 #mce-responses .response {
+  display: none;
   min-height: 26px;
   margin: 0;
   margin-top: 15px;

@@ -130,28 +130,29 @@
 			whitelist: list
 
 		}).on('add', function(e, tagName) {
-
-
+            console.log(e);
+            console.log(tagName);
 			var all_tags = jQuery('[name=tags]').data('tagify').value;
 			var all_items = jQuery('.event-item');
 
 			jQuery(".event-item").each(function(item) {
 
+                // get each tag from tagify input
 				jQuery.each(all_tags, function(index, value) {
-					console.log(all_tags);
                     the_tag = all_tags[index].value;
                     the_tag = the_tag.toLowerCase();
+                    console.log(the_tag);
 				});
 
 				var active = the_tag;
 				all_items.hide().filter("." + active).fadeIn(450);
-
-
-			});
+            });
+            
 		}).on('remove', function(e, tagName) {
+            console.log(e);
+            console.log(tagName);
 
-			var all_items = jQuery('.event-item');
-			all_items.fadeIn(450);
+        
 
 		});
 

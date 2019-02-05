@@ -105,52 +105,8 @@ jQuery(document).ready(function ($) {
     });
   });
 
-  /* embeb form mailchimp */
-  var $form = jQuery('#mc-embedded-subscribe-form');
 
-  if ($form.length > 0) {
-    jQuery('#mc-embedded-subscribe-form input[type=submit]').bind('click', function (event) {
-      if (event) event.preventDefault()
-      register($form)
-    });
-  }
 
-  function register($form) {
-    jQuery.ajax({
-      type: $form.attr('method'),
-      url: $form.attr('action'),
-      data: $form.serialize(),
-      cache: false,
-      dataType: 'jsonp',
-      contentType: "application/json; charset=utf-8",
-      error: function (err) {
-        alert("Could not connect to the registration server. Please try again later.");
-      },
-      success: function (data) {
-        if (data.result === 'success') {
-          // Yeahhhh Success
-          console.log(data.msg)
-       //   jQuery('#mce-EMAIL').css('borderColor', '#ffffff')
-          jQuery('#subscribe-result').css('color', 'rgb(53, 114, 210)')
-          jQuery('#subscribe-result').html('<p>Thank you for subscribing. We have sent you a confirmation email.</p>')
-          jQuery('#mce-EMAIL').val('')
-          jQuery('#mce-responses .response').html('<span>' + data.msg + '</span>')
-        } else {
-          // Something went wrong, do something to notify the user.
-          console.log(data.msg)
-          jQuery('#mce-FNAME').addClass('mce_inline_error');
-          jQuery('#mce-EMAIL').addClass('mce_inline_error');
-          jQuery('#subscribe-result').css('color', '#ff8282')
-          if (data.msg == '0 - Please enter a value') {
-            //do nothing
-          } else {
-            jQuery('#mce-responses .response').html('<span>' + data.msg + '</span>')
-          }
-
-        }
-      }
-    });
-  }
 
   /*3D Button effect*/
   jQuery('.button').on('mousedown', function () {

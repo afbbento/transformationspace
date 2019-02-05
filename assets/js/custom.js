@@ -92,12 +92,13 @@ jQuery(function() {
 
         if (data.result === 'success') {
             // Yeahhhh Success
-        
-            jQuery('#'+form_name+' #mce-EMAIL').css('borderColor', '#ffffff')
+            console.log(data.result)
+
+            //jQuery('#'+form_name+' #mce-EMAIL').css('borderColor', '#ffffff')
             jQuery('#'+form_name+' #subscribe-result').css('color', 'rgb(53, 114, 210)')
             jQuery('#'+form_name+' #subscribe-result').html('<p>Thank you for subscribing. We have sent you a confirmation email.</p>')
             jQuery('#'+form_name+' #mce-EMAIL').val('')
-            jQuery('#'+form_name+' #mce-responses .response').html('<span>' + data.msg + '</span>')
+      //      jQuery('#'+form_name+' #mce-responses .response').html('<span>' + data.msg + '</span>')
           } else {
           // Something went wrong, do something to notify the user.
         

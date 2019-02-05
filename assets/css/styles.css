@@ -1119,20 +1119,8 @@ input[type="button"].open-btn{
 	font-size: 16px;
 	padding: 5px 10px;
 }
-.slick-dots li button.black-dots::before {
-	content:  url('../images/dot-black-inactive.svg');
-	opacity: 1;
-}
-.slick-dots li.slick-active button.black-dots::before {
-	content:  url('../images/dot-black.svg');
-}
-.slick-dots li button.white-dots::before {
-	content:  url('../images/dot-inactive.svg');
-	opacity: 1;
-}
-.slick-dots li.slick-active button.white-dots::before {
-	content:  url('../images/dot.svg');
-}
+
+
 .prev, .next{
 	background: transparent;
 	padding: 0;
@@ -1483,6 +1471,7 @@ ul.social-links li a{
 .slick-dots li.slick-active button.black-dots {
 	background: #fff;
 }
+
 .home-slider-container{
 	color: #fff;
 	padding-top: 125px;
@@ -4162,6 +4151,7 @@ body.tag .row.title{
 	font-size: 14px;
 	margin: 0;
 }
+.tagify__dropdown__item--active,
 .tagify__dropdown__item:hover{
 	color: #000;
 	background-color: var(--yellow);
