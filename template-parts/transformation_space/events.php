@@ -1,16 +1,16 @@
 <?php
 /**
- * Template part for Homepage Events
- *
- * Used in Bootcamp and Homepage
- *
- * 
- *
- * @package WordPress
- * @subpackage Transformation Space
- * @since 1.0
- * @version 1.2
- */
+* Template part for Homepage Events
+*
+* Used in Bootcamp and Homepage
+*
+* 
+*
+* @package WordPress
+* @subpackage Transformation Space
+* @since 1.0
+* @version 1.2
+*/
 ?>
 <section id="events" class="events">
     <div class="container">
@@ -24,26 +24,26 @@
                         Barcelona, Madrid, Lisbon & Oporto. </p>
                     <div class="event-search">
                         <?php 
-						$taglist = '';
-						if( have_rows('events', 404) ):
-							$i=0;
-							$taglist .= '[';
-							while ( have_rows('events', 404 ) ) : the_row();   
-							
-								while( have_rows('tags_repeater') ): the_row();
+$taglist = '';
+if( have_rows('events', 404) ):
+    $i=0;
+    $taglist .= '[';
+    while ( have_rows('events', 404 ) ) : the_row();   
+    
+    while( have_rows('tags_repeater') ): the_row();
+    
+    $taglist .= '"'.get_sub_field('tags').'"';
+    
+    $taglist .= ',';
+endwhile; 
 
-									$taglist .= '"'.get_sub_field('tags').'"';
-									
-									$taglist .= ',';
-								 endwhile; 
-				
-      						endwhile;
-      						$taglist = rtrim($taglist, ',');
-							
-							$taglist .= ']';
-						endif;
-							
-						?>
+endwhile;
+$taglist = rtrim($taglist, ',');
+
+$taglist .= ']';
+endif;
+
+?>
 
                         <script>
                         jQuery(document).ready(function() {
@@ -56,51 +56,34 @@
                                 whitelist: list
 
                             }).on('add', function(e, tagName) {
-
+                                
+                                
                                 var all_tags = jQuery('[name=tags]').data('tagify').value;
-                                //console.log(all_tags);
+                                var all_items = jQuery('.event-item');
 
-
-
-                                jQuery(".event-item").each(function() {
-
-                                    var tag = jQuery(this).data("tags");
-
+                                jQuery(".event-item").each(function(item) {
 
                                     jQuery.each(all_tags, function(index, value) {
-                                        var the_tag = all_tags[index].value;
-
-
-                                        if (tag.indexOf('porto') <= 0) {
-                                            jQuery(this).show();
-                                            console.log(tag + "-" + the_tag);
-                                        } else {
-                                            jQuery(this).hide();
-                                        }
+                                        the_tag = all_tags[index].value;
                                     });
+                                    
+                                    var active = the_tag;
+                                    all_items.hide().filter( "." + active ).fadeIn(450);
+
 
                                 });
                             }).on('remove', function(e, tagName) {
 
-                                var all_tags = jQuery('[name=tags]').data('tagify').value;
-                                console.log(all_tags);
+                                var all_items = jQuery('.event-item');
+                                all_items.fadeIn(450);
 
-
-                                jQuery(".event-item").each(function() {
-
-                                    var tag = jQuery(this).data("tags");
-                                    //console.log(tag);
-                                    /*if (tag.indexOf(tagName) <= 0){
-                                    	jQuery(this).hide();
-                                    }*/
-                                });
                             });
 
                         });
                         </script>
                         <?php	
-						$tags_values = '';
-						?>
+                        $tags_values = '';
+                        ?>
                         <form id="tags" method="post">
                             <input name="tags" placeholder="" value="<?php echo $tags_values; ?>">
                         </form>
@@ -109,33 +92,33 @@
 
                         <?php 
 
-						if( have_rows('events', 404) ):
-					
-							while ( have_rows('events', 404 ) ) : the_row();   
-							
-							switch (strtolower(get_sub_field('city'))) {
-							    case 'lisboa':
-							        $bg = 'black';
-							        break;
-							    case 'porto':
-							        $bg = 'yellow';
-							        break;
-							    case 'madrid':
-							        $bg = 'blue';
-							        break;
-							}
-							$tags = '';
-							while( have_rows('tags_repeater') ):
-									the_row();
-									$select = get_sub_field_object('select');
-									$value = $select['value'];
-									
-									if(get_sub_field('tags')):
-									$tags .= get_sub_field('tags');
-									$tags .= ' ';
-									endif;
-								 endwhile; 
-						?>
+if( have_rows('events', 404) ):
+    
+    while ( have_rows('events', 404 ) ) : the_row();   
+    
+    switch (strtolower(get_sub_field('city'))) {
+        case 'lisboa':
+        $bg = 'black';
+        break;
+        case 'porto':
+        $bg = 'yellow';
+        break;
+        case 'madrid':
+        $bg = 'blue';
+        break;
+    }
+    $tags = '';
+    while( have_rows('tags_repeater') ):
+        the_row();
+        $select = get_sub_field_object('select');
+        $value = $select['value'];
+        
+        if(get_sub_field('tags')):
+            $tags .= get_sub_field('tags');
+          //  $tags .= ' ';
+        endif;
+    endwhile; 
+    ?>
 
                         <div class="event-item bordered-box <?php echo $tags; ?>">
                             <div class="event-location <?php echo $bg; ?>">
@@ -161,9 +144,9 @@
                             </div>
                         </div>
                         <?php
-							endwhile;
-						endif;
-						?>
+endwhile;
+endif;
+?>
 
                     </div>
                 </div>

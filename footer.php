@@ -275,7 +275,7 @@ jQuery(document).ready(function($) {
     var images = ['face-1.gif', 'face-2.gif', 'face-3.gif'];
 
     var href = GLOBAL_URL + '/' + images[Math.floor(Math.random() * images.length)];
-    console.log(href);
+    //console.log(href);
     $(".random-faces").attr("src", href);
 });
 </script>
