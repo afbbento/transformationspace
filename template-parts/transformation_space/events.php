@@ -152,7 +152,29 @@
             console.log(e);
             console.log(tagName);
 
-        
+            var all_tags = jQuery('[name=tags]').data('tagify').value;
+			var all_items = jQuery('.event-item');
+
+			jQuery(".event-item").each(function(item) {
+
+                // get each tag from tagify input
+				jQuery.each(all_tags, function(index, value) {
+                    the_tag = all_tags[index].value;
+                    the_tag = the_tag.toLowerCase();
+                    console.log(the_tag);
+				});
+
+				var active = the_tag;
+               
+                if(all_tags == '') {
+                    all_items.fadeIn(450);
+                } else {
+                    all_items.hide().filter("." + active).fadeIn(450);
+                }	
+                
+            });
+
+         		
 
 		});
 
