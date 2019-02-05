@@ -45,42 +45,7 @@
 
 						?>
 
-						<script>
-							jQuery(document).ready(function() {
 
-								var list = <?php echo $taglist; ?>;
-								jQuery('[name=tags]').tagify({
-									duplicates: false,
-									enforceWhitelist: true,
-									autoComplete: true,
-									whitelist: list
-
-								}).on('add', function(e, tagName) {
-									
-									
-									var all_tags = jQuery('[name=tags]').data('tagify').value;
-									var all_items = jQuery('.event-item');
-
-									jQuery(".event-item").each(function(item) {
-
-										jQuery.each(all_tags, function(index, value) {
-											the_tag = all_tags[index].value;
-										});
-										
-										var active = the_tag;
-										all_items.hide().filter( "." + active ).fadeIn(450);
-
-
-									});
-								}).on('remove', function(e, tagName) {
-
-									var all_items = jQuery('.event-item');
-									all_items.fadeIn(450);
-
-								});
-
-							});
-						</script>
 						<?php	
 						$tags_values = '';
 						?>
@@ -114,7 +79,7 @@
 									$value = $select['value'];
 									
 									if(get_sub_field('tags')):
-										$tags .= get_sub_field('tags');
+										$tags .= strtolower(get_sub_field('tags'));
 										$tags .= ' ';
 									endif;
 								endwhile; 
@@ -154,3 +119,41 @@
 	</div>
 </div>
 </section>
+<script>
+	jQuery(document).ready(function() {
+
+		var list = <?php echo $taglist; ?>;
+		jQuery('[name=tags]').tagify({
+			duplicates: false,
+			enforceWhitelist: true,
+			autoComplete: true,
+			whitelist: list
+
+		}).on('add', function(e, tagName) {
+
+
+			var all_tags = jQuery('[name=tags]').data('tagify').value;
+			var all_items = jQuery('.event-item');
+
+			jQuery(".event-item").each(function(item) {
+
+				jQuery.each(all_tags, function(index, value) {
+					console.log(all_tags);
+                    the_tag = all_tags[index].value;
+                    the_tag = the_tag.toLowerCase();
+				});
+
+				var active = the_tag;
+				all_items.hide().filter("." + active).fadeIn(450);
+
+
+			});
+		}).on('remove', function(e, tagName) {
+
+			var all_items = jQuery('.event-item');
+			all_items.fadeIn(450);
+
+		});
+
+	});
+</script>
