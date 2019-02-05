@@ -4143,7 +4143,12 @@ body.tag .row.title{
 	box-shadow: none;
 }
 
+.tagify__dropdown div:nth-child(1) {
+	display: block;
+}
+
 .tagify__dropdown__item{
+	display: none;
 	border-radius: 0;
 	padding: 13px 30px;
 	background: var(--blue);
@@ -4166,9 +4171,15 @@ body.tag .row.title{
 	background-color: var(--yellow);
 	text-transform: uppercase;
 }
+.tagify tag x,
 .tagify tag > div{
-	padding: 4px 15px;
-	border-radius: 0;	
+	display: flex;
+	align-items: center;
+	height: 24px;
+}
+.tagify tag > div{
+	padding: 0 15px;
+    border-radius: 0;
 }
 .tagify tag > div > *{
 	text-transform: uppercase;
@@ -4188,8 +4199,6 @@ body.tag .row.title{
 }
 .tagify tag x{
 	font-weight: bold;
-	top: calc(50% - 5px);
-	right: 6px;
 }
 body.category .blog-posts-main,
 body.tag .blog-posts-main{

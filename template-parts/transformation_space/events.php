@@ -126,8 +126,10 @@
 		jQuery('[name=tags]').tagify({
 			duplicates: false,
 			enforceWhitelist: true,
-			autoComplete: true,
-			whitelist: list
+            whitelist: list, 
+            dropdown : {
+            enabled: 1,
+            }
 
 		}).on('add', function(e, tagName) {
             console.log(e);
@@ -171,7 +173,7 @@
                 } else {
                     all_items.hide().filter("." + active).fadeIn(450);
                 }	
-                
+
             });
 
          		
