@@ -16,9 +16,7 @@ get_header(); ?>
 
 <div class="main-content">
 	<div class="content-inner">
-			<div class="gif-container">
-
-				
+			<div class="gif-container">		
   				<img src="<?php echo _wp_upload_dir_baseurl(); ?>/john.gif" width="350" height="300" />
 			</div>
 			<p class="title">404 - not found</p>

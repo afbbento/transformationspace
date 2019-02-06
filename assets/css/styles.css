@@ -885,6 +885,11 @@ input:-moz-placeholder { /* Firefox 18- */
 	background-color: var(--blue);
 	color: #fff;
 }
+
+.error404 .btn-yellow:hover {
+	background-color: var(--yellow);
+	color: #000;
+}
 .footer input[type="submit"], 
 #newsletter-menu input[type="submit"],
 #newsletter-header input[type="submit"]{
@@ -4427,12 +4432,18 @@ body.tag .blog-posts-main{
 
 
 /*404*/
-.error404{
+.error404 {
 	background-image: url('../images/not-found-bg.jpg');
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 	text-align: center;
 	font-family: Raleway;
+	background-size: cover;
 }
+
+.error404 .main-content {
+	height: 100vh;
+}
+
 .error404 p.title{
 	font-weight: 900;
 	line-height: 60px;
@@ -4455,21 +4466,24 @@ body.tag .blog-posts-main{
 	width: 100%;
 }
 .error404 .content-inner{
-	margin: 0;
-	position: absolute;
-	top: 60%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 600px;
+	height: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
 }
+
 .error404 .gif-container{
 	border-bottom: 7px solid #fff;
 	margin-bottom: 30px;
 }
+
 .error404 .btn-yellow {
 	color: var(--yellow);
 	background-color: #000;
 	border: 2px solid var(--yellow);
-	margin-bottom: 128px;
 	margin-top: 20px;
 }
 
@@ -4594,11 +4608,7 @@ body.tag .blog-posts-main{
 		padding: 22px 0px;
 	}
 	
-	/*PAGE 404*/
 
-	.error404 .content-inner {
-		top: 50%;
-	}
 	
 }
 @media only screen and (max-width : 992px) {
@@ -5336,11 +5346,6 @@ body.tag .blog-posts-main{
 		display: none;
 	}	
 
-	/*PAGE 404*/
-
-	.error404 .content-inner {
-		top: 45%;
-	}
 
 	.error404 p.title {
 		font-size: 50px;
@@ -5361,19 +5366,20 @@ body.tag .blog-posts-main{
 
 	
 	.error404 p.title {
-		font-size: 50px;
+		font-size: 40px;
 	}
 
 	.error404 p.lead {
-		font-size: 40px;
+		font-size: 30px;
 	}
 
 }
 
-@media screen and (max-width: 414px){
 
+@media only screen 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
 	.error404 .content-inner {
-		top: 60%;
+		display: block;
 	}
-
 }
