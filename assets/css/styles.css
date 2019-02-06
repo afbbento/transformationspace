@@ -5357,6 +5357,10 @@ body.tag .blog-posts-main{
 }
 
 @media screen and (max-width: 480px){
+
+	.error404 .gif-container img {
+		max-width: 250px;
+	}
 	.ajax-load-more-wrap ul.alm-listing li.grid-item{
 		width: 100%;
 		margin: 0 0 20px;  
