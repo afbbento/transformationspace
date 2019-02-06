@@ -5371,6 +5371,11 @@ body.tag .blog-posts-main{
 	
 	.error404 p.title {
 		font-size: 40px;
+		margin-bottom: 20px;
+	}
+
+	.error404 .btn-yellow {
+		margin-top: 0;
 	}
 
 	.error404 p.lead {
