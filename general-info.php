@@ -99,7 +99,7 @@ get_header(); ?>
 						<div class="location <?php echo $color; ?>"><?php the_sub_field('location'); ?></div>
 						<div class="col-md-2">							
 							<div class="job-image">						
-								<img src="http://localhost:8888/wp-content/uploads/job-logo.jpg">						
+								<img src="<?php echo bloginfo('template_url'); ?>/assets/images/job-logo.jpg">						
 							</div>
 						</div>
 						<div class="col-md-3">

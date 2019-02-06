@@ -20,7 +20,7 @@
 		$btn_color='yellow';
 	}
 ?>
-<section class="banner <?php echo $banner_color; ?> info-banner">
+<section class="banner <?php echo $banner_color; ?> info-banner pt-50 pb-50">
 	<h3><?php pll_e('Get more info'); ?></h3>
 	<p><?php pll_e('So many things we can share with you. Let your e-mail here'); ?></p>
 	<div class="container">
