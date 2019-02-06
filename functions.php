@@ -790,7 +790,7 @@ function get_newsletter_sidebar( $atts ) {
 							<form action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?" method="get" id="newsletter-blog" name="mc-embedded-subscribe-form" class="form-inline validate newsletter-sidebar newsletter-blog" target="_blank">	
 								<div class="input-container">
 									<input id="mce-EMAIL" class="big" name="EMAIL" required="" type="email" placeholder="Your e-mail address">
-									<input class="btn btn-big btn-shadow submit" name="subscribe" type="submit" value="Go!">
+									<input class="btn btn-black btn-shadow submit" name="subscribe" type="submit" value="Go!">
 								</div>				
 								<div id="mce-responses" class="clear">
 									<p class="response"></p>
