@@ -56,21 +56,24 @@ jQuery(document).ready(function ($) {
 
   // validate checkbox #moreInfoModal
   var moreInfoModal = document.querySelector('#moreInfoModal .wpcf7');
-  moreInfoModal.addEventListener('wpcf7submit', function (event) {
-    if ($('#acept')[0].checked === false) {
-      $(this).find(".policy-js").addClass("wpcf7-not-valid");
-    }
-  }, false);
 
+  if ( $(moreInfoModal).length ) {
+    moreInfoModal.addEventListener('wpcf7submit', function (event) {
+      if ($('#acept')[0].checked === false) {
+        $(this).find(".policy-js").addClass("wpcf7-not-valid");
+      }
+    }, false);
+  }
 
   // validate checkbox #bootCampModal
   var bootCampModal = document.querySelector('#bootCampModal .wpcf7');
+  if ( $(bootCampModal).length ) {
   bootCampModal.addEventListener('wpcf7submit', function (event) {
     if ($('#acept2')[0].checked === false) {
       $(this).find(".policy-js").addClass("wpcf7-not-valid");
     }
   }, false);
-
+  }
 
   moreInfoModal.addEventListener('wpcf7mailsent', function (event) {
     //console.log(yourName);
