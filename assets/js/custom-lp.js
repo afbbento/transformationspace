@@ -106,15 +106,4 @@ jQuery(document).ready(function ($) {
   });
 
 
-
-
-  /*3D Button effect*/
-  jQuery('.button').on('mousedown', function () {
-    jQuery(this).addClass('clicked');
-  });
-  jQuery('.button').on('mouseup', function () {
-    jQuery(this).removeClass('clicked');
-  });
-
-
 });

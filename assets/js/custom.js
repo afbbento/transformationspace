@@ -42,10 +42,10 @@ jQuery(document).ready(function(){
   
   
   /*3D Button effect*/
-  jQuery('.button').on('mousedown',function() {
+  jQuery('.button-effect-js').on('mousedown',function() {
     jQuery(this).addClass('clicked');
   });
-  jQuery('.button').on('mouseup',function() {
+  jQuery('.button-effect-js').on('mouseup',function() {
     jQuery(this).removeClass('clicked');
   });
   
@@ -69,7 +69,7 @@ jQuery(function() {
 
 jQuery(document).ready( function ($) {
 
-var $form = jQuery('.form-newsletter');
+var $form = jQuery('.form-newsletter-js');
 
   if ( $form.length > 0 ) {
     $($form).each(function(item) {

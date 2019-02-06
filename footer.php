@@ -42,7 +42,7 @@
                             <form
                                 action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?"
                                 method="get" id="newsletter-footer" name="mc-embedded-subscribe-form"
-                                class="form-inline validate form-newsletter newsletter-footer" target="_blank">
+                                class="form-inline validate form-newsletter-js newsletter-footer" target="_blank">
                                 <input id="mce-EMAIL" name="EMAIL" type="email" required=""
                                     placeholder="<?php pll_e('Your e-mail here'); ?>">
                                 <input class="btn btn-yellow submit" name="subscribe" type="submit" value="<?php pll_e('Get started'); ?>">

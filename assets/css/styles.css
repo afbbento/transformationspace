@@ -52,6 +52,10 @@ a:visited {
 	text-decoration: none;
 }
 
+a:hover {
+	color: #000;
+}
+
 a:focus {
 	color: inherit;
 	outline-color: inherit;
@@ -786,7 +790,7 @@ input[type="email"]{ box-shadow: none !important; }
 input.mce_inline_error {
 	border: 1px solid #e85c41 !important;
 }
-form.form-newsletter p.response,
+form.form-newsletter-js p.response,
 form.banner-form p.response{
 	font-size: 12px;
 	margin: 0;
@@ -859,7 +863,7 @@ input:-moz-placeholder { /* Firefox 18- */
 	font-weight:bold;
 	padding:2px;
 }
-.form-newsletter input[type="email"] {
+.form-newsletter-js input[type="email"] {
 	float: left;
 	height: 40px;
 	padding: 12px 16px;
@@ -886,7 +890,7 @@ input:-moz-placeholder { /* Firefox 18- */
 #newsletter-header input[type="submit"]{
 	width: 24%;
 }
-.form-newsletter .btn{
+.form-newsletter-js .btn{
 	height: 40px;
 	font-family: "Work Sans";
 }
@@ -896,7 +900,7 @@ input:-moz-placeholder { /* Firefox 18- */
 	will-change: auto;
 }
 
-.form-newsletter input[type="button"]{
+.form-newsletter-js input[type="button"]{
 	width: 24%;
 	font-size: 13px;
 }
@@ -3261,10 +3265,10 @@ h2.widget-title{
 	text-align: left;
 	padding: 26px;
 }
-.form-newsletter input[type="text"]{
+.form-newsletter-js input[type="text"]{
 	width: 65%;
 }
-.footer .form-newsletter input[type="button"] {
+.footer .form-newsletter-js input[type="button"] {
 	width: 34%;
 }
 .footer .newsletter-box label{
@@ -3570,10 +3574,7 @@ aside li a{
 	top: 1px;
 	right: 1px;
 }
-.newsletter-sidebar input[type="submit"]:hover{
-	color: #000;
-	background-color: var(--yellow);
-}
+
 .get-started-widget h1{
 	font-family: Raleway;
 	font-style: normal;

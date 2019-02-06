@@ -47,9 +47,12 @@ if( $intro_about ):
 	 	   			<h1><?php echo $intro_about['title']; ?></h1>
 	 	   			<p><?php echo $intro_about['text']; ?></p>
 	 	   			<?php 
-	 	   				if (is_front_page()){
-	 	   					echo '<a href="'.get_permalink(5).'" class="btn btn-yellow btn-shadow">discover more</a>';		
-	 	   				} 
+					if (is_front_page()){
+						echo '<a href="'.get_permalink(5).'" class="btn btn-yellow btn-shadow">discover more</a>';		
+					} 
+					if( is_page('general-info') ) {
+						echo '<a href="'.get_permalink(5).'" class="btn btn-yellow btn-shadow">more about us</a>';		
+					}
 	 	   			?>
 	 	   		</div>
   		</div>
