@@ -4434,7 +4434,7 @@ body.tag .blog-posts-main{
 }
 .error404 p.title{
 	font-weight: 900;
-	line-height: 66px;
+	line-height: 60px;
 	font-size: 70px;
 	color: var(--yellow);
 	margin-bottom: 30px;
@@ -4456,13 +4456,13 @@ body.tag .blog-posts-main{
 .error404 .content-inner{
 	margin: 0;
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 .error404 .gif-container{
 	border-bottom: 7px solid #fff;
-	margin-bottom: 42px;
+	margin-bottom: 30px;
 }
 .error404 .btn-yellow {
 	color: var(--yellow);
