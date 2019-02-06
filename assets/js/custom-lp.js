@@ -75,6 +75,7 @@ jQuery(document).ready(function ($) {
   }, false);
   }
 
+  if ( $(moreInfoModal).length ) {
   moreInfoModal.addEventListener('wpcf7mailsent', function (event) {
     //console.log(yourName);
     document.getElementById("your-name").innerHTML = yourName + '!';
@@ -89,7 +90,8 @@ jQuery(document).ready(function ($) {
       }
     });
   });
-
+  }
+  if ( $(bootCampModal).length ) {
   bootCampModal.addEventListener('wpcf7mailsent', function (event) {
     console.log(yourName2);
     console.log(selectedBootcamp);
@@ -107,6 +109,6 @@ jQuery(document).ready(function ($) {
       }
     });
   });
-
+}
 
 });
