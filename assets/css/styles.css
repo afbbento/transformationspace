@@ -713,7 +713,9 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 .form-newsletter .btn{
 	height: 40px;
-	font-family: "Work Sans"
+	font-family: "Work Sans";
+	background-position: 15px top;
+	will-change: auto;
 }
 
 .form-newsletter input[type="button"]{
