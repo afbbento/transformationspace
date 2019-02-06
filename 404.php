@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The template for displaying 404 pages (not found)
@@ -12,12 +13,13 @@
 
 get_header(); ?>
 
+
 <div class="main-content">
 	<div class="content-inner">
 			<div class="gif-container">
 
 				
-  				<img src="<?php echo _wp_upload_dir_baseurl(); ?>/john.gif" width="400" height="300" />
+  				<img src="<?php echo _wp_upload_dir_baseurl(); ?>/john.gif" width="350" height="300" />
 			</div>
 			<p class="title">404 - not found</p>
 			<p class="lead">lost your way?</p>
