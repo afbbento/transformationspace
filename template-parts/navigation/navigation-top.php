@@ -95,18 +95,6 @@ if(!empty( $categories)) {
 						</div>
 					</form>
 				</div>
-					<script>
-						jQuery(document).ready( function () {
-							var $form = jQuery('.newsletter-menu');
-
-						  if ( $form.length > 0 ) {
-						    jQuery('.newsletter-menu input[type=submit]').bind('click', function ( event ){
-						      if (event) event.preventDefault()
-						        register($form)
-						    });
-						  }
-						});
-						</script>
 				<div class="dot" style="background-image: url('<?php bloginfo( 'template_url' ); ?>/assets/images/dot.svg');">UX experience Architech <input type="button" class="btn btn-yellow btn-shadow open-btn" value="open"/></div>
 				<div class="message" style="background-image: url('<?php bloginfo( 'template_url' ); ?>/assets/images/message.svg');">questions? we are online</div>
   			</div>

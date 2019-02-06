@@ -28,15 +28,7 @@
 </script>
 	
 </head>
-<?php 
-		// $post = get_post();
-		// if ( $post ) {
-		//     $categories = get_the_category( $post->ID );
-		//    	$category = $categories[0]->slug;
-		//    	$category = $category.'-template-page';
-		// }
-	?>
-<!-- <body <?php //body_class($category); ?> > -->
+
 <body <?php body_class(); ?> onload="init()">
 	
 	<?php 

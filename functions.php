@@ -654,6 +654,7 @@ function my_assets() {
 	$ts_theme_version = '5.2';
 	wp_enqueue_style( 'Raleway-font', 'https://fonts.googleapis.com/css?family=Raleway:400,700,900' );
 	wp_enqueue_style( 'Abhaya-font', 'https://fonts.googleapis.com/css?family=Abhaya+Libre:400,600' );
+	wp_enqueue_style( 'Work-Sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,700' );
 	wp_enqueue_style( 'hamburgers-style', get_template_directory_uri() . '/assets/css/hamburgers.min.css' );
 	wp_enqueue_style( 'slick-style-theme', get_template_directory_uri() . '/assets/css/slick-theme.css' );
 	wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/assets/css/slick.css' );

@@ -28,7 +28,7 @@ jQuery(document).ready(function(){
     jQuery('.hamburger').toggleClass('is-active');
     jQuery('.overlay').toggleClass('open');
   });
-
+  
   jQuery('.close-menu-js').click(function(){
     jQuery('.hamburger').removeClass('is-active');
     jQuery('.overlay').removeClass('open');
@@ -40,7 +40,7 @@ jQuery(document).ready(function(){
     jQuery(this).closest('.bootcamp-stories-item').next('.bootcamp-stories-ajax').slideToggle();
   });
   
-
+  
   /*3D Button effect*/
   jQuery('.button').on('mousedown',function() {
     jQuery(this).addClass('clicked');
@@ -48,7 +48,7 @@ jQuery(document).ready(function(){
   jQuery('.button').on('mouseup',function() {
     jQuery(this).removeClass('clicked');
   });
-
+  
 });
 
 jQuery(function() {
@@ -67,44 +67,49 @@ jQuery(function() {
   });
 });
 
-jQuery(document).ready( function () {
-  var $form = jQuery('.newsletter-blog');
-  
+jQuery(document).ready( function ($) {
+
+var $form = jQuery('.form-newsletter');
+
   if ( $form.length > 0 ) {
-    jQuery('.newsletter-blog input[type=submit]').bind('click', function ( event ){
-      if (event) event.preventDefault()
-      register($form)
+    $($form).each(function(item) {
+      var item = jQuery($form[item]);
+      jQuery(this).find("input[type=submit]").bind('click', function ( event ) {
+        if (event) event.preventDefault()
+          register(item);
+      });
     });
+    
   }
 });
 
-function register($form) {
+
+function register(item) {
   jQuery.ajax({
-    type: $form.attr('method'),
-    url: $form.attr('action'),
-    data: $form.serialize(),
+    type: item.attr('method'),
+    url: item.attr('action'),
+    data: item.serialize(),
     cache       : false,
     dataType    : 'jsonp',
     contentType: "application/json; charset=utf-8",
-    error       : function(err) { alert("Could not connect to the registration server. Please try again later."); },
+    error       : function() { alert("Could not connect to the registration server. Please try again later."); },
     success    : function(data) {
       
-      var form_name = $form.attr('id');
+      var form_name = item.attr('id');
       
       console.log(form_name);
       
       if (data.result === 'success') {
         // Yeahhhh Success
         console.log(data.result)
-        
-        //jQuery('#'+form_name+' #mce-EMAIL').css('borderColor', '#ffffff')
-        jQuery('#'+form_name+' #subscribe-result').css('color', 'rgb(53, 114, 210)')
-        jQuery('#'+form_name+' #subscribe-result').html('<p>Thank you for subscribing. We have sent you a confirmation email.</p>')
-        jQuery('#'+form_name+' #mce-EMAIL').val('')
-        //      jQuery('#'+form_name+' #mce-responses .response').html('<span>' + data.msg + '</span>')
+        jQuery('#'+form_name+' .btn').addClass("success").val('Success');
+        jQuery('#'+form_name+' #mce-EMAIL').val('');
+        jQuery('#'+form_name+' #mce-FNAME').removeClass('mce_inline_error');
+        jQuery('#'+form_name+' #mce-EMAIL').removeClass('mce_inline_error');
+        //jQuery('#'+form_name+' #mce-responses .response').html('<span>' + data.msg + '</span>')
       } else {
         // Something went wrong, do something to notify the user.
-        
+        console.log(data.result)
         jQuery('#'+form_name+' #mce-FNAME').addClass('mce_inline_error');
         jQuery('#'+form_name+' #mce-EMAIL').addClass('mce_inline_error');
         jQuery('#'+form_name+' #subscribe-result').css('color', '#ff8282')

@@ -45,7 +45,7 @@
                                 class="form-inline validate form-newsletter newsletter-footer" target="_blank">
                                 <input id="mce-EMAIL" name="EMAIL" type="email" required=""
                                     placeholder="<?php pll_e('Your e-mail here'); ?>">
-                                <input class="btn btn-big btn-yellow submit" name="subscribe" type="submit" value="<?php pll_e('Get started'); ?>">
+                                <input class="btn btn-yellow submit" name="subscribe" type="submit" value="<?php pll_e('Get started'); ?>">
                                 <div id="mce-responses" class="clear">
                                     <p class="response"></p>
                                 </div>
@@ -53,18 +53,7 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                jQuery(document).ready(function() {
-                    var $form = jQuery('.newsletter-footer');
-
-                    if ($form.length > 0) {
-                        jQuery('.newsletter-footer input[type=submit]').bind('click', function(event) {
-                            if (event) event.preventDefault()
-                            register($form)
-                        });
-                    }
-                });
-                </script>
+   
                 <div class="row address">
                 <?php 
                 $contact_locations_page = 165;

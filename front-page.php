@@ -136,18 +136,6 @@ get_header(); ?>
 								<p class="response"></p>
 							</div>
 						</form>
-						<script>
-						jQuery(document).ready( function () {
-							var $form = jQuery('.newsletter-header');
-
-						  if ( $form.length > 0 ) {
-						    jQuery('.newsletter-header input[type=submit]').bind('click', function ( event ){
-						      if (event) event.preventDefault()
-						        register($form)
-						    });
-						  }
-						});
-						</script>
 	 				</div>
 	 			</div>
 	 		</div>
