@@ -101,8 +101,7 @@
 											</div>
 										</div>
 										<div class="col-md-2 align-center link-event">
-											<a id="eventModal" data-fancybox data-src="#eventModal" href="javascript:;"
-											class="button events-js btn-plus">
+											<a href="<?php the_sub_field('link'); ?>" class="button btn-plus" target="_blank">
 											<i class="fa fa-plus"></i>
 										</a>
 									</div>

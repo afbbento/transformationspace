@@ -86,7 +86,7 @@ if(!empty( $categories)) {
 				<div class="newsletter-box bordered-box">
 					<h1>Get more info</h1>
 					<p>So many things we can share with you. Let your e-mail here</p>
-					<form action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?" method="get" id="newsletter-menu" name="mc-embedded-subscribe-form" class="form-inline validate form-newsletter newsletter-menu" target="_blank">	  
+					<form action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?" method="get" id="newsletter-menu" name="mc-embedded-subscribe-form" class="form-inline validate form-newsletter-js newsletter-menu" target="_blank">	  
 					    <input id="mce-EMAIL" name="EMAIL" type="email" required="" placeholder="<?php pll_e('Your e-mail here'); ?>" > 
 					    <input class="btn btn-big btn-yellow submit" name="subscribe" type="submit" value="
 					    	<?php pll_e('Get started'); ?>">

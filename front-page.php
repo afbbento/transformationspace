@@ -48,7 +48,7 @@ get_header(); ?>
 				    				<h1><?php the_sub_field('title'); ?></h1>
 									<p><?php the_sub_field('paragraph'); ?></p>
 									<div class="button-wrapper hidden-xs hidden-sm">
-									  <a href="<?php echo get_site_url(); ?>/bootcamps" class="button"><?php pll_e('Explore our Bootcamps'); ?></a>
+									  <a href="<?php echo get_site_url(); ?>/bootcamps" class="button button-effect-js"><?php pll_e('Explore our Bootcamps'); ?></a>
 									</div>
 				    			</div>
 				    			<div class="col-md-6">
@@ -127,7 +127,7 @@ get_header(); ?>
 						<?php pll_e('Looking for the right career move?'); ?>
 						 </div>
 	 					<label><?php pll_e('Enter your email'); ?></label>
-	 					<form action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?" method="get" id="newsletter-header" name="mc-embedded-subscribe-form" class="form-inline validate form-newsletter newsletter-header" target="_blank">	  				  
+	 					<form action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?" method="get" id="newsletter-header" name="mc-embedded-subscribe-form" class="form-inline validate form-newsletter-js newsletter-header" target="_blank">	  				  
 					    	<input id="mce-EMAIL" name="EMAIL" type="email" required="" placeholder="<?php pll_e('Your e-mail here'); ?>" > 
 					    	<input class="btn btn-black submit" name="subscribe" type="submit" value="
 					    	
