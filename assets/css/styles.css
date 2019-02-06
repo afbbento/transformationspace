@@ -73,7 +73,6 @@ a:focus {
 	-moz-transition-timing-function: ease;
 	transition-timing-function: ease;
 	cursor: pointer;
-	font-family: "Work Sans";
 }
 
 .button:focus,
@@ -714,6 +713,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 .form-newsletter .btn{
 	height: 40px;
+	font-family: "Work Sans"
 }
 
 .form-newsletter input[type="button"]{
