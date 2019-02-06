@@ -547,6 +547,7 @@ span.circle-line{
 	padding: 6px 46px 6px 72px;
 	text-transform: lowercase;
 }
+.menu-right-nav-menu .current_page_item .menu-item-link,
 .menu-right-nav-menu .menu-item-link:hover{
 	background: var(--yellow);
 	background-image: url('../images/checkmark.svg');
