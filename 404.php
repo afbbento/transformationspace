@@ -27,6 +27,6 @@ get_header(); ?>
 			<p><a href="/" class="btn btn-yellow">back to transformation</a>
 		
 	</div>
-<?php dynamic_sidebar( 'footer-bottom-menu' ); ?>
+<?php // dynamic_sidebar( 'footer-bottom-menu' ); ?>
 
 </div>
