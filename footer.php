@@ -315,14 +315,7 @@ jQuery(document).ready(function($) {
         if (/#/.test(href)) {
             /* do not run AJAX function */
             e.preventDefault(); // prevent hard jump, the default behavior
-
-
-            if (href == "#footer" || "http://localhost/transformation-space/#footer") {
-                console.log("true")
-                targetOffset = target.position().top + 200;
-            } else {
-                targetOffset = target.position().top - 115;
-            }
+            targetOffset = target.position().top - 100;
 
             // if target is valid, scroll to
             if (target && targetOffset != '') {
