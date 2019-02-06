@@ -130,7 +130,7 @@ if( $transformation_content ):
 <?php
 	get_template_part( 'template-parts/transformation_space/banner-slider');
 ?>
-<section class="magic">
+<section class="team">
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
