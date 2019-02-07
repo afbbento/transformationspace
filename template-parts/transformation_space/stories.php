@@ -84,21 +84,21 @@
 												?>
 
                         <div class="row">
-                            <div class="col-md-6 col-sm-6 col-sx-6 image-container visible-xs">
+                            <!-- <div class="col-md-6 col-sm-6 col-sx-6 image-container visible-xs">
                                 <div class="play-button-outer small">
                                     <a data-fancybox data-width="640" data-height="360"
                                         href="https://vimeo.com/<?php the_field('vimeo_video_id'); ?>">
                                         <img src="<?php the_field('video_cover'); ?>">
                                     </a>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-md-6 col-sm-6 col-sx-6">
                                 <div class="text-container">
                                     <div class="lead3"><?php the_title(); ?></div>
                                     <p class="small"><?php echo create_excerpt(get_field('text'), 84); ?></p>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-sx-6 image-container hidden-xs"
+                            <div class="col-md-6 col-sm-6 col-sx-6 image-container"
                                 style="background-image: url('<?php the_field('video_cover'); ?>');">
                                 <div class="play-button-outer small">
                                     <a data-fancybox data-width="640" data-height="360"
@@ -115,7 +115,7 @@
 
 
                     </div>
-                    <div class="slick-nav-stories col-xs-1 hidden-xs"></div>
+                    <div class="slick-nav-stories col-xs-1 mb-40"></div>
                 </div>
             </div>
         </div>

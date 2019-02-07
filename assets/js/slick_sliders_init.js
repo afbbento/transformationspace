@@ -25,11 +25,12 @@ jQuery(document).ready(function(){
       {
         breakpoint: 992,
         settings: {
+          centerMode: true,
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
+          infinite: false,
+          dots: false
+        },
       }
       // You can unslick at a given breakpoint now by adding:
       // settings: "unslick"

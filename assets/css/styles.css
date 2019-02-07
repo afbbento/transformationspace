@@ -2732,11 +2732,11 @@ header.bootcamp .circle-line.white::after {
 
 
 @media only screen and (max-width: 768px) {
-
+	
 	.header-section-bottom .col-md-6 {
 		padding-left: 60px;
 	}
-
+	
 	#timeline-wrapper .timeline-top {
 		text-align: right;
 		padding-right: 20%;
@@ -4740,13 +4740,13 @@ body.tag .blog-posts-main{
 	text-align: center;
 }
 
+#navbar {
+	padding-right: 20px;
+}
+
 
 @media only screen and (max-width : 1200px) {
-
-	#navbar{
-		display: none;	
-	}
-
+	
 	h3{
 		line-height: 38px;
 		font-size: 33px;
@@ -4785,20 +4785,19 @@ body.tag .blog-posts-main{
 	}
 	.article-slider .col-md-6:last-child {
 		padding: 19px 84px 0 29px;
-	}
-
-	/*FOOTER*/
-
-	.row.foot {
-		margin-right: 10px;
-	}
-	.row.address {
-		margin-right: 18px;
-	}
-	
+	}	
 }
 
 
+/* Hide main menu */
+@media screen and (max-width: 1024px) {
+	#navbar {
+		display: none;
+	}
+}
+
+
+/* Fix bg on 404 landscape */
 @media only screen 
 and (max-device-width : 1024px) 
 and (orientation : landscape) { 
@@ -4807,10 +4806,20 @@ and (orientation : landscape) {
 	}
 }
 
+@media only screen and (min-width : 769px) {
+	/*FOOTER*/
+	
+	.row.foot {
+		margin-right: 10px;
+	}
+	.row.address {
+		margin-right: 18px;
+	}
+}
 
 @media only screen and (max-width : 992px) {
 	/*MENU*/
-
+	
 	.right-nav {
 		width: 50px;
 		height: 50px;
@@ -5038,14 +5047,19 @@ and (orientation : landscape) {
 		max-height: 147px;
 		overflow: hidden;
 	}
-
+	
 	.header-section-bottom .col-md-6 {
-    	padding-left: 60px;
+		padding-left: 60px;
 	}
 }
 
 
 @media only screen and (max-width : 767px) {
+	
+	section {
+		padding: 40px 0;
+	}
+	
 	h1{
 		font-size: 32px;
 		line-height: 40px;
@@ -5085,6 +5099,10 @@ and (orientation : landscape) {
 	}
 	.stories-slider-container .col-md-6 {
 		width: 100%;
+		height: auto;
+	}
+	.stories-slider-container .image-container {
+		height: 250px; 
 	}
 	.stories-slider-container .text-container{
 		width: 80%;
@@ -5118,7 +5136,7 @@ and (orientation : landscape) {
 		padding: 10px;
 		width: 100%;
 	}
-
+	
 	.header-section-bottom {
 		background: #fff;
 	}
@@ -5142,11 +5160,11 @@ and (orientation : landscape) {
 	.header-section-bottom .row-highlight {
 		padding: 15px;
 	}
-
+	
 	.education-item {
 		padding: 0;
 	}
-
+	
 	.education {
 		padding: 40px 0;
 	}
@@ -5248,11 +5266,9 @@ and (orientation : landscape) {
 		width: 100%;
 		height: auto;
 		margin-top: 30px;
+		border: none;
 	}
-	.stories-slider-container p,
-	.stories-slider-container .lead3 {
-		margin-left: 20px;
-	}
+	
 	.bootcamp-box [class*="col-"]:nth-child(1) p{
 		position: relative;
 		left: auto;
@@ -5479,9 +5495,7 @@ and (orientation : landscape) {
 	.stories-slider-container p.small {
 		margin-bottom:0;
 	}
-	.stories-slider-container .col-md-6{
-		height: auto;
-	}
+	
 	.job-item{
 		height: auto;
 		padding: 14px 0;
@@ -5580,12 +5594,30 @@ and (orientation : landscape) {
 }
 
 @media only screen and (max-width: 480px) {
-
+	
+	/* the slides */
+	.slick-slide {
+		margin: 0 20px;
+	}
+	/* the parent */
+	.slick-list {
+		margin: 0 -20px;
+	}
+	
+	.stories-slider-container .col-md-6 {
+		height: 250px;
+	}
+	
+	.stories-slider-container p,
+	.stories-slider-container .lead3 {
+		margin: 0;
+	}
+	
 	.home-slider h1 {
 		font-size: 35px;
 		line-height: 47px;
 	}
-
+	
 	.separator.separator-education .button-container {
 		transform: translateY(-75px);
 	}
@@ -5618,7 +5650,7 @@ and (orientation : landscape) {
 	}
 	
 	/*PAGE STORIES*/
-
+	
 	.all-stories .feat-video .lined-box{
 		margin-left: 0px;
 	}
