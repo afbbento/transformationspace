@@ -289,8 +289,7 @@ jQuery('.article-slider').on('afterChange', function(event, slick, currentSlide,
 <!---DISABLED for now-->
 <?php if( !have_rows('education_items', 2) ): ?>
 
-<section class="education"
-    style="background-image: url('wp-content/themes/transformationspace/images/homepage-education-section.jpg');">
+<section class="education" style="background-image: url('<?php echo bloginfo('template_url'); ?>/assets/images/homepage-education-section.jpg');">
     <div class="container">
         <div class="row">
             <?php	
