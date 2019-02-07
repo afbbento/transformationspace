@@ -52,10 +52,10 @@ get_header();
 				</dir>
 				<div class="row">
 					<div class="col-md-12">
-						<form class="search" action="/" method="get">				  
+						<!-- <form class="search" action="/" method="get">				  
 					   		<input class="borderless-input" type="text" name="s" id="search" placeholder="Search" value="">
 					   	 	<input type="image" alt="Search" src="<?php bloginfo('template_url'); ?>/assets/images/search.png">
-						</form>
+						</form> -->
 					</div>
 				</div>
 			</div>
