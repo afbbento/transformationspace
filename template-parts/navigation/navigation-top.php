@@ -37,7 +37,7 @@ if(!empty( $categories)) {
 <nav class="navbar navbar-default navbar-fixed-top <?php echo $color_theme; ?>">
     <div class="container">
         <div class="row">
-            <a href="/" class="col-xs-2">
+            <a href="/" class="col-xs-2 hidden-xs">
                 <span class="custom-logo"></span>
             </a>
 
