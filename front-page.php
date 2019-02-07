@@ -194,7 +194,8 @@ if( $bootcamps_section ):
 <div class="separator">
     <div class="line"></div>
     <div class="button-container">
-        <button class="btn btn-black btn-large btn-shadow"><?php echo $bootcamps_section['title']; ?></button>
+        <button class="btn btn-black btn-large btn-shadow">
+					<?php echo $bootcamps_section['title']; ?></button>
     </div>
     <div class="container">
         <div class="row">
@@ -223,10 +224,12 @@ if( $bootcamps_section ):
 $education_section = get_field('education_section');
 if( $education_section ):
 ?>
-<div class="separator">
-    <div class="line"></div>
-    <div class="button-container">
-        <button class="btn btn-black btn-large btn-shadow"><?php echo $education_section['title']; ?></button>
+<div class="separator container-fluid separator-education">
+    <div class="row line"></div>
+    <div class="col-sm-12 button-container">
+        <button class="btn btn-black btn-large btn-shadow">
+					<?php echo $education_section['title']; ?>
+				</button>
     </div>
     <div class="container">
         <div class="row">
@@ -241,7 +244,7 @@ if( $education_section ):
 <?php 
 	if( have_rows('education_items') ):
 ?>
-<section class="education" style="background-image: url('<?php echo bloginfo('template_url'); ?>/assets/images/homepage-education-section.jpg');">
+<section class="education theme--dark" style="background-image: url('<?php echo bloginfo('template_url'); ?>/assets/images/homepage-education-section.jpg');">
     <div class="container">
         <div class="row">
             <?php
@@ -249,12 +252,14 @@ if( $education_section ):
 					  ?>
             <div class="col-md-6">
                 <div class="education-item partners">
-                    <img src="<?php the_sub_field('image'); ?>">
-                    <div class="inner-content white-text">
+										<div class="partner__img-wrapper mb-40">
+                        <img src="<?php the_sub_field('image'); ?>" alt="" class="partner__img">
+                    </div>
+                    <div class="inner-content">
                         <h1><?php the_sub_field('title'); ?></h1>
                         <p><?php the_sub_field('text'); ?></p>
                     </div>
-                    <ul class="social-links center">
+                    <ul class="social-links center mb-30">
                         <?php	
 										if (!get_sub_field('fb')): ?>
                         <li>
@@ -281,9 +286,10 @@ if( $education_section ):
                         <?php	
 										endif;
 										?>
-                    </ul>
-                    <a href="#" class="btn btn-transparent full-width">know more</a>
-
+										</ul>
+										<?php	if(get_sub_field('link')): ?>
+                    <a target="_blank" href="<?php the_sub_field('link'); ?>" class="btn btn-transparent full-width">know more</a>
+									<?php endif; ?>
                 </div>
             </div>
             <?php	

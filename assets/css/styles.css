@@ -1325,13 +1325,13 @@ input[type="submit"].btn-black:hover {
 }
 .btn-transparent{
 	background: transparent;
-	color: #101010;
-	border:2px solid var(--black);
+	color: var(--color-1);
+	border:2px solid var(--color-1);
 }
 .btn-transparent:hover {
-	background: var(--black);
-	color: #fff;
-	border:2px solid #fff;
+	background: var(--color-1);
+	color: var(--bg-1);
+	border:2px solid var(--color-1);
 }
 .btn-large{
 	font-size: 30px;
@@ -1710,11 +1710,15 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 }
 
 /*SEPARATOR*/
-div.separator{
+.separator{
 	position: relative;
 	margin-bottom: 25px;
 }
-div.separator p{
+
+.separator .btn {
+	white-space: normal;
+}
+.separator p{
 	margin-top: 8px;
 }
 .separator .line{
@@ -1738,7 +1742,7 @@ div.separator p{
 	font-weight: 900;
 	font-size: 30px;
 }
-.separator button:before{
+.separator button::before{
 	content: "";
 	position: absolute;
 	width: 40px;
@@ -1748,7 +1752,7 @@ div.separator p{
 	transform: rotate(38deg);	
 	border-left: 2px solid #000;
 }
-.separator button:after{
+.separator button::after{
 	content: "";
 	position: absolute;
 	width: 40px;
@@ -1771,7 +1775,7 @@ div.separator p{
 .overlay-footer{
 	color: #fff;
 }
-ul.social-links{
+.social-links{
 	position: relative;
 }
 .overlay-footer .logo-spaces{
@@ -1779,7 +1783,7 @@ ul.social-links{
 	right: 44px;
 	top: 53px;
 }
-ul.social-links li a{
+.social-links li a{
 	background-repeat: no-repeat;
 	float: left;
 	padding: 30px;
@@ -2175,16 +2179,10 @@ ul.social-links li a{
 .education{
 	padding: 115px 0;
 }
-.education .btn-transparent{
-	border: 2px solid #fff;
-	color: #fff;
-}
 .education-item{
 	padding: 0 78px;
 } 
-.education-item img{
-	border: 1px solid #000;
-}
+
 .education-item > div {
 	padding: 35px 14px 10px;
 }
@@ -2196,16 +2194,16 @@ ul.social-links li a{
 	letter-spacing: 3px;
 	margin-bottom: 32px;
 }
-.education ul.social-links li a{
+.education .social-links li a{
 	margin-top: 0;
 }
-.education ul.social-links{
-	display: table;
+.education .social-links li a:hover {
+	color: var(--yellow);
+}
+.education .social-links{
 	margin: 18px auto;
 }
-.education ul.social-links li{
-	float: left;
-}
+
 .education .row:last-of-type{
 	margin-top: 50px;
 }
@@ -2851,7 +2849,7 @@ header.bootcamp .circle-line.white::after {
 	float: right;
 }
 
-.person ul.social-links li a{
+.person .social-links li a{
 	padding: 0 30px 25px 0;
 	margin-top: 0;
 	font-size: 16px;	
@@ -2913,24 +2911,22 @@ header.bootcamp .circle-line.white::after {
 .person.small .small{
 	clear: both;
 }
-.person.small ul.social-links li a {
+.person.small .social-links li a {
 	padding: 0 30px 34px 0;
 }
 .education-white img{
 	border: 1px solid #000;
 }
-ul.social-links li a{
+.social-links li a{
 	font-size: 16px;
 	margin-top: 0;	
 }
-ul.social-links.center{
-	text-align: center;
-}
-ul.social-links.center li{
+
+.social-links.center li{
 	padding: 0 10px;
 	display: inline-block;
 }
-ul.social-links.center li a{
+.social-links.center li a{
 	padding: 0 26px;
 }
 .banner-enroll h1{
@@ -3154,7 +3150,8 @@ button{
 }
 
 .partner__img-wrapper {
-	border: 1px solid #000000;
+	border: 1px solid var(--color-1);
+	background: var(--color-1);
 	height: 306px;
 	display: flex;
 	justify-content: center;
@@ -3177,8 +3174,7 @@ div.banner-image{
 	padding: 0;
 	position: relative;
 }
-div.banner-image .col-image,
-{
+div.banner-image .col-image {
 	background-blend-mode: lighten;
 	background-color: var(--blue);
 }
@@ -3275,10 +3271,10 @@ div.banner-image .simple-line{
 	padding-bottom: 80px;	
 }
 
-.bootcamp-template-page div.separator p{
+.bootcamp-template-page .separator p{
 	margin-bottom: 42px;
 }
-.bootcamp-template-page div.separator {
+.bootcamp-template-page .separator {
 	border-bottom: 2px solid #000;
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
@@ -3287,7 +3283,7 @@ div.banner-image .simple-line{
 	color: #000;
 }
 .bootcamp-template-page .education h1, 
-.bootcamp-template-page .education-item p,  {
+.bootcamp-template-page .education-item p {
 	color: #000;
 }
 .bootcamp-investment .button.black-border{
@@ -3802,14 +3798,14 @@ aside li a{
 .author-meta p.x-small{
 	line-height: 21px;
 }
-.author-meta ul.social-links li a{
+.author-meta .social-links li a{
 	padding: 9px;
 	color: #979797;
 }
-.author-meta ul.social-links li:first-child a{
+.author-meta .social-links li:first-child a{
 	padding-left: 0;
 }
-.author-meta ul.social-links li a i{
+.author-meta .social-links li a i{
 	font-size: 13px;	
 }
 .swp_social_panel.swp_default_full_color a{
@@ -4904,8 +4900,7 @@ body.tag .blog-posts-main{
 		padding: 60px 0;
 	}
 	.btn-lines::before,
-	.btn-lines::after,
-	{
+	.btn-lines::after {
 		bottom: 20px;
 	}
 	.page-template-about .slider-nav {
@@ -5029,7 +5024,7 @@ body.tag .blog-posts-main{
 	}
 	.btn-large {
 		font-size: 24px;
-		padding: 16px 38px;
+		padding: 12px 32px;
 	}
 	.separator button::before,
 	.separator button::after {
@@ -5532,6 +5527,10 @@ body.tag .blog-posts-main{
 }
 
 @media screen and (max-width: 480px){
+
+	.separator.separator-education .button-container {
+		transform: translateY(-75px);
+	}
 	
 	.error404 .gif-container img {
 		max-width: 250px;
