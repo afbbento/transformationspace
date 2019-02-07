@@ -2719,13 +2719,15 @@ header.bootcamp .circle-line.white::after {
 	right: -12px;
 }
 
-@media screen and (max-height: 768px) {
+@media only screen and (max-height: 768px) {
 	.overlay-footer {
 		display: none;
 	}
 }
 
-@media (max-width: 768px) {
+
+
+@media only screen and (max-width: 768px) {
 
 	.header-section-bottom .col-md-6 {
 		padding-left: 60px;
@@ -4735,8 +4737,6 @@ body.tag .blog-posts-main{
 }
 
 
-
-/*RESPONSIVE*/
 @media only screen and (max-width : 1200px) {
 
 	#navbar{
@@ -4784,6 +4784,16 @@ body.tag .blog-posts-main{
 	}
 	
 }
+
+
+@media only screen 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+	.error404 .content-inner {
+		display: block;
+	}
+}
+
 
 @media only screen and (max-width : 992px) {
 	/*MENU*/
@@ -5543,7 +5553,12 @@ body.tag .blog-posts-main{
 	}
 }
 
-@media screen and (max-width: 480px){
+@media only screen and (max-width: 480px) {
+
+	.home-slider h1 {
+		font-size: 40px;
+		line-height: 52px;
+	}
 
 	.separator.separator-education .button-container {
 		transform: translateY(-75px);
@@ -5584,10 +5599,3 @@ body.tag .blog-posts-main{
 }
 
 
-@media only screen 
-and (max-device-width : 1024px) 
-and (orientation : landscape) { 
-	.error404 .content-inner {
-		display: block;
-	}
-}

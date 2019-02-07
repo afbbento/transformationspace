@@ -69,7 +69,10 @@ get_header();
 			<div class="banner-image latest-post">
 				<?php 
 
-					$args = array( 'numberposts' => '1' );
+					$args = array( 
+						'post_type' => 'blog',
+						'numberposts' => '1' 
+					);
 					$recent_posts = wp_get_recent_posts( $args );
 					foreach( $recent_posts as $recent ){
 					
@@ -127,7 +130,12 @@ get_header();
 			<div class="row">
 				<div class="col-md-6">
 					<?php 
-						$args = array( 'numberposts' => '1', 'meta_key' => 'featured', 'meta_value'	=> '1' );
+						$args = array( 
+							'post_type' => 'blog',
+							'numberposts' => '1',
+							'meta_key' => 'featured',
+							'meta_value'	=> '1' 
+						);
 						$featured_post = wp_get_recent_posts( $args );
 						
 						foreach( $featured_post as $featured ){
@@ -149,7 +157,12 @@ get_header();
 				<div class="col-md-6">
 
 					<?php 
-						$args = array( 'numberposts' => '2', 'offset' => 1 );
+						$args = array(
+							 'post_type' => 'blog',
+							 'numberposts' => '2',
+							 'offset' => 1
+							 );
+
 						$recent_posts_highlight = wp_get_recent_posts( $args );
 						
 						foreach( $recent_posts_highlight as $recent_highlight ){
@@ -185,7 +198,7 @@ get_header();
 	<div class="row blog-posts-main">
 		<div class="col-md-10 col-md-offset-1">
 			<h1>where you can <br/> <span class="blue">find more?</span></h1>
-			<?php echo do_shortcode('[ajax_load_more orderby="rand" post_type="post" posts_per_page="4" label="Load More" transition="masonry" container_type="ul" masonry_selector=".grid-item" masonry_animation="slide-up"]'); ?>
+			<?php echo do_shortcode('[ajax_load_more orderby="rand" post_type="blog" posts_per_page="2" label="Load More" transition="masonry" container_type="ul" masonry_selector=".grid-item" masonry_animation="slide-up"]'); ?>
 		</div>
 	</div>
 </div><!-- .container -->
