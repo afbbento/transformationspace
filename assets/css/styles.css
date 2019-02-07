@@ -765,6 +765,10 @@ span.circle-line{
 	border-bottom: 2px solid var(--color-1);
 }
 
+.blog.remove-bg {
+	background-image: none;
+}
+
 .navbar.scrolled-nav{
 	box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);
 	-webkit-box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);
@@ -5114,6 +5118,10 @@ and (orientation : landscape) {
 		padding: 10px;
 		width: 100%;
 	}
+
+	.header-section-bottom {
+		background: #fff;
+	}
 	.header-section-bottom .highlight-text {
 		width: 50%;
 	}
@@ -5134,6 +5142,15 @@ and (orientation : landscape) {
 	.header-section-bottom .row-highlight {
 		padding: 15px;
 	}
+
+	.education-item {
+		padding: 0;
+	}
+
+	.education {
+		padding: 40px 0;
+	}
+	
 	.quote .container{
 		padding: 0 40px;
 	}
@@ -5565,8 +5582,8 @@ and (orientation : landscape) {
 @media only screen and (max-width: 480px) {
 
 	.home-slider h1 {
-		font-size: 40px;
-		line-height: 52px;
+		font-size: 35px;
+		line-height: 47px;
 	}
 
 	.separator.separator-education .button-container {

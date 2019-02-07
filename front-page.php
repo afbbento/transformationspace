@@ -81,7 +81,7 @@ get_header(); ?>
                         foreach( $posts as $post ):
                             setup_postdata( $post );
                             ?>
-                <div class="col-md-6 col-sm-12 row-highlight">
+                <div class="col-md-6 col-sm-12 row-highlight hidden-xs">
                     <div class="highlight-text">
                         <div class="lead3 white-text">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -226,7 +226,7 @@ if( $bootcamps_section ):
                     while ( have_rows('education_items') ) : the_row();
                         ?>
             <div class="col-md-6">
-                <div class="education-item partners">
+                <div class="education-item partners pb-40">
                     <div class="partner__img-wrapper mb-40">
                         <img src="<?php the_sub_field('image'); ?>" alt="" class="partner__img">
                     </div>
