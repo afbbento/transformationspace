@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 col-md-12">
-                <div class="row">
+                <div class="row foot">
                     <div class="col-md-3">
                         <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
                         <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">

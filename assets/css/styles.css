@@ -4782,6 +4782,15 @@ body.tag .blog-posts-main{
 	.article-slider .col-md-6:last-child {
 		padding: 19px 84px 0 29px;
 	}
+
+	/*FOOTER*/
+
+	.row.foot {
+		margin-right: 10px;
+	}
+	.row.address {
+		margin-right: 18px;
+	}
 	
 }
 
