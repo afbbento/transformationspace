@@ -5559,6 +5559,11 @@ body.tag .blog-posts-main{
 		font-size: 30px;
 	}
 	
+	/*PAGE STORIES*/
+
+	.all-stories .feat-video .lined-box{
+		margin-left: 0px;
+	}
 }
 
 
