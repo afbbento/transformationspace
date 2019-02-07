@@ -1,30 +1,27 @@
 <?php
 /**
- * The front page template file
- *
- * If the user has selected a static page for their homepage, this is what will
- * appear.
- * Learn more: https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage transformationspace
- * @since 1.0
- * @version 1.0
- */
-
+* The front page template file
+*
+* If the user has selected a static page for their homepage, this is what will
+* appear.
+* Learn more: https://codex.wordpress.org/Template_Hierarchy
+*
+* @package WordPress
+* @subpackage transformationspace
+* @since 1.0
+* @version 1.0
+*/
 get_header(); ?>
-
 <div class="header-section" style="background-image:url('<?php echo get_field('header_background');  ?>');">
     <div class="home-slider-container">
         <div class="container">
             <div class="row visible-xs visible-sm">
                 <div class="col-md-12">
-                    <?php 
-
-		      		if ( has_custom_logo() ) {        
-		        		echo '<a href="/"><div class="custom-logo"></div></a>';
-					}
-		      	?>
+                    <?php
+                    if ( has_custom_logo() ) {
+                        echo '<a href="/"><div class="custom-logo"></div></a>';
+                    }
+                    ?>
                 </div>
             </div>
             <div class="row">
@@ -32,16 +29,12 @@ get_header(); ?>
                     <div class="slick-nav col-xs-1 hidden-xs"></div>
                     <div class="home-slider">
                         <?php
-
-						
-						if( have_rows('header_slider') ):
-
-						
-						while ( have_rows('header_slider') ) : the_row();
-
-						?>
+                        
+                        if( have_rows('header_slider') ):
+                            
+                            while ( have_rows('header_slider') ) : the_row();
+                                ?>
                         <div>
-
                             <div class="row">
                                 <div class="col-md-6 home-slider-left">
                                     <p class="sup-title"><?php the_sub_field('lead'); ?></p>
@@ -63,17 +56,13 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                         <?php
-						endwhile;
-					else :
-					    // no rows found
-
-					endif;
-
-					?>
+                                endwhile;
+                            else :
+														// no rows found
+                            endif;
+                            ?>
                     </div>
                 </div>
             </div>
@@ -82,26 +71,25 @@ get_header(); ?>
     <div class="header-section-bottom">
         <div class="container">
             <div class="row">
-                <?php 
-						$posts = get_posts(array(
-							'posts_per_page'	=> 1,
-							'post_type'			=> 'Bootcamps',
-							'orderby'        => 'rand'
-						));
-						if( $posts ):
-							foreach( $posts as $post ): 
-								setup_postdata( $post );
-						?>
-
-                <div class="col-md-6 col-sm-12 col-xs-12 row-highlight">
+                <?php
+                    $posts = get_posts(array(
+                        'posts_per_page'    => 1,
+                        'post_type'         => 'Bootcamps',
+                        'orderby'        => 'rand'
+                    ));
+                    if( $posts ):
+                        foreach( $posts as $post ):
+                            setup_postdata( $post );
+                            ?>
+                <div class="col-md-6 col-sm-12 row-highlight">
                     <div class="highlight-text">
                         <div class="lead3 white-text">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </div>
-                        <?php 
-								$bootcamp_description = get_field('bootcamp_description');	
-								if( $bootcamp_description ):
-							?>
+                        <?php
+												$bootcamp_description = get_field('bootcamp_description');
+												if( $bootcamp_description ):
+													?>
                         <p><?php echo create_excerpt($bootcamp_description['text'], 122); ?></p>
                     </div>
                     <?php $imgid = get_field('homepage_video'); ?>
@@ -117,25 +105,18 @@ get_header(); ?>
                 </div>
                 <?php endif; ?>
                 <?php endforeach; ?>
-
                 <?php wp_reset_postdata(); ?>
-
                 <?php endif; ?>
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="lead2">
                         <?php pll_e('Looking for the right career move?'); ?>
                     </div>
                     <label><?php pll_e('Enter your email'); ?></label>
-                    <form
-                        action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?"
-                        method="get" id="newsletter-header" name="mc-embedded-subscribe-form"
-                        class="form-inline validate form-newsletter-js newsletter-header" target="_blank">
+                    <form action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?" method="get" id="newsletter-header" name="mc-embedded-subscribe-form" class="form-inline validate form-newsletter-js newsletter-header" >
                         <input id="mce-EMAIL" name="EMAIL" type="email" required=""
                             placeholder="<?php pll_e('Your e-mail here'); ?>">
                         <input class="btn btn-black submit" name="subscribe" type="submit"
-                            value="
-					    	
-					    	<?php pll_e('Get started'); ?>">
+                            value="<?php pll_e('Get started'); ?>">
                         <div id="mce-responses" class="clear">
                             <p class="response"></p>
                         </div>
@@ -144,7 +125,6 @@ get_header(); ?>
             </div>
         </div>
     </div>
-
 </div><!-- #primary -->
 <script type="text/javascript">
 jQuery(document).ready(function() {
@@ -164,13 +144,12 @@ jQuery(document).ready(function() {
 });
 </script>
 <?php
-	get_template_part( 'template-parts/transformation_space/section-about');
+get_template_part( 'template-parts/transformation_space/section-about');
 ?>
-
 <?php
 $quote_1 = get_field('quote_1');
 if( $quote_1 ):
-?>
+    ?>
 <section class="quote">
     <div class="container">
         <div class="row">
@@ -186,16 +165,15 @@ if( $quote_1 ):
     </div>
 </section>
 <?php endif; ?>
-
 <?php
 $bootcamps_section = get_field('bootcamps_section');
 if( $bootcamps_section ):
-?>
+    ?>
 <div class="separator">
     <div class="line"></div>
     <div class="button-container">
         <button class="btn btn-black btn-large btn-shadow">
-					<?php echo $bootcamps_section['title']; ?></button>
+            <?php echo $bootcamps_section['title']; ?></button>
     </div>
     <div class="container">
         <div class="row">
@@ -206,30 +184,27 @@ if( $bootcamps_section ):
     </div>
 </div>
 <?php endif; ?>
-
 <section class="bootcamps">
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <?php
-					get_template_part( 'template-parts/transformation_space/bootcamp-box');
-				?>
+                    get_template_part( 'template-parts/transformation_space/bootcamp-box');
+                    ?>
             </div>
         </div>
     </div>
 </section>
-
-
 <?php
-$education_section = get_field('education_section');
-if( $education_section ):
-?>
+    $education_section = get_field('education_section');
+    if( $education_section ):
+        ?>
 <div class="separator container-fluid separator-education">
     <div class="row line"></div>
     <div class="col-sm-12 button-container">
         <button class="btn btn-black btn-large btn-shadow">
-					<?php echo $education_section['title']; ?>
-				</button>
+            <?php echo $education_section['title']; ?>
+        </button>
     </div>
     <div class="container">
         <div class="row">
@@ -240,19 +215,19 @@ if( $education_section ):
     </div>
 </div>
 <?php endif; ?>
-
-<?php 
-	if( have_rows('education_items') ):
-?>
-<section class="education theme--dark" style="background-image: url('<?php echo bloginfo('template_url'); ?>/assets/images/homepage-education-section.jpg');">
+<?php
+    if( have_rows('education_items') ):
+        ?>
+<section class="education theme--dark"
+    style="background-image: url('<?php echo bloginfo('template_url'); ?>/assets/images/homepage-education-section.jpg');">
     <div class="container">
         <div class="row">
             <?php
-						while ( have_rows('education_items') ) : the_row();    
-					  ?>
+                    while ( have_rows('education_items') ) : the_row();
+                        ?>
             <div class="col-md-6">
                 <div class="education-item partners">
-										<div class="partner__img-wrapper mb-40">
+                    <div class="partner__img-wrapper mb-40">
                         <img src="<?php the_sub_field('image'); ?>" alt="" class="partner__img">
                     </div>
                     <div class="inner-content">
@@ -260,60 +235,58 @@ if( $education_section ):
                         <p><?php the_sub_field('text'); ?></p>
                     </div>
                     <ul class="social-links center mb-30">
-                        <?php	
-										if (!get_sub_field('fb')): ?>
+                        <?php
+                                    if (!get_sub_field('fb')): ?>
                         <li>
                             <a target="_blank" href="<?php the_sub_field('fb'); ?>" class="white-text">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </li>
-                        <?php	
-										endif;
-										if (!get_sub_field('linkedin')): ?>
+                        <?php
+                                    endif;
+                                    if (!get_sub_field('linkedin')): ?>
                         <li>
                             <a target="_blank" href="<?php the_sub_field('linkedin'); ?>" class="white-text">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                         </li>
-                        <?php	
-										endif;
-										if (!get_sub_field('twitter')): ?>
+                        <?php
+                                    endif;
+                                    if (!get_sub_field('twitter')): ?>
                         <li>
                             <a target="_blank" href="<?php the_sub_field('twitter'); ?>" class="white-text">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </li>
-                        <?php	
-										endif;
-										?>
-										</ul>
-										<?php	if(get_sub_field('link')): ?>
-                    <a target="_blank" href="<?php the_sub_field('link'); ?>" class="btn btn-transparent full-width">know more</a>
-									<?php endif; ?>
+                        <?php
+                                    endif;
+                                    ?>
+                    </ul>
+                    <?php   if(get_sub_field('link')): ?>
+                    <a target="_blank" href="<?php the_sub_field('link'); ?>"
+                        class="btn btn-transparent full-width">know more</a>
+                    <?php endif; ?>
                 </div>
             </div>
-            <?php	
-            endwhile;
-            ?>
+            <?php
+                    endwhile;
+                    ?>
         </div>
         <!-- <div class="row">
-            <div class="col-md-12 text-center">
-                <a href="#" class="btn btn-yellow bordered">see more</a>
-            </div>
-        </div> -->
+                <div class="col-md-12 text-center">
+                    <a href="#" class="btn btn-yellow bordered">see more</a>
+                </div>
+            </div> -->
     </div>
 </section>
 <?php endif; ?>
 <?php
-
-	get_template_part( 'template-parts/transformation_space/stories');
-
+get_template_part( 'template-parts/transformation_space/stories');
 ?>
-
 <?php
 $blog_section = get_field('blog_section');
 if( $blog_section ):
-?>
+    ?>
 <div class="separator">
     <div class="line"></div>
     <div class="button-container">
@@ -331,23 +304,18 @@ if( $blog_section ):
 <section class="blog">
     <div class="container">
         <?php
-			get_template_part( 'template-parts/transformation_space/article-slider');
-		?>
+        get_template_part( 'template-parts/transformation_space/article-slider');
+        ?>
     </div>
 </section>
-
 <?php
-
-	get_template_part( 'template-parts/transformation_space/text-slider');
+get_template_part( 'template-parts/transformation_space/text-slider');
 ?>
-
 <?php
-	$banner_color = 'yellow';
-	include(locate_template('template-parts/transformation_space/more-info-banner.php'));
+$banner_color = 'yellow';
+include(locate_template('template-parts/transformation_space/more-info-banner.php'));
 ?>
-
 <?php
-	get_template_part( 'template-parts/transformation_space/events');
+get_template_part( 'template-parts/transformation_space/events');
 ?>
-
 <?php get_footer();

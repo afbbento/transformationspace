@@ -631,6 +631,7 @@ span.circle-line{
 .navbar-default{
 	border: none;
 	z-index: 2;
+	height: 100px;
 }
 .custom-logo{
 	float: left;
@@ -1866,6 +1867,7 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 }
 .home-slider-container .button-wrapper{
 	margin-left: 11px;
+	margin-bottom: 10px;
 }
 .home-slider-left{
 	padding-top: 40px;
@@ -1930,8 +1932,6 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 }
 .header-section-bottom{
 	border-top: 2px solid #fff;
-	top: 0;
-	left: 0;
 	width: 100%;
 	background: linear-gradient(to left, #fff 50%, #000 50%);
 	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
@@ -1985,9 +1985,6 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 }
 .header-section-bottom .highlight-image {
 	width: 43%;
-	height: auto;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 .highlight-number{
 	font-weight: bold;
@@ -2729,6 +2726,11 @@ header.bootcamp .circle-line.white::after {
 }
 
 @media (max-width: 768px) {
+
+	.header-section-bottom .col-md-6 {
+		padding-left: 60px;
+	}
+
 	#timeline-wrapper .timeline-top {
 		text-align: right;
 		padding-right: 20%;
@@ -4736,6 +4738,11 @@ body.tag .blog-posts-main{
 
 /*RESPONSIVE*/
 @media only screen and (max-width : 1200px) {
+
+	#navbar{
+		display: none;	
+	}
+
 	h3{
 		line-height: 38px;
 		font-size: 33px;
@@ -4775,18 +4782,12 @@ body.tag .blog-posts-main{
 	.article-slider .col-md-6:last-child {
 		padding: 19px 84px 0 29px;
 	}
-	.highlight-image img{
-		padding: 22px 0px;
-	}
-	
-	
 	
 }
+
 @media only screen and (max-width : 992px) {
 	/*MENU*/
-	.navbar-default{
-		display: none;	
-	}
+
 	.right-nav {
 		width: 50px;
 		height: 50px;
@@ -5005,6 +5006,22 @@ body.tag .blog-posts-main{
 	}
 	
 }
+
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+@media only screen and (max-width : 834px) {
+	.header-section-bottom .highlight-image {
+		max-height: 147px;
+		overflow: hidden;
+	}
+
+	.header-section-bottom .col-md-6 {
+    	padding-left: 60px;
+	}
+}
+
+
 @media only screen and (max-width : 767px) {
 	h1{
 		font-size: 32px;
