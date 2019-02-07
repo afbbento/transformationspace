@@ -3884,7 +3884,7 @@ a.round-btn.bookmark:hover{
 }
 .related-posts-row h1{
 	padding-left: 27px;	
-	margin-top: 65px;
+	margin-top: 40px;
 }
 .related-image{
 	position: relative;
@@ -3995,8 +3995,9 @@ body.category .scrolled-nav .top-menu .enroll-btn .menu-item-link{
 	color: var(--yellow);	
 }
 .breadcrumbs {
-	margin-bottom: 60px;
+	margin-bottom: 20px;
 }
+
 
 .single header{
 	padding-top: 100px;
