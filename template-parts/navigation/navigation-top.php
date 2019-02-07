@@ -37,12 +37,8 @@ if(!empty( $categories)) {
 <nav class="navbar navbar-default navbar-fixed-top <?php echo $color_theme; ?>">
     <div class="container">
       	<div class="row">
-      	<?php 
-
-      		if ( has_custom_logo() ) {        
-        		echo '<a href="/"><div class="custom-logo"></div></a>';
-			}
-      	?>
+					<a href="/"><div class="custom-logo"></div></a>
+					
 	        <div id="navbar">
 	        <?php wp_nav_menu( array(
 					'theme_location' => 'top',
