@@ -47,7 +47,6 @@ function register_post_types() {
         'taxonomies' => array('category','post_tag'),
 		'hierarchical' => true,
 		'menu_icon' => 'dashicons-calendar',
-		//'rewrite' => array('slug' => '/bootcamps/'),
 		'query_var' => true,
 		'supports' => array(
 		  'title',
@@ -70,7 +69,6 @@ function register_post_types() {
 		'capability_type' => 'post',
 		'hierarchical' => true,
 		'menu_icon' => 'dashicons-admin-users',
-		//'rewrite' => array('slug' => '/bootcamps/'),
 		'query_var' => true,
 		'supports' => array(
 		  'title',
@@ -93,7 +91,6 @@ function register_post_types() {
 		'capability_type' => 'post',
 		'hierarchical' => true,
 		'menu_icon' => 'dashicons-welcome-write-blog',
-		//'rewrite' => array('slug' => '/bootcamps/'),
 		'query_var' => true,
 		'supports' => array(
 		  'title',
