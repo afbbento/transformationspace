@@ -169,7 +169,7 @@ if( $quote_1 ):
 $bootcamps_section = get_field('bootcamps_section');
 if( $bootcamps_section ):
     ?>
-<div class="separator">
+<div class="separator pt-40">
     <div class="line"></div>
     <div class="button-container">
         <button class="btn btn-black btn-large btn-shadow">
