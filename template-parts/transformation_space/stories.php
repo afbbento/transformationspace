@@ -19,21 +19,21 @@
         <div class="row">
 
             <?php 
-		         		$args = array(
-						    'category_name' => 'Stories',
-						    'posts_per_page'   => 1,
-						);
-						// query
-						$the_query = new WP_Query( $args );
-					 if( $the_query->have_posts() ): 
-						 while( $the_query->have_posts() ) : $the_query->the_post(); 
-						 $video_ID = get_field('vimeo_video_id');
-		         	?>
+                $args = array(
+                    'post_type' => 'Stories',
+                    'posts_per_page'   => 1,
+                );
+                // query
+                $the_query = new WP_Query( $args );
+                if( $the_query->have_posts() ): 
+                    while( $the_query->have_posts() ) : $the_query->the_post(); 
+                    $video_ID = get_field('vimeo_video_id');
+            ?>
 
             <div class="col-md-10 col-md-offset-1">
                 <div class="bordered-box lined-box">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-8 reset">
                             <div class="video-container">
                                 <div class="play-button-outer big">
                                     <a data-fancybox="" data-width="640" data-height="360"
@@ -55,13 +55,10 @@
 
                 </div>
             </div>
-
-
             <?php 
-						endwhile;
-						wp_reset_query(); 
-						endif; ?>
-
+            endwhile;
+            wp_reset_query(); 
+            endif; ?>
         </div>
         <div class="row">
             <div class="col-lg-12 col-lg-offset-0 col-md-7 col-md-offset-2 text-center">
