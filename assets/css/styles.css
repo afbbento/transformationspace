@@ -4166,7 +4166,6 @@ body.category .scrolled-nav .top-menu .enroll-btn .menu-item-link{
 	width: 47%;
 	margin: 0 1.5% 3%;
 	float: left;
-	display: inline-block;
 }
 
 .alm-listing>li {
@@ -5070,6 +5069,10 @@ and (orientation : landscape) {
 
 
 @media only screen and (max-width : 767px) {
+
+	.navbar-default {
+		display: none;
+	}
 	
 	.slick-track {
 		padding-top: 0;
