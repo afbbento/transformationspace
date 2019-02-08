@@ -1869,7 +1869,7 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 }
 .home-slider-container .slick-nav{
 	position: absolute;
-	left: -9%;
+	left: -6%;
 }
 .home-slider-container .button-wrapper{
 	margin-left: 11px;
