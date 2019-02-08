@@ -4163,9 +4163,14 @@ body.category .scrolled-nav .top-menu .enroll-btn .menu-item-link{
 
 .ajax-load-more-wrap ul.alm-listing li.grid-item{
 	border: 1px solid #efefef;
+	width: 47%;
 	margin: 0 1.5% 3%;
-	display: inline;
-	padding-left: 0;
+	float: left;
+	display: inline-block;
+}
+
+.alm-listing>li {
+	padding: 0 !important;
 }
 .alm-listing > li img {
 	position: relative !important;
