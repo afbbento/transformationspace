@@ -1017,8 +1017,9 @@ input:-moz-placeholder { /* Firefox 18- */
 	float: left;
 	height: 40px;
 	padding: 12px 16px;
-	width: 75%;
+	width: 70%;
 	margin-right: 1%;
+	border-bottom: 1px solid #fff;
 }
 .btn-yellow{
 	background-color: var(--yellow);
@@ -1043,7 +1044,7 @@ input:-moz-placeholder { /* Firefox 18- */
 .footer input[type="submit"], 
 #newsletter-menu input[type="submit"],
 #newsletter-header input[type="submit"]{
-	width: 24%;
+	width: 29%;
 }
 .form-newsletter-js .btn{
 	height: 40px;
