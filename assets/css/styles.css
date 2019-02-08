@@ -5070,6 +5070,10 @@ and (orientation : landscape) {
 		padding-top: 0;
 	}
 
+	.home-slider-left {
+		padding-top: 70px;
+	}
+
 	.article-slider .row {
 		padding: 0;
 	}
