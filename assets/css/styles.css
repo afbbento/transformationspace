@@ -4174,6 +4174,7 @@ body.category .scrolled-nav .top-menu .enroll-btn .menu-item-link{
 }
 .alm-listing > li img {
 	position: relative !important;
+	width: 100%;
 }
 .tag-list{
 	display: block;
