@@ -3193,6 +3193,7 @@ div.banner-image .col-image {
 div.banner-image .button-container{
 	position: absolute;
 	bottom: 0;
+	left: 0;
 	transform: translateY(20px);
 	text-align: center;
 	width: 100%;
