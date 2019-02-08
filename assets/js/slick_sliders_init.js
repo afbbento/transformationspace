@@ -29,7 +29,19 @@ jQuery(document).ready(function(){
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: false,
-          dots: false
+          dots: true,
+          centerPadding: '60px'
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true,
+          centerPadding: '0px'
         },
       }
       // You can unslick at a given breakpoint now by adding:

@@ -14,7 +14,8 @@
  
 $terms = get_field('blog_category_slider');
 
-if ( ! empty( $terms ) ) {
+// escondido por agora
+if (  empty( $terms ) ) {
 ?>
 
 

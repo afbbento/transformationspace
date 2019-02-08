@@ -5267,7 +5267,6 @@ and (orientation : landscape) {
 		width: 100%;
 		height: auto;
 		margin-top: 30px;
-		border: none;
 	}
 	
 	.bootcamp-box [class*="col-"]:nth-child(1) p{
@@ -5605,8 +5604,8 @@ and (orientation : landscape) {
 		margin: 0 -20px;
 	}
 	
-	.stories-slider-container .col-md-6 {
-		height: 250px;
+	.stories-slider-container .col-md-6:first-child {
+		height: 200px;
 	}
 	
 	.stories-slider-container p,
