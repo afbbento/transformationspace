@@ -21,12 +21,12 @@
 	}
 ?>
 <section class="banner <?php echo $banner_color; ?> info-banner pt-50 pb-50">
-	<h3><?php pll_e('Get more info'); ?></h3>
-	<p><?php pll_e('So many things we can share with you. Let your e-mail here'); ?></p>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-				<div id="mc_embed_signup" class="col-xs-12">
+			<h3><?php pll_e('Get more info'); ?></h3>
+			<p><?php pll_e('So many things we can share with you. Let your e-mail here'); ?></p>
+				<div id="mc_embed_signup">
 					<form action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?" method="get"  name="mc-embedded-subscribe-form" id="banner-newsletter" class="banner-form form-inline validate" target="_blank">
 					    <div class="form-group">
 					      <label for="name"><?php pll_e('Name'); ?></label>
