@@ -5310,9 +5310,7 @@ and (orientation : landscape) {
 	.bootcamp-box .line{
 		margin: 29px -15px 19px -15px;
 	}
-	footer .widget{
-		padding-bottom: 0;
-	}
+
 	footer .address-box{
 		margin-bottom: 40px;
 	}
