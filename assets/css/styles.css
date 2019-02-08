@@ -5058,6 +5058,7 @@ and (orientation : landscape) {
 
 @media only screen and (max-width : 767px) {
 	
+	.about-section,
 	section {
 		padding: 40px 0;
 	}
@@ -5432,9 +5433,7 @@ and (orientation : landscape) {
 		height: auto;
 		margin-bottom: 50px;
 	}
-	.about-section {
-		padding: 38px 0 100px;
-	}
+
 	.lined-box::before {
 		content: none;
 	}
