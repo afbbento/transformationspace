@@ -5112,7 +5112,7 @@ and (orientation : landscape) {
 		margin-bottom: 31px;
 	}
 	.home-slider .button-wrapper.visible-xs.visible-sm{
-		margin-top: 50px;
+		margin-top: 25px;
 		margin-bottom: 25px;	
 	}
 	.home-slider-container {
@@ -5594,6 +5594,10 @@ and (orientation : landscape) {
 }
 
 @media only screen and (max-width: 480px) {
+
+	.slider-image {
+		width: 100%;
+	}
 	
 	/* the slides */
 	.slick-slide {
