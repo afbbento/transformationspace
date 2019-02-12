@@ -208,7 +208,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="faqs">
+<section id="faq" class="faqs">
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
