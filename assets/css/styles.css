@@ -932,6 +932,7 @@ span.circle-line{
 }
 
 .menu-right-nav-menu .current_page_item  .menu-item-link,
+.menu-right-nav-menu .anchor-link:hover .menu-item-link,
 .menu-right-nav-menu .anchor-link.selected .menu-item-link,
 .menu-right-nav-menu .menu-item-link:hover{
 	background: var(--yellow);
