@@ -925,8 +925,14 @@ span.circle-line{
 	text-transform: lowercase;
 }
 
+/* remove current page item if is anchor link */
+.menu-right-nav-menu .anchor-link.current_page_item .menu-item-link {
+	background: initial;
+    box-shadow: initial;
+}
+
 .menu-right-nav-menu .current_page_item  .menu-item-link,
-.menu-right-nav-menu .selected .menu-item-link,
+.menu-right-nav-menu .anchor-link.selected .menu-item-link,
 .menu-right-nav-menu .menu-item-link:hover{
 	background: var(--yellow);
 	background-image: url('../images/checkmark.svg');
@@ -934,6 +940,8 @@ span.circle-line{
 	background-position: 28px center;
 	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
 }
+
+
 .menu-right-nav-menu .menu-item {
 	list-style: none;
 	text-transform: lowercase;
