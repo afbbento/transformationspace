@@ -411,7 +411,7 @@ input,
 select,
 textarea {
 	color: #333;
-	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: 'Raleway', 'Work Sans', helvetica, arial, sans-serif;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	font-weight: 400;

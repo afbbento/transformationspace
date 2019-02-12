@@ -79,9 +79,21 @@ a:focus {
 	cursor: pointer;
 }
 
+
+
+/* fix focus after click on chrome */
+
 .button:focus,
 .btn:focus {
 	outline: none;
+}
+
+.btn:focus, .btn.focus {
+	color: initial;
+}
+
+.btn-transparent-alt:focus {
+	color: #fff;
 }
 
 .clearfix{
@@ -912,6 +924,8 @@ span.circle-line{
 	padding: 6px 46px 6px 72px;
 	text-transform: lowercase;
 }
+
+.menu-right-nav-menu .current_page_item  .menu-item-link,
 .menu-right-nav-menu .selected .menu-item-link,
 .menu-right-nav-menu .menu-item-link:hover{
 	background: var(--yellow);
@@ -1019,7 +1033,6 @@ input:-moz-placeholder { /* Firefox 18- */
 	padding: 12px 16px;
 	width: 70%;
 	margin-right: 1%;
-	border-bottom: 1px solid #fff;
 }
 .btn-yellow{
 	background-color: var(--yellow);
@@ -1275,9 +1288,7 @@ img.plus-sign{
 	color: #333;
 	text-decoration: none;
 }
-.btn:focus, .btn.focus {
-	color: initial;
-}
+
 input[type="button"].btn-shadow, .btn-shadow,
 input[type="submit"].btn-shadow{
 	-webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
@@ -1340,6 +1351,18 @@ input[type="submit"].btn-black:hover {
 	color: var(--bg-1);
 	border:2px solid var(--color-1);
 }
+
+.btn-transparent-alt{
+	background: var(--color-1);
+	color: var(--bg-1);
+	border:2px solid var(--color-1);
+}
+.btn-transparent-alt:hover {
+	background: transparent;
+	color: var(--color-1);
+	border:2px solid var(--color-1);
+}
+
 .btn-large{
 	font-size: 30px;
 	padding: 17px 74px;
@@ -2954,7 +2977,6 @@ header.bootcamp .circle-line.white::after {
 	margin-bottom: 0px;
 	text-transform: uppercase;
 	margin-bottom: 20px;
-	width: 209px;
 	text-align: center;
 }
 .bootcamp-investment .bordered-box{
