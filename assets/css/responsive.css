@@ -1,14 +1,20 @@
 /* only large devices */
 @media only screen and (min-width : 1300px) {
-    .left-sidebar {
+
+    .sticky-top {
         left: 10%;
     }
 }   
 
+@media only screen and (min-width : 991px) {
+    .single-blog .main-container {
+        margin-top: -450px;
+    }
+}
+
 /* only large and medium devices */
 @media only screen and (min-width : 769px) {
-	/*FOOTER*/
-	
+    
 	.row.foot {
 		margin-right: 10px;
 	}

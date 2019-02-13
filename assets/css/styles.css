@@ -3459,9 +3459,6 @@ h2.widget-title{
 
 /*BLOG SINGLE PAGE*/
 
-.single-blog .main-container {
-	margin-top: -450px;	
-}
 
 header.blog{
 	height: 492px;
@@ -3603,6 +3600,8 @@ aside li a{
 
 
 .sticky-top {
+	display: inline-block;
+    left: 5%;
     position: -webkit-sticky;
     position: sticky;
     top: 150px;
@@ -3689,7 +3688,6 @@ aside li a{
 .left-sidebar {
 	position: relative;
 	top: 200px;
-	left: 5%;
 	height: 450px;
 }
 .left-sidebar.fixed {
