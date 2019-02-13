@@ -79,6 +79,7 @@
         </div>
     </div>
 </header>
+<div class="container-fluid">
 <div class="sticky-top">
     <div class="left-sidebar hidden-xs hidden-sm">
         <div>
@@ -171,6 +172,10 @@
             <?php get_sidebar(); ?>
         </div>
     </div>
+    </div><!-- .container -->
+    </div><!-- .container-fluid -->
+    
+    <div class="container">
     <div class="row related-posts-row">
         <div class="col-md-11">
             <h1>where you can<br><span class="blue">find more</span></h1>

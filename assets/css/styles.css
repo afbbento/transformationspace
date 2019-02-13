@@ -3458,6 +3458,11 @@ h2.widget-title{
 }
 
 /*BLOG SINGLE PAGE*/
+
+.single-blog .main-container {
+	margin-top: -450px;	
+}
+
 header.blog{
 	height: 492px;
 	background: -moz-linear-gradient(top, rgba(0,0,0,0.7) 33%, rgba(0,0,0,0) 100%, transparent),  url("http://localhost/transformation-space/wp-content/uploads/header-blog.jpg") no-repeat center; /* FF3.6-15 */
@@ -3601,7 +3606,7 @@ aside li a{
     position: -webkit-sticky;
     position: sticky;
     top: 150px;
-    z-index: 1020;
+    z-index: 9;
   }
 
 
@@ -3682,9 +3687,10 @@ aside li a{
 }
 
 .left-sidebar {
-	position: absolute;
+	position: relative;
 	top: 200px;
 	left: 5%;
+	height: 450px;
 }
 .left-sidebar.fixed {
 	top: 200px;
@@ -3968,6 +3974,9 @@ blockquote, blockquote p{
 	border: none;
 }
 /*BLOG POSTS PAGE*/
+
+
+
 .page-template-blog .navbar,
 .page-template-stories .navbar,
 body.category .navbar,
