@@ -662,8 +662,10 @@ function my_assets() {
 	wp_enqueue_style( 'tagsinput-style',  plugins_url() . '/search-tag/bootstrap-tagsinput.css' );
 	wp_enqueue_style( 'typehead-style',  plugins_url() . '/search-tag/typeahead.css' );
 	wp_enqueue_style( 'fancybox-style', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css' );
-	wp_enqueue_style( 'styles', get_template_directory_uri() . '/assets/css/styles.css', '', $ts_theme_version);
 	wp_enqueue_style( 'landing-style', get_template_directory_uri() . '/assets/css/style-landing-page.css', '', $ts_theme_version);	
+	wp_enqueue_style( 'tp-style', get_template_directory_uri() . '/assets/css/styles.css', '', $ts_theme_version);
+	wp_enqueue_style( 'tp-responsive', get_template_directory_uri() . '/assets/css/responsive.css', '', $ts_theme_version);
+
 }
 
 add_action( 'wp_enqueue_scripts', 'my_assets' );

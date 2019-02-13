@@ -16,41 +16,53 @@
  */
 
 ?>
+
+
+
+<div class="bg-blog-wrapper"></div>
 <header class="blog">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="breadcrumbs white">
-					<span class="level0"><span class="circle-line white"></span>blog </span><i class="fas fa-chevron-right"></i><span class="level1"><?php echo get_the_title(); ?> </span>
-				</div>
-				
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-11">
-				<dir class="row header-text">
-					<div class="col-md-9">
-						<p class="x-small upper yellow-text"><strong>Agile methodologies</strong></p>
-						<h1 class="blog-title"><?php echo get_the_title(); ?></h1>
-						<div class="post-meta">
-							<ul>
-								<li><p class="x-small"><?php echo transformationspace_posted_on(); ?></p></li>
-								<li class="likes"><p class="x-small">
-									<?php 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumbs white">
+                    <span class="level0"><span class="circle-line white"></span>blog </span><i
+                        class="fas fa-chevron-right"></i><span class="level1"><?php echo get_the_title(); ?> </span>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-11">
+                <dir class="row header-text">
+                    <div class="col-md-9">
+                        <p class="x-small upper yellow-text"><strong>Agile methodologies</strong></p>
+                        <h1 class="blog-title"><?php echo get_the_title(); ?></h1>
+                        <div class="post-meta">
+                            <ul>
+                                <li>
+                                    <p class="x-small"><?php echo transformationspace_posted_on(); ?></p>
+                                </li>
+                                <li class="likes">
+                                    <p class="x-small">
+                                        <?php 
 										if (function_exists('wp_ulike_get_post_likes')):
 											echo wp_ulike_get_post_likes(get_the_ID());
 										endif;
 									?>
-								</p></li>	
-								
-								<?php $post_object = get_post( get_the_ID() );	?>
-								<li class="read-time"><p class="x-small"><?php echo estimate_time_read($post_object->post_content); ?> read</p></li>
-							</ul>							
-						</div>
-					</div>	
-					<div class="col-md-3 author-col">
-						<img src="<?php echo _wp_upload_dir_baseurl(); ?>/blog-author.png" alt="Avatar" >
-						<p><?php 
+                                    </p>
+                                </li>
+
+                                <?php $post_object = get_post( get_the_ID() );	?>
+                                <li class="read-time">
+                                    <p class="x-small"><?php echo estimate_time_read($post_object->post_content); ?>
+                                        read</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 author-col">
+                        <img src="<?php echo _wp_upload_dir_baseurl(); ?>/blog-author.png" alt="Avatar">
+                        <p><?php 
 
 							$author_id = get_post_field( 'post_author', get_the_ID() );
 							$fname = get_the_author_meta( 'first_name', $author_id );
@@ -59,31 +71,33 @@
 							
 							echo $fname." ".$lname;
 						?>
-						</p>
-						<p class="x-small"><?php the_field('user_position', 'user_'. $author_id ); ?></p>					
-					</div>	
-				</dir>
-			</div>
-		</div>
-	</div>
+                        </p>
+                        <p class="x-small"><?php the_field('user_position', 'user_'. $author_id ); ?></p>
+                    </div>
+                </dir>
+            </div>
+        </div>
+    </div>
 </header>
-<div class="left-sidebar hidden-xs hidden-sm">
-		<div>
-			<?php echo do_shortcode('[wp_ulike]');?>
-		</div>
-		<div>		
-			<a class="round-btn bookmark" id="bookmarkme" href="#"></a>
-		</div>
-		<div class="social-share">
-			<?php echo do_shortcode( '[social_warfare button_shape="flat_fresh"]' ); ?>
-		</div>
-	</div>
+<div class="sticky-top">
+    <div class="left-sidebar hidden-xs hidden-sm">
+        <div>
+            <?php echo do_shortcode('[wp_ulike]');?>
+        </div>
+        <div>
+            <a class="round-btn bookmark" id="bookmarkme" href="#"></a>
+        </div>
+        <div class="social-share">
+            <?php echo do_shortcode( '[social_warfare button_shape="flat_fresh"]' ); ?>
+        </div>
+    </div>
+</div>
 <div class="container main-container">
-	<div class="row">
-		<div class="col-md-7 col-md-offset-1">
-				<main id="main" class="site-main" role="main">
+    <div class="row">
+        <div class="col-md-7 col-md-offset-1">
+            <main id="main" class="site-main" role="main">
 
-					<?php
+                <?php
 					if ( have_posts() ) :
 
 						/* Start the Loop */
@@ -111,56 +125,59 @@
 					endif;
 
 					?>
-					<div class="left-sidebar visible-xs visible-sm" style="position:relative;">
-						<div>
-							<?php echo do_shortcode('[wp_ulike]');?>
-						</div>
-						<div>		
-							<a class="round-btn bookmark" id="bookmarkme" href="#"></a>
-						</div>
-						<div class="social-share">
-							<?php echo do_shortcode( '[social_warfare button_shape="flat_fresh"]' ); ?>
-						</div>
-					</div>
-					<div class="blog-bottom">
-						<img src="<?php echo _wp_upload_dir_baseurl(); ?>/blog-bottom-1.png">
-					</div>
-					<div class="author-meta">
-						<div class="row">
-							<div class="col-md-2">
-							<div class="author-img">
-								<?php echo do_shortcode( '[avatar]' ); ?>
-							</div>
-						</div>
-						<div class="col-md-10">
-							<div class="author-text">
-								<p><?php echo $fname." ".$lname; ?></p>
-								<p class="x-small"><?php echo $author_bio; ?></p>
-								<ul class="social-links">
-									<li><a target="_blank" href="<?php the_field('facebook_link', 'user_'. $author_id ); ?>" class=""><i class="fab fa-facebook-f"></i></a></li>
-									<li><a target="_blank" href="http://linkedin.com" class=""><i class="fab fa-linkedin-in"></i></a></li>
-									<li><a target="_blank" href="http://twitter.com" class=""><i class="fab fa-twitter"></i></a></li>
-								</ul>
-							</div>
-						</div>
-						</div>
-						
-							
-					</div>
-				</main><!-- #main -->
-		</div><!-- #col -->
-		<div class="col-md-3 col-md-offset-1">
-			<?php get_sidebar(); ?>	
-		</div>
-	</div>
-	<div class="row related-posts-row">
-		<div class="col-md-11">
-			<h1>where you can<br><span class="blue">find more</span></h1>
-			<?php
+                <div class="left-sidebar visible-xs visible-sm" style="position:relative;">
+                    <div>
+                        <?php echo do_shortcode('[wp_ulike]');?>
+                    </div>
+                    <div>
+                        <a class="round-btn bookmark" id="bookmarkme" href="#"></a>
+                    </div>
+                    <div class="social-share">
+                        <?php echo do_shortcode( '[social_warfare button_shape="flat_fresh"]' ); ?>
+                    </div>
+                </div>
+                <div class="blog-bottom">
+                    <img src="<?php echo _wp_upload_dir_baseurl(); ?>/blog-bottom-1.png">
+                </div>
+                <div class="author-meta">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="author-img">
+                                <?php echo do_shortcode( '[avatar]' ); ?>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="author-text">
+                                <p><?php echo $fname." ".$lname; ?></p>
+                                <p class="x-small"><?php echo $author_bio; ?></p>
+                                <ul class="social-links">
+                                    <li><a target="_blank"
+                                            href="<?php the_field('facebook_link', 'user_'. $author_id ); ?>"
+                                            class=""><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a target="_blank" href="http://linkedin.com" class=""><i
+                                                class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a target="_blank" href="http://twitter.com" class=""><i
+                                                class="fab fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </main><!-- #main -->
+        </div><!-- #col -->
+        <div class="col-md-3 col-md-offset-1">
+            <?php get_sidebar(); ?>
+        </div>
+    </div>
+    <div class="row related-posts-row">
+        <div class="col-md-11">
+            <h1>where you can<br><span class="blue">find more</span></h1>
+            <?php
 				get_template_part( 'template-parts/transformation_space/related-posts');
 			?>
-		</div>
-	</div>
-	
-</div><!-- .container -->
+        </div>
+    </div>
 
+</div><!-- .container -->

@@ -13,7 +13,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>"  <?php post_class("remove-bg"); ?>>
-	<div class="blog-featured-img">
+	<div class="blog-featured-img pb-80">
 		<div class="lined-box line-image-frame">
 			<?php echo get_the_post_thumbnail(); ?>
 		</div>

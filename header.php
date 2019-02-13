@@ -29,7 +29,17 @@
 	
 </head>
 
-<body <?php body_class(); ?> onload="init()">
+
+
+<?php
+$color_theme = 'theme--light';
+if ( is_page_template( 'single.php' ) ): 
+	$color_theme = 'theme--light';
+endif; 
+?>
+
+
+<body <?php body_class($color_theme); ?> onload="init()">
 	
 	<?php 
 		if (is_404()){
