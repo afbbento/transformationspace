@@ -7,6 +7,7 @@ Template Post Type: post, page, event
 get_header(); 
 $uploads_url = _wp_upload_dir_baseurl();
 ?>
+
 <div class="header-section"
     style="background-image:url('<?php echo _wp_upload_dir_baseurl(); ?>/2018/10/bg-homepage.png');">
     <div class="home-slider-container">
@@ -68,6 +69,8 @@ $uploads_url = _wp_upload_dir_baseurl();
         </div>
     </div>
 </div><!-- #primary -->
+<div class="bg-pattern-about"></div>
+
 <script type="text/javascript">
 /*About Slider*/
 jQuery(document).ready(function() {

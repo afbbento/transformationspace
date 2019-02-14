@@ -3043,9 +3043,7 @@ span.yellow-circle {
 	margin:8px;
 	margin-bottom: 0;
 }
-.page-template-about .about-section{
-	background-image: url('../images/section-about-bg.png');
-}
+
 .about-section {
 	padding: 138px 0 100px;
 }
@@ -3590,12 +3588,21 @@ aside li a{
 
 
 
-.bg-blog-wrapper {
+.bg-pattern {
 	position: absolute;
 	width: 100%;
-    height: 1027px;
-	background-image: url("../images/fundo-blog.png");
+	background-image: url("../images/bg-pattern.png");
 	z-index: -1;
+	height: 1027px;
+}
+
+.bg-pattern-about {
+	position: absolute;
+	width: 100%;
+	background-image: url("../images/bg-pattern-about.png");
+	z-index: -1;
+	height: 1710px;
+
 }
 
 

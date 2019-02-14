@@ -17,9 +17,7 @@
 
 ?>
 
-
-
-<div class="bg-blog-wrapper"></div>
+<div class="bg-pattern"></div>
 <header class="blog">
     <div class="container">
         <div class="row">
