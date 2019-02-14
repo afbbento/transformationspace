@@ -32,10 +32,11 @@
 
 
 <?php
-$color_theme = 'theme--light';
-if ( is_page_template( 'single.php' ) ): 
+$color_theme = 'theme--light-alt';
+if ( is_single() ) {
 	$color_theme = 'theme--light';
-endif; 
+  }
+
 ?>
 
 

@@ -2411,10 +2411,10 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	margin-top: 25px;
 }
 .simple-line{
-	border-top: 2px solid #000;
+	border-top: 1px solid #000;
 }
 .line{
-	border-top: 2px solid #000;
+	border-top: 1px solid #000;
 }
 /*
 .line:after{
