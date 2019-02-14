@@ -271,7 +271,7 @@ if( $image_banner ):
     </div>
 </section>
 
-<section class="who">
+<section class="who theme--light">
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">

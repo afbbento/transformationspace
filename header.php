@@ -31,16 +31,7 @@
 
 
 
-<?php
-$color_theme = 'theme--light-alt';
-if ( is_single() ) {
-	$color_theme = 'theme--light';
-  }
-
-?>
-
-
-<body <?php body_class($color_theme); ?> onload="init()">
+<body <?php body_class(); ?> onload="init()">
 	
 	<?php 
 		if (is_404()){

@@ -173,7 +173,7 @@
     </div><!-- .container -->
     </div><!-- .container-fluid -->
     
-    <div class="container">
+    <div class="container theme--light">
     <div class="row related-posts-row">
         <div class="col-md-11">
             <h1>where you can<br><span class="blue">find more</span></h1>
