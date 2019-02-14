@@ -1323,10 +1323,10 @@ input[type="submit"] {
 	color: var(--yellow);
 }
 .btn-yellow.bordered{
-	border:2px solid #000;
+	border:1px solid #000;
 }
 .btn-yellow.bordered:hover{
-	border:2px solid var(--yellow);
+	border:1px solid var(--yellow);
 }
 .btn-black{
 	background-color: #000;
@@ -1356,23 +1356,23 @@ input[type="submit"].btn-black:hover {
 .btn-transparent{
 	background: transparent;
 	color: var(--color-1);
-	border:2px solid var(--color-1);
+	border:1px solid var(--color-1);
 }
 .btn-transparent:hover {
 	background: var(--color-1);
 	color: var(--bg-1);
-	border:2px solid var(--color-1);
+	border:1px solid var(--color-1);
 }
 
 .btn-transparent-alt{
 	background: var(--color-1);
 	color: var(--bg-1);
-	border:2px solid var(--color-1);
+	border:1px solid var(--color-1);
 }
 .btn-transparent-alt:hover {
 	background: transparent;
 	color: var(--color-1);
-	border:2px solid var(--color-1);
+	border:1px solid var(--color-1);
 }
 
 .btn-large{
@@ -1408,7 +1408,7 @@ input[type="submit"].btn-black:hover {
 	font-weight: 500;
 	line-height: normal;
 	font-size: 13px;
-	border:2px solid #000;
+	border:1px solid #000;
 	border-top-left-radius: 40px;
 	border-bottom-left-radius: 40px;
 	border-bottom-right-radius: 40px;
