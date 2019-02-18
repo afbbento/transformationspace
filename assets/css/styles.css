@@ -660,7 +660,7 @@ span.circle-line{
 }
 .navbar-default{
 	border: none;
-	z-index: 2;
+	z-index: 3;
 	height: 100px;
 }
 .custom-logo{
@@ -2822,7 +2822,7 @@ header.bootcamp .circle-line.white::after {
 .person__overlay {
 	background-color: rgba(75, 95, 247, .5);
     position: relative;
-    z-index: 0;
+    z-index: 2;
 }
 
 .person__img {
@@ -2843,7 +2843,6 @@ header.bootcamp .circle-line.white::after {
 	bottom: -15px;
 	border: 2px solid #000;
 	right: -15px;
-	z-index: -2;
 }
 .person.big.left .col-md-6:last-of-type{
 	padding-left: 69px;
