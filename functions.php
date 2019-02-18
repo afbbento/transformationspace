@@ -651,7 +651,7 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 
 function my_assets() {
-	$ts_theme_version = '5.3';
+	$ts_theme_version = '5.3.1';
 	wp_enqueue_style( 'Raleway-font', 'https://fonts.googleapis.com/css?family=Raleway:400,700,900' );
 	wp_enqueue_style( 'Abhaya-font', 'https://fonts.googleapis.com/css?family=Abhaya+Libre:400,600' );
 	wp_enqueue_style( 'Work-Sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,700' );
