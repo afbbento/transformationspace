@@ -414,6 +414,10 @@
 		padding: 54px 0 35px;
 	}
 
+	.footer .row.address [class*="col-"] {
+		padding: 0 15px;
+	}
+
 	.page-template-about .slider-nav {
 		bottom: 20px;
 	}
@@ -986,6 +990,7 @@
 	.error404 p.lead {
 		font-size: 40px;
 	}
+
 }
 
 
