@@ -21,21 +21,21 @@
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 col-md-12">
                 <div class="row foot">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
                         <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
                             <?php dynamic_sidebar( 'footer-1' ); ?>
                         </div><!-- #primary-sidebar -->
                         <?php endif; ?>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
                         <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
                             <?php dynamic_sidebar( 'footer-2' ); ?>
                         </div><!-- #primary-sidebar -->
                         <?php endif; ?>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-12">
                         <div class="newsletter-box bordered-box">
                             <p class="x-small"><strong>SIGN OUR NEWSLETTER</strong></p>
                             <label>Enter your email</label>

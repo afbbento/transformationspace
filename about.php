@@ -8,14 +8,11 @@ get_header();
 $uploads_url = _wp_upload_dir_baseurl();
 ?>
 
-<div class="header-section"
+<div class="header-section theme--dark"
     style="background-image:url('<?php echo _wp_upload_dir_baseurl(); ?>/2018/10/bg-homepage.png');">
     <div class="home-slider-container">
-
         <div class="home-slider" id="about-slider">
             <?php
-
-				
 				if( have_rows('header_slider') ):
 
 				$rows_count = count(get_field('header_slider'));
@@ -31,7 +28,7 @@ $uploads_url = _wp_upload_dir_baseurl();
 		    			<div class="col-md-6 home-slider-left">
 		    				<p class="lead1"><span class="circle-line white"></span><strong>about</strong></p>
 		    				<h1>'.$title.'</h1>
-							<p>'.get_sub_field('paragraph').'</p>
+							<p class="home-slider__text">'.get_sub_field('paragraph').'</p>
 		    			</div>
 		    			<div class="col-md-6">
 		    				<div class="slider-image">';
@@ -39,8 +36,8 @@ $uploads_url = _wp_upload_dir_baseurl();
 		    					
 		    				echo '<div class="frame">
 		    						<div class="caption">
-		    							<p><strong>'.get_sub_field('image_caption_bold').'</strong></p>
-		    							<p class="x-small">'.get_sub_field('image_caption').'</p>
+		    							<p class="caption__title"><strong>'.get_sub_field('image_caption_bold').'</strong></p>
+		    							<p class="caption__text x-small">'.get_sub_field('image_caption').'</p>
 		    						</div>
 		    						<img src="'.get_sub_field('image').'">
 		    					</div>';
@@ -103,9 +100,9 @@ if( $transformation_content ):
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <h1><?php echo $transformation_content['title']; ?><br>
-                <span class="blue">
-                    <?php echo $transformation_content['title_blue'];?>
-                </span>
+                    <span class="blue">
+                        <?php echo $transformation_content['title_blue'];?>
+                    </span>
                 </h1>
                 <p class="small"><?php echo $transformation_content['paragraph']; ?></p>
                 <div class="image-container"><img src="<?php echo $transformation_content['image']; ?>"></div>
@@ -258,8 +255,8 @@ if( $image_banner ):
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 location_1"
-                    style="height: 211px;background-image: url('<?php the_sub_field('image_1'); ?>)"></div>
+                <div class="location_1 col-md-4 hidden-sm hidden-xs"
+                    style="height: 211px;background-image: url('<?php the_sub_field('image_1'); ?>')"></div>
                 <div class="col-md-4 hidden-sm hidden-xs" style="transform: translateY(66px);"><img
                         src="<?php the_sub_field('image_2'); ?>"></div>
             </div>

@@ -9,7 +9,8 @@ var browserSync = require('browser-sync').create();
 // Minify CSS
 gulp.task('css', function() {
   return gulp.src([
-      './assets/css/*.css',
+      './assets/css/styles.css',
+      './assets/css/responsive.css',
       '!./assets/css/*.min.css'
     ])
     .pipe(cleanCSS())
@@ -57,7 +58,7 @@ gulp.task('browserSync', function() {
 gulp.task('dev', ['css', 'js', 'browserSync'], function() {
   gulp.watch(['./assets/css/styles.css', './assets/css/responsive.css'], ['css']);
   gulp.watch('./assets/js/*.js', ['js']);
-  gulp.watch('*.php', browserSync.reload);
+  gulp.watch('*.html', browserSync.reload);
 });
 
 

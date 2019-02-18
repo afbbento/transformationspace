@@ -697,7 +697,7 @@ function get_bootcamps( $atts ) {
 		);
    		
   	$recent_posts = wp_get_recent_posts($args);
-	$output = '<ul class="menu">';
+		$output = '<ul class="menu">';
 		foreach( $recent_posts as $recent ){
 			$output .= '<li class="menu-item"><a class="menu-item-link" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
 		}

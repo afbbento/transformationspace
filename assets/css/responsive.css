@@ -1,16 +1,25 @@
-/* only large devices */
-@media only screen and (min-width : 1300px) {
 
+/* custom breakpoint */
+@media only screen and (min-width : 1300px) {
     .sticky-top {
         left: 10%;
     }
 }   
 
+/* custom breakpoint */
 @media only screen and (min-width : 991px) {
     .single-blog .main-container {
         margin-top: -450px;
-    }
+	}
 }
+
+/* Fix bg on 404 landscape */
+@media only screen and (max-device-width : 1024px) and (orientation : landscape) { 
+	.error404 .content-inner {
+		display: block;
+	}
+}
+
 
 /* only large and medium devices */
 @media only screen and (min-width : 769px) {
@@ -23,7 +32,7 @@
 	}
 }
 
-/* hide addresses on overlay menu */
+/* custom breakpoint */
 @media only screen and (max-height: 768px) {
 	.overlay-footer {
 		display: none;
@@ -32,6 +41,10 @@
  
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+
+	.header-section-bottom {
+		display: none;
+	}
 	
 	h3{
 		line-height: 38px;
@@ -63,7 +76,7 @@
 		padding-right: 75px;
 	}
 	.home-slider-container .slick-dots {
-		right: 2px;
+		right: 20px;
 	}
 	.about-section .image-caption {
 		padding-top: 102px;
@@ -93,7 +106,7 @@
 
 /* Medium Devices */
 @media only screen and (max-width : 992px) {
-    
+ 
 	.right-nav {
 		width: 50px;
 		height: 50px;
@@ -233,12 +246,10 @@
 	.page-template-about .home-slider .slider-image .frame{
 		clear: both;
 	}
-	.home-slider p {
+	.home-slider__text {
 		line-height: 23px;	
 	}
-	.page-template-about .home-slider .caption p.x-small {
-		margin-left: 0;
-	}
+
 	.page-template-about .person.big {
 		margin-top: 105px;
 		padding: 0 15px;
@@ -313,6 +324,15 @@
 }
 
 
+/* all small devices */
+@media only screen and (max-width : 991px) {
+
+	.row-location {
+		margin-top: 54px;
+	}
+
+}
+
 /* iPad Pro 10.5" */
 @media only screen and (max-width : 834px) {
 	.header-section-bottom .highlight-image {
@@ -324,6 +344,10 @@
 
 /* Small Devices, iPad */
 @media only screen and (max-width: 768px) {
+
+	.home-slider-container .slick-dots {
+		right: 10px;
+	}
 
 	.container {
 		padding-left: 30px;
@@ -368,17 +392,52 @@
 	}
 }
 
-/* Fix bg on 404 landscape */
-@media only screen and (max-device-width : 1024px) and (orientation : landscape) { 
-	.error404 .content-inner {
-		display: block;
-	}
-}
 
-
-
-/* All Small Devices */
+/* all extra small devices */
 @media only screen and (max-width : 767px) {
+
+	section {
+		padding: 40px 0;
+	}
+
+	div.banner-image {
+		margin-top: 40px;
+	}
+
+	.transform .image-container {
+		padding-bottom: 50px;
+	}
+
+	.page-template-about .transform, 
+	.page-template-about .where,
+	.page-template-about .who {
+		padding: 54px 0 35px;
+	}
+
+	.page-template-about .slider-nav {
+		bottom: 20px;
+	}
+
+	.page-template-about .home-slider .caption {
+		left: 50%;
+		transform: translate(-50%,0);
+		width: 100%;
+	}
+
+	.caption__text.x-small {
+		margin: 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	.caption__title {
+		display: none;
+	}
+
+	.home-slider__text {
+		line-height: 18px;
+		font-size: 12px;
+	}
     
 	.navbar-default {
 		display: none;
@@ -395,12 +454,11 @@
 	.article-slider .row {
 		padding: 0;
 	}
-    
-	section.blog,
-	.about-section,
-	section {
-		padding: 40px 0;
+
+	.about-section {
+		padding: 15px 0;
 	}
+
 	
 	h1{
 		font-size: 32px;
@@ -521,7 +579,7 @@
 	}
 	.page-template-about .home-slider .slider-image .frame{
 		clear: both;
-		padding: 0px 0 81px;
+		padding: 0px 0 60px;
 	}
 	.timeline-block .l-event .event-body::after{
 		content: none;
@@ -900,10 +958,7 @@
 	.overlay-menu {
 		margin-top: 77px;
 	}
-	.home-slider p {
-		line-height: 23px;
-		font-size: 17px;
-	}
+
 	.circle-line.white:before {
 		border: 2px solid #fff;
 	}
@@ -931,25 +986,22 @@
 }
 
 
-/* Extra Small Devices, iPhones */ 
+/* extra small devices, iPhones */ 
 @media only screen and (max-width: 480px) {
     
 	.stories .btn-container {
 		transform: translateY(23px);
 	}
-    
+	
+	.home-slider .slider-image  {
+		width: auto;
+		margin-left: 0;
+	}
 	.slider-image {
 		width: 100%;
 	}
 	
-	/* the slides */
-	.slick-slide {
-		margin: 0 20px;
-	}
-	/* the parent */
-	.slick-list {
-		margin: 0 -20px;
-	}
+
 	
 	.stories-slider-container .col-md-6:first-child {
 		height: 200px;

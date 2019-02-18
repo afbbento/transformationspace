@@ -186,6 +186,7 @@ h4{
 	line-height: 45px;
 	font-size: 30px;
 	color: #010203;
+	color: var(--color-1);
 }
 .lead2{
 	font-weight: 900;
@@ -1816,7 +1817,7 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 
 /* Footer menu */
 
-.widget_nav_menu .menu {
+.footer .menu {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -1940,7 +1941,7 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	display: inline-block;
 	opacity: 0.9;
 }
-.home-slider p{
+.home-slider__text {
 	font-family: Raleway;
 	font-style: normal;
 	font-weight: 500;
@@ -2030,8 +2031,7 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	color: #0B0A0A;
 }
 .header-section-bottom .row-highlight{
-	padding-top: 0;
-	padding-bottom: 0;
+	padding: 0;
 	margin-bottom: -2px;
 }
 .header-section-bottom .highlight-image {
@@ -3014,12 +3014,13 @@ header.bootcamp .circle-line.white::after {
 	left: 50px;
 	margin-bottom: 0;
 }
-.page-template-about .home-slider .caption p{
+.caption__title,
+.caption__text{
 	color: #010101;
 	float: left;
 	margin-bottom: 0;
 }
-.page-template-about .home-slider .caption p.x-small{
+.caption__text.x-small{
 	margin-left: 35px;	
 }
 .page-template-about .home-slider{
@@ -3030,7 +3031,7 @@ header.bootcamp .circle-line.white::after {
 	padding: 30px 0 100px 0;
 }
 .page-template-about .person.big {
-	margin-top: 160px;
+	margin-top: 135px;
 }
 .page-template-about .slider-nav{
 	position: absolute;
@@ -3122,9 +3123,7 @@ button{
 #banner-slider .slick-btn-left{
 	left: -30%;
 }
-.team{
-	padding: 80px 0;
-}
+
 .team .image-container{
 	margin-top: 15px;
 }
@@ -3185,8 +3184,7 @@ button{
 
 div.banner-image{
 	box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
-	margin-top: 57px;
-	margin-bottom: 113px;
+	margin: 40px 0;
 	padding: 0;
 	position: relative;
 }
@@ -3451,7 +3449,7 @@ h2.widget-title{
 .footer .textwidget ul{
 	margin: 0 auto;
 }
-.footer .widget ul {
+.footer .widget .menu {
 	margin-left: 0;
 }
 .footer .newsletter-box{
