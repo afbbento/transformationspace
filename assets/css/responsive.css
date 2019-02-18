@@ -966,11 +966,27 @@
 		margin-top: 77px;
 	}
 
-	.circle-line.white:before {
-		border: 2px solid #fff;
+	.circle-line:before {
+		width: 11px;
+		height: 11px;
 	}
+
+	.circle-line:after {
+		border-top: 3px solid #000;
+	}
+
+	.circle-line.white:before {
+		border: 3px solid #fff;
+	}
+
 	.circle-line.white:after {
-		border-top: 2px solid #fff;
+		left: 5px;
+		border-top: 3px solid #fff;
+		width: 21px;
+	}
+
+	span.circle-line {
+		margin-right: 40px
 	}
 	.job-item .row {
 		text-align: center;
@@ -996,6 +1012,10 @@
 
 /* extra small devices, iPhones */ 
 @media only screen and (max-width: 480px) {
+
+	.lead1 {
+		font-size: 20px;
+	}
     
 	.stories .btn-container {
 		transform: translateY(23px);

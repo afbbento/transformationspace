@@ -260,6 +260,7 @@ span.circle-line{
 	background: transparent;
 	border: 3px solid #fff;
 }
+
 .circle-line:after{
 	content: "";
 	position: absolute;
@@ -269,6 +270,7 @@ span.circle-line{
 	left: 0;
 	width: 34px;
 }
+
 .circle-line.white:after{
 	border-top: 3px solid #fff;
 	left: 7px;
