@@ -3044,23 +3044,21 @@ button:hover{
 .home-slider-left{
 	padding-right: 93px;
 }
-span.yellow-circle {
-	background: var(--yellow);
-	border-radius: 20px;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
+.yellow-circle {
 	display: inline-block;
-	text-align: center;
 	width: 40px;
-	font-family: Abhaya Libre;
-	font-style: normal;
-	font-weight: bold;
-	line-height: 38px;
-	font-size: 20px;
-	color: #0C0B0B;
 	height: 40px;
 	margin:8px;
+	font-family: Abhaya Libre;
+	background: var(--yellow);
+	border-radius: 20px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 40px;
+	font-weight: bold;
+	color: #0C0B0B;
 	margin-bottom: 0;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .about-section {

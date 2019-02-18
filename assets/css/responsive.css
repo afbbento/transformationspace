@@ -234,7 +234,7 @@
 	.prev, .next{
 		float: left;
 	}
-	.page-template-about .header-section .slider-nav p,
+	.page-template-about .header-section .slider-nav .slider-nav__current-wrapper,
 	.page-template-about .header-section .prev, 
 	.page-template-about .header-section .next{
 		float: left;
@@ -579,6 +579,9 @@
 	}
 	.page-template-about .home-slider .slider-image .frame{
 		clear: both;
+		padding: 0px 0 45px;
+	}
+	.page-template-about .home-slider .slider-image .frame.with-navigation {
 		padding: 0px 0 60px;
 	}
 	.timeline-block .l-event .event-body::after{

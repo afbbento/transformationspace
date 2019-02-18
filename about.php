@@ -45,7 +45,7 @@ $uploads_url = _wp_upload_dir_baseurl();
 		    				if ($rows_count>1){
 		    					echo '<div class="slider-nav">		    							
 			    							<button class="prev"><img src="'. $uploads_url .'/prev.png"></button>
-											<p><span class="yellow-circle current-slide"></span></p>
+											<div class="slider-nav__current-wrapper"><span class="yellow-circle current-slide"></span></div>
 											<button class="next"><img src="'. $uploads_url .'/next.png"></button>								
 									</div>';
 		    				}
@@ -70,18 +70,24 @@ $uploads_url = _wp_upload_dir_baseurl();
 
 <script type="text/javascript">
 /*About Slider*/
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
 
-    jQuery('#about-slider').slick({
+    var slider = $('#about-slider');
+    jQuery(slider).slick({
         dots: false,
         fade: true,
         nextArrow: jQuery('.next'),
         prevArrow: jQuery('.prev')
     });
 
-    jQuery('.current-slide').text(1);
-    jQuery('#about-slider').on('afterChange', function(event, slick, currentSlide, nextSlide) {
-        console.log(currentSlide);
+
+    var slideCount = $(slider).slick("getSlick").slideCount;
+    if (slideCount > 1) {
+        $(slider).find(".frame").addClass("with-navigation");
+    }
+
+    jQuery('.current-slide').text('1');
+    jQuery(slider).on('afterChange', function(event, slick, currentSlide, nextSlide) {
         jQuery('.current-slide').text(currentSlide + 1);
     });
 });
