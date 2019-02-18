@@ -2030,7 +2030,8 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	color: #0B0A0A;
 }
 .header-section-bottom .row-highlight{
-	padding:0;
+	padding-top: 0;
+	padding-bottom: 0;
 	margin-bottom: -2px;
 }
 .header-section-bottom .highlight-image {

@@ -30,7 +30,7 @@
 	}
 }
  
-/* medium devices */
+/* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 	
 	h3{
@@ -75,7 +75,7 @@
 }
 
 
-/* medium devices */
+/* custom breakpoint */
 @media screen and (max-width: 1024px) {
 	
 	/* Hide main menu */
@@ -91,11 +91,9 @@
 
 
 
-/* medium devices */
+/* Medium Devices */
 @media only screen and (max-width : 992px) {
     
-	/*MENU*/
-	
 	.right-nav {
 		width: 50px;
 		height: 50px;
@@ -273,6 +271,7 @@
 	.slider-image{
 		width: 83%;
 		margin-bottom: 20px;
+		margin-left: 24px;
 	}
 	.bootcamp-stories-item .align-vertical{
 		display: block;
@@ -303,8 +302,6 @@
 		padding-left: 0;
 	}
 	
-	/*PAGE 404*/
-	
 	.error404 p.title {
 		font-size: 65px;
 	}
@@ -323,16 +320,18 @@
 		overflow: hidden;
 	}
 	
-	.header-section-bottom .col-md-6 {
-		padding-left: 60px;
-	}
 }
 
-/* iPad styles */
+/* Small Devices, iPad */
 @media only screen and (max-width: 768px) {
+
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
 	
-	.header-section-bottom .col-md-6 {
-		padding-left: 60px;
+	.header-section-bottom .col-md-6:nth-child(2) {
+		padding-left: 15px;
 	}
 	
 	#timeline-wrapper .timeline-top {
@@ -378,7 +377,7 @@
 
 
 
-
+/* All Small Devices */
 @media only screen and (max-width : 767px) {
     
 	.navbar-default {
@@ -931,6 +930,8 @@
 	}
 }
 
+
+/* Extra Small Devices, iPhones */ 
 @media only screen and (max-width: 480px) {
     
 	.stories .btn-container {
