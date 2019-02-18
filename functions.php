@@ -658,6 +658,7 @@ function my_assets() {
 	wp_enqueue_style( 'hamburgers-style', get_template_directory_uri() . '/assets/css/hamburgers.min.css' );
 	wp_enqueue_style( 'slick-style-theme', get_template_directory_uri() . '/assets/css/slick-theme.css' );
 	wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/assets/css/slick.css' );
+	wp_enqueue_style( 'animate-style', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css' );
 	wp_enqueue_style( 'tag-style-theme', get_template_directory_uri() . '/assets/css/tagify.css' );
 	wp_enqueue_style( 'tagsinput-style',  plugins_url() . '/search-tag/bootstrap-tagsinput.css' );
 	wp_enqueue_style( 'typehead-style',  plugins_url() . '/search-tag/typeahead.css' );

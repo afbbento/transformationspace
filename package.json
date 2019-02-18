@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
-  "dependencies": {},
+  "dependencies": {
+    "animate.css": "^3.7.0"
+  },
   "devDependencies": {
     "browser-sync": "2.23.6",
     "gulp": "^3.9.1",

@@ -941,7 +941,7 @@ span.circle-line{
 /* remove current page item if is anchor link */
 .menu-right-nav-menu .anchor-link.current_page_item .menu-item-link {
 	background: initial;
-    box-shadow: initial;
+	box-shadow: initial;
 }
 
 .menu-right-nav-menu .current_page_item  .menu-item-link,
@@ -2823,8 +2823,8 @@ header.bootcamp .circle-line.white::after {
 
 .person__overlay {
 	background-color: rgba(75, 95, 247, .5);
-    position: relative;
-    z-index: 2;
+	position: relative;
+	z-index: 2;
 }
 
 .person__img {
@@ -3139,7 +3139,17 @@ button{
 	margin-top: 63px;
 	position: relative;
 }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.fadeInAfter:after{
+	animation: fadein 1s forwards 1.3s;
+}
 .team .row-vector .image-container:after{
+	opacity: 0;
 	content:"";
 	position: absolute;
 	z-index: -1;
@@ -3147,6 +3157,7 @@ button{
 	height: 300px;
 	top: 74px;
 }
+
 .team .row-vector .image-container.pull-left:after{
 	left: 206px;
 	transform: rotate(-46deg);
@@ -3618,18 +3629,18 @@ aside li a{
 	background-image: url("../images/bg-pattern-about.png");
 	z-index: -1;
 	height: 1710px;
-
+	
 }
 
 
 .sticky-top {
 	display: inline-block;
-    left: 5%;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 150px;
-    z-index: 9;
-  }
+	left: 5%;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 150px;
+	z-index: 9;
+}
 
 
 .blog-template-page .line-image-frame{
@@ -3930,7 +3941,7 @@ a.round-btn.bookmark:hover{
 	position: relative;
 	margin-bottom: 25px;
 	height: 222px;
-    overflow: hidden;
+	overflow: hidden;
 }
 .related-image::after{
 	content: "";
@@ -4796,3 +4807,53 @@ body.tag .blog-posts-main{
 	padding-right: 20px;
 }
 
+.inside {
+	opacity: 0;
+}
+
+.delay-300ms {
+	animation-delay: 300ms;
+}
+
+.in-view .inside {
+	transition: opacity 0s linear 1000ms;
+	opacity: 1;
+}
+
+.magic_circle{
+	stroke-dasharray:447 449;
+	stroke-dashoffset:448;
+}
+
+.in-view .magic_circle{
+	animation:magic_circle_draw 1000ms linear forwards;
+}
+
+.in-view .magic_correct{
+	animation:magic_circle_fill 1000ms linear 1000ms forwards;
+}
+
+
+@keyframes magic_circle_draw{
+	100%{
+		stroke-dashoffset:0;
+	}
+}
+
+@keyframes magic_circle_fill{
+	100%{
+		fill: white;
+		stroke: white;
+	}
+}
+@keyframes magic_circle_fade{
+	0%{
+		stroke-opacity:1;
+	}
+	92.98245614035088%{
+		stroke-opacity:1;
+	}
+	100%{
+		stroke-opacity:0;
+	}
+}
