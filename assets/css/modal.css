@@ -591,6 +591,12 @@ div.wpcf7 .ajax-loader {
   background: #faff00;
 }
 
+#talkMoreModal:before,
+#talkMoreModal:after {
+  background: #fff;
+  box-shadow: inset 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
 #policyModal * {
   color: #fff;
 }
@@ -715,8 +721,8 @@ div.wpcf7 .ajax-loader {
   content: "";
   position: absolute;
   width: 26.5px;
-  height: calc(100% - 1px);
-  top: 13.55px;
+  height: 100%;
+  top: 12.55px;
   transform: skewY(-45deg);
   border-top: 2px solid #000;
   border-left: 2px solid #000;
@@ -728,7 +734,7 @@ div.wpcf7 .ajax-loader {
 
 .animated-modal:after {
   content: "";
-  left: -12.25px;
+  left: -11.25px;
   bottom: -25.5px;
   position: absolute;
   width: calc(100% - 1px);
