@@ -2626,10 +2626,7 @@ header.bootcamp .circle-line.white::after {
 	border-bottom: 2px solid #000;
 	border-right: 2px solid #000;
 }
-.bootcamp-description .col-md-6:last-of-type{
-	padding: 0;
-	margin: 0;
-}
+
 .slick-track {
 	padding-top: 25px;
 }
@@ -2897,6 +2894,7 @@ header.bootcamp .circle-line.white::after {
 .other-guests{
 	margin-top: 120px;
 }
+
 .other-guests h2{
 	margin-bottom: 100px;
 }
@@ -2919,9 +2917,7 @@ header.bootcamp .circle-line.white::after {
 	left: -15px;
 	z-index: -2;
 }
-.person.small .row .col-md-6:last-of-type{
-	padding: 0;
-}
+
 .person.small .lead1{
 	font-family: Abhaya Libre;
 	font-style: normal;
