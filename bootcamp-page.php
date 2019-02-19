@@ -50,7 +50,7 @@ if( $bootcamp_description ):
 			<h1>Programme +<br><span class="blue">pre-course</span></h1>
 			<p class="small">Looking back over the last 40 years, it’s hard to understand how we could have been so
 			gullible. We believed that fat, and more specifically saturated fat...</p>
-			<div class="banner-image" style="padding: 0;">
+			<div class="banner-image">
 				<div class="row flex v-center">
 					<div class="col-md-6">
 						<div class="col-md-10 col-md-offset-1">
@@ -185,8 +185,10 @@ if( $bootcamp_description ):
 		jQuery('.row.bs-wizard div:nth-child(' + current + ')').addClass('disabled');
 	});
 </script>
-<div class="separator">
-	<div class="line"></div>
+
+<section class="who theme--light">
+<div class="separator container-fluid">
+	<div class="row line"></div>
 	<div class="button-container">
 		<button class="btn btn-black btn-large btn-shadow">
 			education team & partners
@@ -201,7 +203,6 @@ if( $bootcamp_description ):
 		</div>
 	</div>
 </div>
-<section>
 	<div class="container">
 		<div class="col-md-10 col-md-offset-1">
 			<div class="row">
@@ -315,8 +316,8 @@ if( $bootcamp_description ):
 <?php
 get_template_part( 'template-parts/transformation_space/stories');
 ?>
-<div class="separator">
-	<div class="line"></div>
+<div class="separator container-fluid">
+	<div class="row line"></div>
 	<div class="button-container">
 		<button class="btn btn-black btn-large btn-shadow">dates & investiment</button>
 	</div>
@@ -375,7 +376,7 @@ get_template_part( 'template-parts/transformation_space/stories');
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-				<div class="bordered-box main-box" style="padding: 40px;">
+				<div class="bordered-box main-box">
 					<div class="button-container">
 						<button class="btn btn-yellow btn-large btn-shadow btn-lines-yellow vertical-btn">financial
 						agreements</button>
@@ -412,7 +413,7 @@ get_template_part( 'template-parts/transformation_space/stories');
 														<p class="small"><?php echo get_sub_field('text'); ?></p>
 													</div>
 												</div>
-												<div class="col-md-2 text-center">
+												<div class="col-md-2 text-center financial__link">
 													<a class="btn-plus" href="#"><i class="fas fa-plus"></i></a>
 												</div>
 											</div>

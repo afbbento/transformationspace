@@ -4,6 +4,7 @@
 	--black: #101010;
 	--white: #fff;
 	--green: #41CC7B;
+	--gray: #F0F2F7;
 }
 
 .theme--dark {
@@ -26,6 +27,7 @@
 	--color-1: #000;
 	--color-2: var(--blue);
 	--color-3: var(--yellow);
+	--color-4: var(--gray);
 }
 
 .theme--light-alt {
@@ -971,7 +973,7 @@ input[type="text"], textarea {
 	outline: none;
 	-webkit-appearance: none;
 }
-input[type="email"]{ box-shadow: none !important; }
+
 /*FORMS*/
 input.mce_inline_error {
 	border: 1px solid #e85c41 !important;
@@ -986,12 +988,14 @@ form.banner-form p.response{
 input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="password"]{
-	background: #fff;
-	border: 1px solid #0B0A0A;
+.wpcf7 textarea{
+	background: var(--color-1);
+	border: 1px solid var(--color-1);
 	border-radius: 0;
-	padding: 11px 27px;
+	padding: 11px 18px;
 }
+
+
 input.big{
 	height: 60px;
 	padding: 20px 27px;
@@ -2635,6 +2639,7 @@ header.bootcamp .circle-line.white::after {
 .programme{
 	background-image: url('../images/dots-bg.png');
 	background-repeat: no-repeat;	
+	background-size: contain;
 }
 
 /*TIMELINE*/
@@ -2801,9 +2806,7 @@ header.bootcamp .circle-line.white::after {
 .equal-pad [class*='col-']:nth-child(3) {
 	padding-left: 40px;
 }
-.typical-day{
-	margin-bottom: 80px;
-}
+
 .typical-day .article-slider .slider-image::before {
 	background-color: var(--yellow);
 }
@@ -3194,10 +3197,14 @@ button{
 
 div.banner-image{
 	box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
-	margin: 40px 0;
-	padding: 0;
+	margin-bottom: 100px;
 	position: relative;
 }
+
+.programme .banner-image {
+	margin-bottom: 100px;
+}
+
 div.banner-image .col-image {
 	background-blend-mode: lighten;
 	background-color: var(--blue);
@@ -3217,7 +3224,6 @@ div.banner-image .button-container{
 }
 div.banner-image .row.flex{
 	height: 500px;
-	margin: 0;
 	background-color: #fff;
 }
 div.banner-image .simple-line{
@@ -3380,7 +3386,9 @@ span.twitter-typeahead {
 	margin-left: 15px;
 }
 .boxes-container{
-	padding-left: 20%;
+	max-width: 600px;
+	margin: 0 auto;
+	/* padding-left: 20%; */
 }
 .footer .address-box{
 	background-color: var(--bg-1);

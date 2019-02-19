@@ -496,10 +496,11 @@ span.wpcf7-list-item {
 }
 
 .wpcf7-form a {
-  color: #fff;
+  color: var(--color-1);
 }
 
 .wpcf7-form a:hover {
+  color: var(--color-1);
   -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
   box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
 }
@@ -637,6 +638,7 @@ div.wpcf7 .ajax-loader {
 
 .fancybox-content .title {
   color: #fff;
+  color: var(--color-1);
   font-size: 35px;
   line-height: 25px;
   font-weight: 900;
@@ -688,11 +690,18 @@ div.wpcf7 .ajax-loader {
   margin-bottom: 50px;
 }
 
+#talkMoreModal .wpcf7 input[type="text"], 
+#talkMoreModal .wpcf7 input[type="email"],
+#talkMoreModal .wpcf7 textarea {
+    background: var(--color-4);
+    border-color: #E3E8F0;
+}
+
 .animated-modal {
   width: 600px;
   max-width: 100%;
   overflow: visible;
-  background: #000000;
+  background: var(--bg-1);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
   transform: matrix(1, 0, 0, -1, 0, 0);
   transform: translateY(-80px);
@@ -828,7 +837,7 @@ div.wpcf7 .ajax-loader {
   width: 100%;
   font-size: 13px;
   height: 40px;
-  border-radius: 2px;
+  border-radius: 0;
   border: 0;
 }
 
@@ -862,6 +871,7 @@ div.wpcf7 .ajax-loader {
   font-size: 12px;
   letter-spacing: 1.09091px;
   color: #fff;
+  color: var(--color-1);
 }
 
 .wpcf7 .acept-label {
@@ -917,7 +927,8 @@ label.message {
 }
 
 #aceptCheckbox label,
-#aceptCheckbox2 label {
+#aceptCheckbox2 label,
+#aceptCheckbox3 label {
   margin-bottom: 0;
 }
 
@@ -1010,7 +1021,7 @@ label.message {
 }
 
 .checkbox--checkbox:checked+.checkbox__label:after {
-  border-color: #faff00;
+  border-color: var(--color-2);
 }
 
 .checkbox__text {
@@ -1031,7 +1042,7 @@ label.message {
   flex-wrap: wrap;
 }
 
-label.fname {
+.block label.fname {
   width: 194px;
 }
 
@@ -1175,7 +1186,7 @@ label.phone {
 
 @media only screen and (max-width: 666px) {
 
-  label.fname,
+  .block label.fname,
   label.lname,
   label.city,
   label.phone {

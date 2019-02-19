@@ -10,6 +10,7 @@ var browserSync = require('browser-sync').create();
 gulp.task('css', function() {
   return gulp.src([
       './assets/css/styles.css',
+      './assets/css/modal.css',
       './assets/css/responsive.css',
       '!./assets/css/*.min.css'
     ])
@@ -56,7 +57,7 @@ gulp.task('browserSync', function() {
 // Dev task
 
 gulp.task('dev', ['css', 'js', 'browserSync'], function() {
-  gulp.watch(['./assets/css/styles.css', './assets/css/responsive.css'], ['css']);
+  gulp.watch(['./assets/css/styles.css', './assets/css/responsive.css', './assets/css/modal.css'], ['css']);
   gulp.watch('./assets/js/*.js', ['js']);
   gulp.watch('*.html', browserSync.reload);
 });

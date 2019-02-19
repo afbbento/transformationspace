@@ -29,16 +29,21 @@ jQuery(document).ready(function ($) {
 
   $('#aceptCheckbox input[type="checkbox"]').attr('id', 'acept');
   $('#aceptCheckbox2 input[type="checkbox"]').attr('id', 'acept2');
-  $('#aceptCheckbox input[type="checkbox"], #aceptCheckbox2 input[type="checkbox"]').addClass(
+  $('#aceptCheckbox3 input[type="checkbox"]').attr('id', 'acept3');
+  $('#aceptCheckbox input[type="checkbox"], #aceptCheckbox2 input[type="checkbox"], #aceptCheckbox3 input[type="checkbox"]').addClass(
     'checkbox checkbox--checkbox');
 
-    $('#aceptCheckbox input[type="checkbox"], #aceptCheckbox2 input[type="checkbox"]').attr( 'checked', 'checked' )
+  $('#aceptCheckbox input[type="checkbox"], #aceptCheckbox2 input[type="checkbox"], #aceptCheckbox3 input[type="checkbox"]').attr( 'checked', 'checked' )
 
   $("#aceptCheckbox .wpcf7-list-item-label").replaceWith(
     "<label for='acept' class='checkbox__label'><span class='checkbox__text'><a class='policy-js' href='javascript:;'>Privacy &amp; Data Policy (required)</a></span></label>"
   );
   $("#aceptCheckbox2 .wpcf7-list-item-label").replaceWith(
     "<label for='acept2' class='checkbox__label'><span class='checkbox__text'><a class='policy-js' href='javascript:;'>Privacy &amp; Data Policy (required)</a></span></label>"
+  );
+
+  $("#aceptCheckbox3 .wpcf7-list-item-label").replaceWith(
+    "<label for='acept3' class='checkbox__label'><span class='checkbox__text'><a class='policy-js' href='javascript:;'>Privacy &amp; Data Policy (required)</a></span></label>"
   );
 
 

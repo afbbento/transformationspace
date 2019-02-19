@@ -651,7 +651,7 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 
 function my_assets() {
-	$ts_theme_version = '5.3.4';
+	$ts_theme_version = '5.3.5';
 	wp_enqueue_style( 'Raleway-font', 'https://fonts.googleapis.com/css?family=Raleway:400,700,900' );
 	wp_enqueue_style( 'Abhaya-font', 'https://fonts.googleapis.com/css?family=Abhaya+Libre:400,600' );
 	wp_enqueue_style( 'Work-Sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,700' );
@@ -663,7 +663,7 @@ function my_assets() {
 	wp_enqueue_style( 'tagsinput-style',  plugins_url() . '/search-tag/bootstrap-tagsinput.css' );
 	wp_enqueue_style( 'typehead-style',  plugins_url() . '/search-tag/typeahead.css' );
 	wp_enqueue_style( 'fancybox-style', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css' );
-	wp_enqueue_style( 'landing-style', get_template_directory_uri() . '/assets/css/style-landing-page.css', '', $ts_theme_version);	
+	wp_enqueue_style( 'modal-style', get_template_directory_uri() . '/assets/css/modal.css', '', $ts_theme_version);	
 	wp_enqueue_style( 'tp-style', get_template_directory_uri() . '/assets/css/styles.css', '', $ts_theme_version);
 	wp_enqueue_style( 'tp-responsive', get_template_directory_uri() . '/assets/css/responsive.css', '', $ts_theme_version);
 

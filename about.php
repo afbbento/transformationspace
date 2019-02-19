@@ -206,9 +206,8 @@ if( $transformation_content ):
 $image_banner = get_field('image_banner');	
 if( $image_banner ):
 ?>
-<div class="banner-image">
+<div class="container-fluid banner-image">
     <div class="row flex v-center">
-
         <div class="col-md-6 col-sm-12 visible-xs"
             style="margin-bottom: 40px; height: 300px;background-blend-mode: lighten;background-color: #4B5FF7;background-size: cover;background-image: url('<?php echo $image_banner['image']; ?>')">
         </div>
@@ -229,6 +228,7 @@ if( $image_banner ):
         </div>
     </div>
 </div>
+
 <?php endif; ?>
 
 
@@ -306,7 +306,8 @@ if( $image_banner ):
 </section>
 
 
-<script src="<?php echo bloginfo('template_url'); ?>/assets/js/intersection-observer-polyfill.js" type="text/javascript" ></script>
+<script src="<?php echo bloginfo('template_url'); ?>/assets/js/intersection-observer-polyfill.js"
+    type="text/javascript"></script>
 
 <script>
 window.addEventListener("load", function(event) {

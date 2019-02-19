@@ -1,4 +1,4 @@
-<div style="display: none;" id="bootCampModal" class="animated-modal text-center p-5">
+<div style="display: none;" id="bootCampModal" class="animated-modal text-center p-5 theme--dark">
 
 	<h2 class="title">Want more information?</h2>
 	<p class="subtitle">

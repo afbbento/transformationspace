@@ -920,17 +920,23 @@
 		border-right: none;
 		padding: 90px 25px;
 	}
+
+	.financial .main-box.bordered-box {
+		padding: 25px;
+	}
+	.financial .align-vertical,
 	.events .align-vertical {
 		display: block;
-		align-items: center;
 	}
 	.event-item .event-month {
 		margin-bottom: 30px;
 	}
+	.financial__link,
 	.link-event{
 		position: absolute;
 		width: 100%;
 		text-align: center;
+		left: 0;
 	}
 	.event-item-text {
 		padding-left: 0;
@@ -1013,6 +1019,7 @@
 /* extra small devices, iPhones */ 
 @media only screen and (max-width: 480px) {
 
+	.level0,
 	.lead1 {
 		font-size: 20px;
 		left: 5px;
