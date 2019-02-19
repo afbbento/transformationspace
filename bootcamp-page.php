@@ -62,7 +62,7 @@ if( $bootcamp_description ):
                             </div>
                         </div>
                         <div class="col-md-6 col-image"
-                            style="background-blend-mode: lighten;background-color: #4B5FF7;height: 100%;background-position: -135px;background-size: cover;background-image: url('/wp-content/uploads/student-half.jpg')">
+                            style="background-blend-mode: lighten;background-color: #4B5FF7;height: 100%;background-position: -135px;background-size: cover;background-image: url('<?php echo bloginfo('url'); ?>/wp-content/uploads/student-half.jpg')">
                         </div>
                     </div>
                 </div>
@@ -188,7 +188,7 @@ jQuery('.article-slider').on('afterChange', function(event, slick, currentSlide,
 </script>
 
 <section class="who theme--light">
-    <div class="separator separator-bootcamp container-fluid">
+    <div class="container-fluid separator separator--mobile">
         <div class="row line"></div>
         <div class="col-sm-12 button-container">
             <button class="btn btn-black btn-large btn-shadow">
@@ -318,7 +318,7 @@ jQuery('.article-slider').on('afterChange', function(event, slick, currentSlide,
 <?php
 get_template_part( 'template-parts/transformation_space/stories');
 ?>
-<div class="separator container-fluid">
+<div class="container-fluid separator separator--two-lines">
     <div class="row line"></div>
     <div class="col-sm-12 button-container">
         <button class="btn btn-black btn-large btn-shadow">dates & investiment</button>

@@ -14,11 +14,11 @@ gulp.task('css', function() {
       './assets/css/responsive.css',
       '!./assets/css/*.min.css'
     ])
-    .pipe(cleanCSS())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('./css'))
+    // .pipe(cleanCSS())
+    // .pipe(rename({
+    //   suffix: '.min'
+    // }))
+    // .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());
 });
 
@@ -56,7 +56,7 @@ gulp.task('browserSync', function() {
 
 // Dev task
 
-gulp.task('dev', ['css', 'js', 'browserSync'], function() {
+gulp.task('dev', ['css','js', 'browserSync'], function() {
   gulp.watch(['./assets/css/styles.css', './assets/css/responsive.css', './assets/css/modal.css'], ['css']);
   gulp.watch('./assets/js/*.js', ['js']);
   gulp.watch('*.html', browserSync.reload);

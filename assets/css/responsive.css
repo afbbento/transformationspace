@@ -1,9 +1,4 @@
 
-div[class*="col-"] > div[class*="col-"] {
-
-	padding:0;
-  
-  }
 
 /* custom breakpoint */
 @media only screen and (min-width : 1300px) {
@@ -1088,21 +1083,20 @@ div[class*="col-"] > div[class*="col-"] {
 		line-height: 47px;
 	}
 
-
-	.separator.separator-education .button-container {
+	.separator.separator--two-lines .button-container {
 		transform: translateY(-75px);
 	}
 
-	.separator.separator-bootcamp {
+	.separator.separator--mobile {
 		margin-top: 117px;
+	}
+
+	.separator.separator--mobile .button-container {
+		transform: translateY(-117px);
 	}
 
 	.banner-image__text {
 		padding-top: 40px;
-	}
-
-	.separator.separator-bootcamp .button-container {
-		transform: translateY(-117px);
 	}
 	
 	.error404 .gif-container img {

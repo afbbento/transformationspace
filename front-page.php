@@ -199,7 +199,7 @@ if( $bootcamps_section ):
     $education_section = get_field('education_section');
     if( $education_section ):
         ?>
-<div class="separator container-fluid separator-education">
+<div class="separator container-fluid separator--two-lines">
     <div class="row line"></div>
     <div class="col-sm-12 button-container">
         <button class="btn btn-black btn-large btn-shadow">
