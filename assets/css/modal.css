@@ -1080,7 +1080,6 @@ label.phone {
   background: #ffffff;
   color: #3a405b;
   box-shadow: 0px 10px 25px rgba(58, 64, 91, 0.2);
-  border-radius: 2px;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1099,13 +1098,26 @@ label.phone {
   cursor: pointer;
 }
 
+/*style select items, on bootcamp page */
+.category-select .select-items div,
+.category-select .select-selected {
+  height: 50px;
+  padding: 16px 22px;
+  cursor: pointer;
+}
+
 .select-selected {
   margin-bottom: 25px;
 }
 
+.category-select .select-selected {
+    margin-bottom: 0;
+  }
+
 /*style items (options):*/
 .select-items {
   position: absolute;
+  color: #fff;
   background-color: #4b5ff7;
   top: 100%;
   left: 0;
