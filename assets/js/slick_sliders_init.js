@@ -104,6 +104,7 @@ jQuery(document).ready(function(){
   jQuery('#banner-slider').slick({
       dots: false,
       speed: 500,
+      autoplay: true,
       slidesToShow: 1,
       arrows: true,
       slidesToScroll: 1,
