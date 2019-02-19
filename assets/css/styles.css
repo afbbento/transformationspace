@@ -4830,7 +4830,7 @@ body.tag .blog-posts-main{
 }
 
 .in-view .magic_correct{
-	animation:magic_circle_fill 1000ms linear 1000ms forwards;
+	animation:magic_circle_fill 0s linear 1000ms forwards;
 }
 
 
