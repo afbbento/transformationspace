@@ -180,7 +180,7 @@ if( $transformation_content ):
                                 <p class="small"><?php the_sub_field('text') ?></p>
                             </div>
                         </div>
- 
+
 
                         <?php 
 					    
@@ -307,58 +307,54 @@ if( $image_banner ):
 
 
 <script>
-
 window.addEventListener("load", function(event) {
 
 
     myElement = document.querySelectorAll('.in-view-js');
 
-    if (!('IntersectionObserver' in window) ||
-    !('IntersectionObserverEntry' in window) ||
-    !('intersectionRatio' in window.IntersectionObserverEntry.prototype)) {
-        // load polyfill now
-        myElement.classList.add('in-view');
-         jQuery(myElement).find(".image-container").addClass('fadeInAfter');
-         jQuery(myElement).find(".text").addClass('fadeIn');
-        
-    }
-    
-  
 
-  createObserver();
+    if ('IntersectionObserver' in window) {
+        // LazyLoad images using IntersectionObserver
+        createObserver();
+    } else {
+        jQuery(myElement).addClass('in-view');
+        jQuery(myElement).find(".image-container").addClass('fadeInAfter');
+        jQuery(myElement).find(".text").addClass('fadeIn');
+    }
+
+
+
+
 }, false);
 
 
 function createObserver() {
-  var observer;
+    var observer;
 
-  var options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.5
-  };
+    var options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5
+    };
 
-  observer = new IntersectionObserver(handleIntersect, options);
+    observer = new IntersectionObserver(handleIntersect, options);
     myElement.forEach(element => {
-    observer.observe(element);
+        observer.observe(element);
     });
 }
 
 
 function handleIntersect(entries, observer) {
-  entries.forEach(function(entry) {
-     if (entry.intersectionRatio > 0) {
-         entry.target.classList.add('in-view');
-         jQuery(entry.target).find(".image-container").addClass('fadeInAfter');
-         jQuery(entry.target).find(".text").addClass('fadeIn');
-    }
+    entries.forEach(function(entry) {
+        if (entry.intersectionRatio > 0) {
+            entry.target.classList.add('in-view');
+            jQuery(entry.target).find(".image-container").addClass('fadeInAfter');
+            jQuery(entry.target).find(".text").addClass('fadeIn');
+        }
 
-    prevRatio = entry.intersectionRatio;
-  });
+        prevRatio = entry.intersectionRatio;
+    });
 }
-
-
-
 </script>
 
 <?php get_footer();
