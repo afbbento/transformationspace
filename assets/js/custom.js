@@ -126,9 +126,13 @@ function register(item) {
 
 /*FILTER BOOTCAMP*/
 jQuery(function() {
-  jQuery( "#bootcamp-filter" ).change(function() {
-    var bootcamp = jQuery(this).val();
+  /* check if Custom Select Box changed and filter */
+  jQuery("#category-select .select-selected").on('DOMSubtreeModified', function() {
+    console.log("changed")
     
+    var bootcamp = jQuery("#bootcamp-filter").val();
+    console.log(bootcamp)
+
     if (bootcamp=='0'){
       jQuery('.bootcamp-box').show("fast");
     }else{
@@ -137,8 +141,9 @@ jQuery(function() {
     }
   });
   
-  jQuery( "#bootcamp-location-filter" ).change(function() {
-    var location = jQuery(this).val();
+    /* check if Custom Select Box changed and filter */
+    jQuery("#location-select .select-selected").on('DOMSubtreeModified', function() {
+    var location = jQuery("#bootcamp-location-filter").val();
     
     if (location=='0'){
       jQuery('.bootcamp-box').show("fast");

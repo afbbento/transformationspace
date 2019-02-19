@@ -23,8 +23,7 @@ get_header(); ?>
                         </div>
                         <div class="row row-filter">
                             <div class="col-md-6">
-                                <form id="category-select" class="category-select"
-                                    action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+                                <form id="category-select" class="category-select" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
                                     <div class="custom-select">
                                         <select id="bootcamp-filter">
                                             <option value="0" selected>Bootcamp</option>
