@@ -309,7 +309,21 @@ if( $image_banner ):
 <script>
 
 window.addEventListener("load", function(event) {
-   myElement = document.querySelectorAll('.in-view-js');
+
+
+    myElement = document.querySelectorAll('.in-view-js');
+
+    if (!('IntersectionObserver' in window) ||
+    !('IntersectionObserverEntry' in window) ||
+    !('intersectionRatio' in window.IntersectionObserverEntry.prototype)) {
+        // load polyfill now
+        myElement.classList.add('in-view');
+         jQuery(myElement).find(".image-container").addClass('fadeInAfter');
+         jQuery(myElement).find(".text").addClass('fadeIn');
+        
+    }
+    
+  
 
   createObserver();
 }, false);
