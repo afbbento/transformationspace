@@ -306,6 +306,8 @@ if( $image_banner ):
 </section>
 
 
+<script src="<?php echo bloginfo('template_url'); ?>/assets/js/intersection-observer-polyfill.js" type="text/javascript" ></script>
+
 <script>
 window.addEventListener("load", function(event) {
 
