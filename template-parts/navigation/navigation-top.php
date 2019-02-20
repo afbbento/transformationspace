@@ -37,7 +37,7 @@ if(!empty( $categories)) {
 <nav class="navbar navbar-default navbar-fixed-top <?php echo $color_theme; ?>">
     <div class="container">
         <div class="row">
-            <a href="/" class="col-xs-2 hidden-xs">
+            <a href="<?php echo bloginfo('url'); ?>" class="col-xs-2 hidden-xs">
                 <span class="custom-logo"></span>
             </a>
 
@@ -54,8 +54,10 @@ if(!empty( $categories)) {
     </div>
 </nav>
 <div class="right-nav <?php echo $nav_theme; ?>">
-    <div class="logo-menu-mobile">
-        <img class="visible-xs logo-mobile" src="<?php echo _wp_upload_dir_baseurl(); ?>/logo-mobile.svg">
+    <div class="logo-menu-mobile visible-xs">
+        <a href="<?php echo bloginfo('url'); ?>">
+        <img class="logo-mobile" src="<?php echo _wp_upload_dir_baseurl(); ?>/logo-mobile.svg">
+        </a>
     </div>
     <button class="hamburger hamburger--collapse" type="button">
         <span class="hamburger-box">
