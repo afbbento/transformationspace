@@ -210,11 +210,17 @@
 	.person.big.left .text-container {
 		padding-right: 0px;
 	}
+	.financial .button-container,
 	.events .button-container {
 		position: absolute;
 		transform: rotate(0deg);
 		left: 0;
 		top: -33px;
+		right: 0;
+	}
+	.vertical-btn {
+		position: relative;
+		left: 0;
 		right: 0;
 	}
 	.article-slider .col-md-6:last-child {
@@ -223,6 +229,10 @@
 	.btn-lines::before,
 	.btn-lines::after {
 		bottom: 20px;
+	}
+	.btn-lines-yellow::after,
+	.btn-lines-yellow::before {
+		bottom: 5px;
 	}
 	.page-template-about .slider-nav {
 		left: 0;
@@ -345,6 +355,11 @@
 
 /* Small Devices, iPad */
 @media only screen and (max-width: 768px) {
+
+	.bootcamp-desc-image:before,
+	.bootcamp-desc-image:after {
+		content: none;
+	}
 
 	.career .container > div {
 		padding:0;
@@ -509,6 +524,9 @@
 	.btn-large {
 		font-size: 24px;
 		padding: 12px 32px;
+	}
+	.btn-lines-yellow {
+		font-size: 20.5px;
 	}
 	.separator button::before,
 	.separator button::after {
@@ -938,18 +956,14 @@
 	.row.filter-job form{
 		margin-bottom: 20px;
 	}
-	.events .container{
-		padding: 0;
-	}
+
+	.financial .main-box.bordered-box,
 	.events .container > .bordered-box{
 		border-left: none;
 		border-right: none;
-		padding: 90px 25px;
+		padding: 90px 25px 0;
 	}
 
-	.financial .main-box.bordered-box {
-		padding: 25px;
-	}
 	.financial .align-vertical,
 	.events .align-vertical {
 		display: block;
@@ -1093,10 +1107,6 @@
 
 	.separator.separator--mobile .button-container {
 		transform: translateY(-117px);
-	}
-
-	.banner-image__text {
-		padding-top: 40px;
 	}
 	
 	.error404 .gif-container img {

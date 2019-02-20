@@ -572,7 +572,7 @@ div.wpcf7 .ajax-loader {
 }
 
 .fancybox-slide--html {
-  padding: 30px;
+  padding: 25px;
 }
 
 #bootCampModal,
@@ -1214,8 +1214,9 @@ label.phone {
   #confirmationModal .fancybox-content,
   #confirmationModal2 .fancybox-content,
   #bootCampModal,
-  #moreInfoModal {
-    padding: 30px;
+  #moreInfoModal,
+  #talkMoreModal {
+    padding: 25px;
   }
 
   .animated-modal:before,

@@ -29,12 +29,12 @@ if( $bootcamp_description ):
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-sm-6">
                         <div class="bootcamp-desc-image">
                             <img src="<?php echo $bootcamp_description['image']; ?>'">
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-sm-6">
                         <p><b><?php echo $bootcamp_description['title']; ?></b></p>
                         <p><?php echo $bootcamp_description['text']; ?></p>
                     </div>
@@ -55,20 +55,21 @@ if( $bootcamp_description ):
                     <div class="row flex v-center">
                         <div class="col-md-6 ">
                             <div class="col-md-10 col-md-offset-1 banner-image__text">
+                                <div class="row visible-xs person__overlay">
+                                    <img class="banner-image--blended" src="<?php echo bloginfo('url'); ?>/wp-content/uploads/student-half.jpg">	
+                                </div>
                                 <h3>We have the right path to your future job</h3>
                                 <div class="simple-line"></div>
                                 <p>Looking back over the last 40 years, it’s hard to understand how we could have been
                                     so gullible. We believed that fat, and more specifically saturated fat...</p>
                             </div>
                         </div>
-                        <div class="col-md-6 col-image"
-                            style="background-blend-mode: lighten;background-color: #4B5FF7;height: 100%;background-position: -135px;background-size: cover;background-image: url('<?php echo bloginfo('url'); ?>/wp-content/uploads/student-half.jpg')">
+                        <div class="col-md-6 col-image hidden-xs"
+                            style="background-image: url('<?php echo bloginfo('url'); ?>/wp-content/uploads/student-half.jpg')">
                         </div>
                     </div>
                 </div>
-                <?php
-		get_template_part( 'template-parts/transformation_space/timeline');
-		?>
+                <?php get_template_part( 'template-parts/transformation_space/timeline'); ?>
             </div>
         </div>
     </div>

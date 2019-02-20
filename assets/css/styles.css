@@ -988,6 +988,7 @@ form.banner-form p.response{
 input[type="text"],
 input[type="email"],
 input[type="url"],
+input[type="tel"], 
 .wpcf7 textarea{
 	background: var(--color-1);
 	border: 1px solid var(--color-1);
@@ -2520,7 +2521,7 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 .events .button-container{
 	position: absolute;
 	transform: rotate(-90deg);
-	left: -119px;
+	left: -127px;
 	top: calc(50% - 42px);
 }
 .vertical-btn{
@@ -3191,17 +3192,22 @@ button{
 	display: block;
 }
 
-div.banner-image{
+.banner-image{
 	box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
 	margin-bottom: 100px;
 	position: relative;
 }
 
 .programme .banner-image {
+	background-color: #fff;
 	margin-bottom: 100px;
 }
 
-div.banner-image .col-image {
+.banner-image--blended {
+	mix-blend-mode: lighten;
+}
+
+.banner-image .col-image {
 	background-blend-mode: lighten;
 	background-color: var(--blue);
 }
@@ -3209,7 +3215,8 @@ div.banner-image .col-image {
 	height: 500px;
 	margin:0 -15px;
 }
-div.banner-image .button-container{
+
+.banner-image .button-container{
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -3218,11 +3225,8 @@ div.banner-image .button-container{
 	width: 100%;
 	z-index: 1;
 }
-div.banner-image .row.flex{
-	height: 500px;
-	background-color: #fff;
-}
-div.banner-image .simple-line{
+
+.banner-image .simple-line{
 	margin-top: 41px;
 	margin-bottom: 36px;
 }
@@ -3898,7 +3902,7 @@ aside li a{
 .swp_social_panel .sw{
 	font-size: 19px;
 }
-div.swp_social_panel .nc_tweetContainer:not(.total_shares):not(.total_sharesalt){
+.swp_social_panel .nc_tweetContainer:not(.total_shares):not(.total_sharesalt){
 	margin-bottom: 11px;
 }
 .left-sidebar > div {
@@ -4099,14 +4103,14 @@ body.category .scrolled-nav .top-menu .enroll-btn .menu-item-link{
 	font-weight: bold;
 	padding: 2px;
 }
-.page-template-blog div.banner-image .simple-line::after{
+.page-template-blog .banner-image .simple-line::after{
 	margin-left: 0;
 }
-.page-template-blog div.banner-image .simple-line {
+.page-template-blog .banner-image .simple-line {
 	margin-top: 35px;
 	margin-bottom: 24px;
 }
-.page-template-blog div.banner-image .simple-line::after {
+.page-template-blog .banner-image .simple-line::after {
 	width: 50%;
 }
 .banner-image .col-image{
