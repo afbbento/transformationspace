@@ -3203,7 +3203,7 @@ button{
 	margin-bottom: 100px;
 }
 
-.banner-image--blended {
+.banner-image__img--blended {
 	mix-blend-mode: lighten;
 }
 

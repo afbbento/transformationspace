@@ -56,7 +56,7 @@ if( $bootcamp_description ):
                         <div class="col-md-6 ">
                             <div class="col-md-10 col-md-offset-1 banner-image__text">
                                 <div class="row visible-xs person__overlay">
-                                    <img class="banner-image--blended" src="<?php echo bloginfo('url'); ?>/wp-content/uploads/student-half.jpg">	
+                                    <img class="banner-image__img--blended" src="<?php echo bloginfo('url'); ?>/wp-content/uploads/student-half.jpg">	
                                 </div>
                                 <h3>We have the right path to your future job</h3>
                                 <div class="simple-line"></div>
