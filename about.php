@@ -208,14 +208,13 @@ if( $image_banner ):
 ?>
 <div class="container-fluid banner-image">
     <div class="row flex v-center">
-        <div class="col-md-6 col-sm-12 visible-xs"
-            style="margin-bottom: 40px; height: 300px;background-blend-mode: lighten;background-color: #4B5FF7;background-size: cover;background-image: url('<?php echo $image_banner['image']; ?>')">
-        </div>
         <div class="col-md-6 col-sm-12">
             <div class="col-lg-7 col-md-8 col-sm-10 col-lg-offset-3 col-md-offset-2 col-sm-offset-1">
-                <div class="row visible-xs person__overlay">
-                    <img class="banner-image__img--blended"
-                        src="<?php echo bloginfo('url'); ?>/wp-content/uploads/student-half.jpg">
+                <div class="row">
+                    <div style="margin-bottom: 40px;" class="row visible-xs person__overlay">
+                        <img class="banner-image__img--blended"
+                            src="<?php echo bloginfo('url'); ?>/wp-content/uploads/student-half.jpg">
+                    </div>
                 </div>
                 <div class="text-container">
                     <h3><?php echo $image_banner['title']; ?></h3>
