@@ -985,12 +985,12 @@ form.banner-form p.response{
 	line-height: 21px;
 	margin-top: 6px;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="tel"], 
-.wpcf7 textarea{
-	background: var(--color-1);
+input[type="tel"] {
+	background: var(--bg-1);
 	border: 1px solid var(--color-1);
 	border-radius: 0;
 	padding: 11px 18px;
@@ -1060,6 +1060,7 @@ input:-moz-placeholder { /* Firefox 18- */
 	padding: 12px 16px;
 	width: 70%;
 	margin-right: 1%;
+	background-color: #fff;
 }
 .btn-yellow{
 	background-color: var(--yellow);
@@ -3207,15 +3208,6 @@ button{
 	mix-blend-mode: lighten;
 }
 
-.banner-image .col-image {
-	background-blend-mode: lighten;
-	background-color: var(--blue);
-}
-.banner-image .col-image{
-	height: 500px;
-	margin:0 -15px;
-}
-
 .banner-image .button-container{
 	position: absolute;
 	bottom: 0;
@@ -4114,11 +4106,17 @@ body.category .scrolled-nav .top-menu .enroll-btn .menu-item-link{
 	width: 50%;
 }
 .banner-image .col-image{
+	height: 500px;
+	margin: 0 -15px;
 	background-blend-mode: lighten;
 	background-color: var(--blue);
-	background-position: -135px;
 	background-size: cover;	
 }
+
+.col-image--pos {
+	background-position: -135px;
+}
+
 .page-template-blog .banner-image p.category a{
 	text-transform: uppercase;
 	color: var(--blue);

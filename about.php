@@ -213,6 +213,10 @@ if( $image_banner ):
         </div>
         <div class="col-md-6 col-sm-12">
             <div class="col-lg-7 col-md-8 col-sm-10 col-lg-offset-3 col-md-offset-2 col-sm-offset-1">
+                <div class="row visible-xs person__overlay">
+                    <img class="banner-image__img--blended"
+                        src="<?php echo bloginfo('url'); ?>/wp-content/uploads/student-half.jpg">
+                </div>
                 <div class="text-container">
                     <h3><?php echo $image_banner['title']; ?></h3>
                     <div class="simple-line"></div>
@@ -223,11 +227,12 @@ if( $image_banner ):
         <div class="button-container">
             <a href="#" class="btn btn-yellow btn-shadow"><strong>get courses guide</strong></a>
         </div>
-        <div class="col-md-6 col-sm-12 hidden-xs"
-            style="background-blend-mode: lighten;background-color: #4B5FF7;height: 100%;background-size: cover;background-image: url('<?php echo $image_banner['image']; ?>')">
+        <div class="col-md-6 col-image hidden-xs"
+            style="background-image: url('<?php echo bloginfo('url'); ?>/wp-content/uploads/student-half.jpg')">
         </div>
     </div>
 </div>
+
 
 <?php endif; ?>
 
@@ -298,7 +303,7 @@ if( $image_banner ):
                 <p class="small"><?php echo $section_who['paragraph']; ?></p>
                 <?php endif; ?>
                 <?php
-				get_template_part( 'template-parts/transformation_space/persons');
+				get_template_part( 'template-parts/transformation_space/persons-all');
 				?>
             </div>
         </div>
@@ -359,5 +364,7 @@ function handleIntersect(entries, observer) {
     });
 }
 </script>
+
+<?php get_template_part( 'template-parts/modals/modal', 'talkmore' ); ?>
 
 <?php get_footer();

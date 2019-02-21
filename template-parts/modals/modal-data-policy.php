@@ -1,4 +1,4 @@
-<div style="display: none;" id="policyModal" class="animated-modal text-center p-5">
+<div style="display: none;" id="policyModal" class="animated-modal text-center p-5 theme--dark">
 	<h2 class="title">
 		Privacy & Data Policy
 	</h2>

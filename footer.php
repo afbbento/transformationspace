@@ -116,7 +116,6 @@
 </div><!-- #page -->
 
 <?php get_template_part( 'template-parts/modals/modal', 'moreinfo' ); ?>
-<?php get_template_part( 'template-parts/modals/modal', 'talkmore' ); ?>
 <?php get_template_part( 'template-parts/modals/modal', 'bootcamp' ); ?>
 <?php get_template_part( 'template-parts/modals/modal', 'data-policy' ); ?>
 
@@ -244,7 +243,10 @@ then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 </script>
 
+
+
 <script>
+/* defer loading gifs - success modals */
 function loadGifs() {
     var imgDefer = document.getElementsByTagName('img');
     for (var i = 0; i < imgDefer.length; i++) {
@@ -260,10 +262,7 @@ function loadGifs() {
 // random gif on modal
 window.GLOBAL_URL = "<?php bloginfo('template_url');?>";
 jQuery(document).ready(function($) {
-
-
     var images = ['face-1.gif', 'face-2.gif', 'face-3.gif'];
-
     var href = GLOBAL_URL + '/' + images[Math.floor(Math.random() * images.length)];
     //console.log(href);
     $(".random-faces").attr("src", href);
@@ -271,17 +270,7 @@ jQuery(document).ready(function($) {
 </script>
 
 
-<script>
-jQuery(document).ready(function($) {
-    $(".enroll-btn .menu-item-js").attr('data-fancybox', '');
-    $(".enroll-btn .menu-item-js").attr('data-src', '#bootCampModal');
-
-});
-</script>
-
-
 <!-- scroll to anchor if on homepage -->
-
 <?php if ( is_front_page() ) : ?>
 <script>
 jQuery(document).ready(function($) {

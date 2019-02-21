@@ -72,6 +72,113 @@ function transformationspace_setup() {
 		}
 		add_filter('wpcf7_dynamic_select', 'dynamic_select', 10, 2);
 
+				/* add a shortcode for dynamic select using functions and hooks */
+	function dynamic_select_facilitatores($choices, $args = array()) {
+
+		$args = array(
+			'post_type' => 'team',
+			'post_status' => 'publish',
+		);
+		
+		$the_query = new WP_Query( $args );
+		
+		while ( $the_query->have_posts() ) :
+		$the_query->the_post();
+		$output[get_the_title()] = get_the_title();
+		endwhile;
+		
+
+		foreach ($output as $myString) {
+			$outputDecoded[] = html_entity_decode($myString);
+		}
+		//var_dump($outputDecoded);
+		
+
+		$choices = array('Select facilitator' => '');
+		$choices = array_merge($choices, $output);
+
+		return $choices;
+
+		}
+		add_filter('wpcf7_dynamic_select_facilitatores', 'dynamic_select_facilitatores', 10, 2);
+
+
+	/* add a shortcode for dynamic select using functions and hooks */
+	function dynamic_select_email_facilitatores($choices, $args = array()) {
+
+		$args = array(
+			'post_type' => 'team',
+			'post_status' => 'publish',
+		);
+		
+		$the_query = new WP_Query( $args );
+		
+		while ( $the_query->have_posts() ) :
+			$the_query->the_post();
+		  global $post;
+			$post_id = $post->ID;
+			//var_dump($post_id);
+
+			$output[get_post_meta($post_id, 'team_0_email', true)] = get_post_meta($post_id, 'team_0_email', true);
+			//var_dump($output);
+
+
+		endwhile;
+		
+
+		foreach ($output as $myString) {
+			$outputDecoded[] = html_entity_decode($myString);
+		}
+		//var_dump($outputDecoded);
+		
+
+		$choices = array('Select email' => '');
+		$choices = array_merge($choices, $output);
+
+		return $choices;
+
+		}
+		add_filter('wpcf7_dynamic_select_email_facilitatores', 'dynamic_select_email_facilitatores', 10, 2);
+
+
+		/* get ACF custom field on contact form 7 */
+		function cf7_get_ACF_custom_field($atts){
+			extract(shortcode_atts($args = array(
+				'key' => '',
+				'post_type' => 'team',
+				'post_id' => -1,
+				'obfuscate'	=> 'off'
+			), $atts));
+
+			$the_query = new WP_Query( $args );
+		
+			while ( $the_query->have_posts() ) :
+			$the_query->the_post();
+
+			$output[get_the_title()] = get_the_title();
+
+			endwhile;
+			
+			if($post_id < 0){
+				global $post;
+				if(isset($post)) 
+				$post_id = $post->ID;
+				//var_dump($post);
+			}
+				
+			$val = get_post_meta($post_id, 'team_0_email', true);
+			//var_dump($val);
+			
+			if($obfuscate == 'on'){
+				$val = cf7dtx_obfuscate($val);
+			}
+			//var_dump($output);
+			return $val;
+			
+		}
+		add_shortcode('CF7_get_ACF_custom_field', 'cf7_get_ACF_custom_field');
+
+		
 
 	function _wp_upload_dir_baseurl(){
 	

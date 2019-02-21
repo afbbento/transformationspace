@@ -20,6 +20,7 @@ jQuery(document).ready(function ($) {
 
     yourName = jQuery('#moreInfoModal input[name="your-name"]').val();
     yourName2 = jQuery('#bootCampModal input[name="your-name"]').val();
+    yourNameTalkMore = jQuery('#talkMoreModal input[name="your-name"]').val();
     selectedBootcamp = jQuery('#bootCampModal .select-selected').text();
     // console.log(yourName2);
     $("label").removeClass("wpcf7-not-valid");
@@ -59,11 +60,20 @@ jQuery(document).ready(function ($) {
     });
   });
 
-  // validate checkbox #moreInfoModal
+  // validate checkbox #moreInfoModal & #talkMoreModal
   var moreInfoModal = document.querySelector('#moreInfoModal .wpcf7');
+  var talkMoreModal = document.querySelector('#talkMoreModal .wpcf7');
 
   if ( $(moreInfoModal).length ) {
     moreInfoModal.addEventListener('wpcf7submit', function (event) {
+      if ($('#acept')[0].checked === false) {
+        $(this).find(".policy-js").addClass("wpcf7-not-valid");
+      }
+    }, false);
+  }
+
+  if ( $(talkMoreModal).length ) {
+    talkMoreModal.addEventListener('wpcf7submit', function (event) {
       if ($('#acept')[0].checked === false) {
         $(this).find(".policy-js").addClass("wpcf7-not-valid");
       }
@@ -96,6 +106,22 @@ jQuery(document).ready(function ($) {
     });
   });
   }
+  if ( $(talkMoreModal).length ) {
+    talkMoreModal.addEventListener('wpcf7mailsent', function (event) {
+      //console.log(yourName);
+      document.getElementById("your-name").innerHTML = yourNameTalkMore + '!';
+      jQuery.fancybox.close()
+      jQuery.fancybox.open({
+        src: '#confirmationModal',
+        type: 'inline',
+        opts: {
+          afterShow: function (instance, current) {
+            console.info('confirmation more Info done!');
+          }
+        }
+      });
+    });
+    }
   if ( $(bootCampModal).length ) {
   bootCampModal.addEventListener('wpcf7mailsent', function (event) {
     console.log(yourName2);

@@ -64,7 +64,7 @@ if( $bootcamp_description ):
                                     so gullible. We believed that fat, and more specifically saturated fat...</p>
                             </div>
                         </div>
-                        <div class="col-md-6 col-image hidden-xs"
+                        <div class="col-md-6 col-image col-image--pos hidden-xs"
                             style="background-image: url('<?php echo bloginfo('url'); ?>/wp-content/uploads/student-half.jpg')">
                         </div>
                     </div>

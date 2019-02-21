@@ -20,7 +20,7 @@
 				Thanks <span id="your-name"></span>
 			</h2>
 			<p class="subtitle">
-				We will send you information about our Bootcamps & our launch event as soon as possible. 🤗
+				You've contacted the facilitator [name]. 🤗
 			</p>
 			<div class="text-center">
 				<a data-fancybox-close="" class="btn btn-green" href="#">return to website</a>

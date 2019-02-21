@@ -29,9 +29,7 @@ get_header(); ?>
                 <h1>our team</h1>
                 <p class="small">Looking back over the last 40 years, it’s hard to understand how we could have been so
                     gullible. We believed that fat, and more specifically saturated fat...</p>
-                <?php
-					get_template_part( 'template-parts/transformation_space/persons');
-				?>
+                <?php get_template_part( 'template-parts/transformation_space/persons-all'); ?>
             </div>
         </div>
     </div>
