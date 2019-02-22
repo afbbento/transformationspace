@@ -792,6 +792,7 @@ span.circle-line{
 	border-bottom: 2px solid var(--color-1);
 }
 
+.post.remove-bg,
 .blog.remove-bg {
 	background-image: none;
 }
@@ -2329,6 +2330,7 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	right: 0;
 	left: 0;
 }
+.post,
 .blog{
 	background-image: url('../images/abstract-dark-bg.jpg');
 	padding: 59px 0;

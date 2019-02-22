@@ -212,55 +212,8 @@ jQuery('.article-slider').on('afterChange', function(event, slick, currentSlide,
                 <p class="small">Looking back over the last 40 years, it’s hard to understand how we could have been so
                     gullible. We believed that fat, and more specifically saturated fat...</p>
             </div>
-            <?php
-			get_template_part( 'template-parts/transformation_space/persons');
-			?>
-            <div class="row other-guests">
-                <h2><span class="circle-line"></span>other guests</h2>
-                <?php
-				if( have_rows('other_guests') ):
-					$rows_count = count(get_field('other_guests'));
-					
-					$i = 1;
-					while ( have_rows('other_guests') ) : the_row();
-						
-						if($i % 2 == 0){
-							$position = 'col-sm-offset-5';
-						} else {
-							$position = '';
-						}
-						echo '<div class="row">
-						<div class="col-sm-6 person '.$position.' small">
-						<div class="row">
-						<div class="col-sm-6">
-						<div class="frame">
-						<img src="'.get_sub_field('image').'">
-						</div>
-						</div>
-						<div class="col-sm-6">
-						<p class="lead1">'.get_sub_field('name').'</p>
-						<ul class="social-links">';
-						if (get_sub_field('fb')){
-							echo '<li><a target="_blank" href="'.get_sub_field('fb').'" class=""><i class="fab fa-facebook-f"></i></a></li>';
-						}
-						if (get_sub_field('linkedin')){
-							echo '<li><a target="_blank" href="'.get_sub_field('linkedin').'" class=""><i class="fab fa-linkedin-in"></i></a></li>';
-						}
-						if (get_sub_field('twitter')){
-							echo '<li><a target="_blank" href="'.get_sub_field('twitter').'" class=""><i class="fab fa-twitter"></i></a></li>';
-						}
-						echo '</ul>
-						<p class="small">'.get_sub_field('bio').'</p>
-						</div>
-						</div>
-						</div>
-						</div>';
-						$i++;
-					endwhile;
-					
-				endif;
-				?>
-            </div>
+            <?php get_template_part( 'template-parts/transformation_space/persons'); ?>
+            <?php get_template_part( 'template-parts/transformation_space/other-guests'); ?>
         </div>
     </div>
 </section>
