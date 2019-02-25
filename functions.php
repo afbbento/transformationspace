@@ -540,19 +540,19 @@ add_action( 'widgets_init', 'transformationspace_widgets_init' );
  * @param string $link Link to single post/page.
  * @return string 'Continue reading' link prepended with an ellipsis.
  */
-function transformationspace_excerpt_more( $link ) {
-	if ( is_admin() ) {
-		return $link;
-	}
+// function transformationspace_excerpt_more( $link ) {
+// 	if ( is_admin() ) {
+// 		return $link;
+// 	}
 
-	$link = sprintf( '<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
-		esc_url( get_permalink( get_the_ID() ) ),
-		/* translators: %s: Name of current post */
-		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'transformationspace' ), get_the_title( get_the_ID() ) )
-	);
-	return ' &hellip; ' . $link;
-}
-add_filter( 'excerpt_more', 'transformationspace_excerpt_more' );
+// 	$link = sprintf( '<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
+// 		esc_url( get_permalink( get_the_ID() ) ),
+// 		/* translators: %s: Name of current post */
+// 		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'transformationspace' ), get_the_title( get_the_ID() ) )
+// 	);
+// 	return ' &hellip; ' . $link;
+// }
+// add_filter( 'excerpt_more', 'transformationspace_excerpt_more' );
 
 /**
  * Handles JavaScript detection.
@@ -758,7 +758,7 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 
 function my_assets() {
-	$ts_theme_version = '5.3.8';
+	$ts_theme_version = '5.3.9';
 	wp_enqueue_style( 'Raleway-font', 'https://fonts.googleapis.com/css?family=Raleway:400,700,900' );
 	wp_enqueue_style( 'Abhaya-font', 'https://fonts.googleapis.com/css?family=Abhaya+Libre:400,600' );
 	wp_enqueue_style( 'Work-Sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,700' );

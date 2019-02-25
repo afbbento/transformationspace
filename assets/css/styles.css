@@ -102,6 +102,11 @@ a:focus {
 	color: initial;
 }
 
+
+.btn-black:focus {
+	color: #fff;	
+}
+
 .btn-transparent-alt:focus {
 	color: #fff;
 }
@@ -1215,6 +1220,10 @@ input:-moz-placeholder { /* Firefox 18- */
 	padding: 16px;
 	border: 2px solid #000;	
 }
+
+.line-image-frame .wp-post-image {
+	width: 100%;
+}
 .white.line-image-frame{
 	border: 2px solid #fff;
 	position: relative;
@@ -1970,6 +1979,11 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	-ms-transform:     translate(-22px, 0px);
 	-o-transform:      translate(-22px, 0px);
 }
+
+.home .text-slider {
+	margin-top: -170px;
+}
+
 .breadcrumbs{
 	margin-top: 60px;
 	margin-bottom: 80px;
@@ -3640,7 +3654,7 @@ aside li a{
 	left: 5%;
 	position: -webkit-sticky;
 	position: sticky;
-	top: 150px;
+	top: 0;
 	z-index: 9;
 }
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for Text Slider
+ * Template part for Blog text slider
  *
  * Used in Front page and Bootcamp
  *
@@ -13,12 +13,9 @@
  */
  
 $terms = get_field('blog_category_slider');
+if (!empty($terms)):
 
-// escondido por agora
-if ( !empty( $terms ) ) {
 ?>
-
-
 <section class="text-slider">
 	<div class="container">
 
@@ -45,7 +42,13 @@ if ( !empty( $terms ) ) {
 		<div class="blog-text-slider">
 
 			<?php 
-			$my_query = new WP_query(array('category__and' => $terms)); 
+			$my_query = new WP_query(
+				array(
+					'post_type' => 'blog',
+					'post_status' => 'publish',
+					'category__and' => $terms
+					)
+				); 
 				while ($my_query->have_posts()):
 					$my_query->the_post(); 
 					$categories = get_the_category();
@@ -58,7 +61,7 @@ if ( !empty( $terms ) ) {
 				<div class="lead3"><?php echo $category; ?></div>
 				<h3><?php echo the_title(); ?></h3>
 				<div class="simple-line"></div>
-				<p class="normal"><?php echo get_excerpt(155); ?></p>
+				<p class="normal"><?php echo get_excerpt(150); ?></p>
 				<div class="button-container">
 					<a href="<?php the_permalink(); ?>" class="btn btn-black shadow">read more</a>
 				</div>				
@@ -75,4 +78,4 @@ if ( !empty( $terms ) ) {
 		</div>
 	</div>
 </section>
-<?php } ?>
+<?php endif; ?>

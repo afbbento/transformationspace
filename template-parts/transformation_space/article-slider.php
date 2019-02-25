@@ -13,7 +13,8 @@
  */
 // args
 $args = array(
-    'post_type' => 'Blog',
+	'post_type' => 'blog',
+	'post_status' => 'publish',
 );
 // query
 $the_query = new WP_Query( $args );
