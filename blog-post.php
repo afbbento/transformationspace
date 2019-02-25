@@ -166,7 +166,7 @@
                 </div>
             </main><!-- #main -->
         </div><!-- #col -->
-        <div class="col-md-3 col-md-offset-1">
+        <div class="col-md-4 custom-sidebar">
             <?php get_sidebar(); ?>
         </div>
     </div>

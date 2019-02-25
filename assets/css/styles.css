@@ -3712,6 +3712,10 @@ aside li a{
 }
 .has-sidebar #secondary {
 	width: initial;
+	float: none;
+}
+.custom-sidebar {
+	padding-left: 70px;
 }
 .blog-template-page .container main{
 	margin-top: 75px;
