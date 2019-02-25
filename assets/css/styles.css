@@ -669,7 +669,7 @@ span.circle-line{
 }
 .navbar-default{
 	border: none;
-	z-index: 3;
+	z-index: 10;
 	height: 100px;
 }
 .custom-logo{
@@ -3887,9 +3887,16 @@ aside li a{
 .author-meta .social-links li a i{
 	font-size: 13px;	
 }
-.swp_social_panel.swp_default_full_color a{
+
+.swp_social_panel.swp_default_full_color a,
+body .swp_social_panel.swp_other_full_color:hover a {
 	color: #979797;
 }
+
+html body .swp_social_panel.swp_individual_full_color .nc_tweetContainer:hover a {
+	color: var(--blue);
+}
+
 .swp_social_panel{
 	position: absolute;
 }
@@ -3903,6 +3910,15 @@ aside li a{
 	display: block;
 	height: auto;
 }
+
+.swp_share {
+	display: none !important;
+}
+
+.iconFiller {
+	width: 30px !important;
+}
+
 .nc_tweetContainer{
 	background-color: transparent !important;
 	border: none !important;
