@@ -3835,13 +3835,12 @@ aside li a{
 	position: relative;
 }
 .newsletter-sidebar input[type="submit"]{
-	width: 56px;
-	height: 48px;
+	width: 46px;
+	height: 40px;
 	font-size: 13px;
 	padding: 0;
 	position: absolute;
-	top: 1px;
-	right: 1px;
+	right: 0;
 }
 
 .get-started-widget h1{
