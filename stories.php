@@ -155,7 +155,7 @@ get_header();
 						<?php } ?>
 						<?php if ($i==1){ ?>
 
-							<div class="col-md-4 col-sm-12 story-item story-item-right">
+							<div class="col-md-4 col-sm-6 story-item story-item-right">
 		                     <div class="story-video">
 		                        <div class="video-container">
 		                           <div class="play-button-outer small">
@@ -182,7 +182,7 @@ get_header();
 
 							</div>
             				<div class="row bootcamp-item-stories">
-								<div class="col-md-4 col-sm-12 story-item">
+								<div class="col-md-4 col-sm-6 story-item">
 						 			<div class="story-video">
 						 				<div class="video-container">
 											<div class="play-button-outer small">
@@ -309,7 +309,7 @@ jQuery(".get-stories").click(function(event){
 						
 						$video_ID = get_field('vimeo_video_id');
 		    ?>
-		 	<div class="col-md-4 col-sm-12 story-item">
+		 	<div class="col-md-4 col-sm-6 story-item">
 		 		<div class="story-video">
 		 			<div class="video-container">
 						<div class="play-button-outer">
