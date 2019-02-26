@@ -83,8 +83,8 @@ textarea {
   height: 114px;
 }
 
-input:focus,
-textarea:focus {
+.wpcf7 input:focus,
+.wpcf7 textarea:focus {
   background: #ffffff;
   box-shadow: 0px 10px 25px rgba(58, 64, 91, 0.2);
   border-radius: 2px;
