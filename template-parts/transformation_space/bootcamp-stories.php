@@ -31,7 +31,7 @@
 			 				</p>
 			 			</div>	
                   </div>
-                  <div class="col-md-4 story-item story-item-right">
+                  <div class="col-md-4 col-sm-12 story-item story-item-right">
                      <div class="story-video">
                         <div class="video-container">
                            <div class="play-button-outer small">
@@ -53,7 +53,7 @@
                   </div>
             </div>
             <div class="row bootcamp-item-stories">
-               	<div class="col-md-4 story-item">
+               	<div class="col-md-4 col-sm-12 story-item">
 		 			<div class="story-video">
 		 				<div class="video-container">
 							<div class="play-button-outer small">
