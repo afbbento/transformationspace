@@ -4471,6 +4471,8 @@ ul.alm-listing li.grid-item.template_2{
 .all-stories .video-container img, 
 .story-video img{
 	box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.15);
+	object-fit: cover; 
+    height: 100%;
 }
 .all-stories .feat-video .play-button{
 	top: 23px;
