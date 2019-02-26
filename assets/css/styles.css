@@ -641,6 +641,7 @@ span.circle-line{
 
 .btn.success {
 	padding-left: 15px !important;
+	box-shadow: none;
 }
 
 .newsletter-footer .success {
@@ -1340,12 +1341,13 @@ img.plus-sign{
 	text-decoration: none;
 }
 
-input[type="button"].btn-shadow, .btn-shadow,
-input[type="submit"].btn-shadow{
+.btn-shadow,
+.btn-shadow {
 	-webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 }
+
 button,
 input[type="button"],
 input[type="submit"] {
@@ -3835,7 +3837,7 @@ aside li a{
 	position: relative;
 }
 .newsletter-sidebar input[type="submit"]{
-	width: 46px;
+	width: 110px;
 	height: 40px;
 	font-size: 13px;
 	padding: 0;

@@ -123,6 +123,68 @@
 /* Medium Devices */
 @media only screen and (max-width : 992px) {
 
+
+	.circle-line:before,
+	.circle-line:after {
+		border-width: 2px;
+	}
+
+
+	.circle-line:after {
+		width: 25px;
+	}
+
+	.level0,
+	.lead1 {
+		font-size: 20px;
+		position: relative;
+	}
+
+	.circle-line,
+	.circle-line.white:after  {
+		left: 5px;
+	}
+
+	.separator .btn, 
+	.separator-left .btn,
+	.level0 {
+		font-size: 25px;
+	}
+
+	.circle-line:before {
+		width: 11px;
+		height: 11px;
+	}
+
+	.circle-line:after {
+		border-top: 2px solid #000;
+	}
+
+	.circle-line.white:before {
+		border: 2px solid #fff;
+	}
+
+	.circle-line.white:after {
+		border-top: 2px solid #fff;
+		width: 21px;
+	}
+
+	span.circle-line {
+		margin-right: 40px
+	}
+
+	.blog-header h1 {
+		font-size: 50px;
+	}
+
+	.article-slider .sup-title {
+		font-size: 12px;
+	}
+
+	.row-location {
+		margin-top: 54px;
+	}
+
 	.story-video-big img {
 		margin-bottom: 20px;
 	}
@@ -364,16 +426,6 @@
 	
 }
 
-
-/* all small devices */
-@media only screen and (max-width : 991px) {
-
-	.row-location {
-		margin-top: 54px;
-	}
-
-}
-
 /* iPad Pro 10.5" */
 @media only screen and (max-width : 834px) {
 	.header-section-bottom .highlight-image {
@@ -383,12 +435,8 @@
 	
 }
 
-/* Small Devices, iPad */
+/* all small devices */
 @media only screen and (max-width: 767px) {
-
-	.article-slider .sup-title {
-		font-size: 12px;
-	}
 
 	.bootcamp-desc-image:before,
 	.bootcamp-desc-image:after {
@@ -463,11 +511,6 @@
 	.theme--dark ~ header,
 	.theme--light ~ header {
 		padding-top: 30px;
-	}
-
-	.separator .btn, 
-	.separator-left .btn {
-		font-size: 25px;
 	}
 
 	.bootcamp-box .schedule:after {
@@ -1057,28 +1100,7 @@
 		margin-top: 77px;
 	}
 
-	.circle-line:before {
-		width: 11px;
-		height: 11px;
-	}
 
-	.circle-line:after {
-		border-top: 3px solid #000;
-	}
-
-	.circle-line.white:before {
-		border: 3px solid #fff;
-	}
-
-	.circle-line.white:after {
-		left: 5px;
-		border-top: 3px solid #fff;
-		width: 21px;
-	}
-
-	span.circle-line {
-		margin-right: 40px
-	}
 	.job-item .row {
 		text-align: center;
 	}
@@ -1104,26 +1126,6 @@
 /* extra small devices, iPhones */ 
 @media only screen and (max-width: 480px) {
 
-
-	.circle-line:before,
-	.circle-line:after {
-		border-width: 2px;
-	}
-
-
-	.circle-line:after {
-		width: 25px;
-	}
-
-	.level0,
-	.lead1 {
-		font-size: 20px;
-		position: relative;
-	}
-
-	.circle-line {
-		left: 5px;
-	}
     
 	.stories .btn-container {
 		transform: translateY(23px);
