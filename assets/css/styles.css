@@ -1104,6 +1104,7 @@ input:-moz-placeholder { /* Firefox 18- */
 	font-family: "Work Sans";
 }
 
+
 .form-inline .btn {
 	background-position: 15px top;
 	will-change: auto;
@@ -1158,6 +1159,18 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 .bordered-box{
 	background-color: #fff;
+}
+
+.bootcamp-box .schedule:after {
+	content: "";
+    border: 36px solid transparent;
+    border-top: 36px solid var(--yellow);
+	top: 100%;
+    position: absolute;
+    right: -2px;
+    border-left: 0px solid;
+	width: calc(100% + 2px);
+	z-index: 1;
 }
 .newsletter-box h1{
 	font-family: Abhaya Libre;
@@ -2131,6 +2144,7 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 }
 .bootcamp-box{
 	border: 2px solid #000;
+	border-bottom: none;
 	padding: 0;
 	height: 270px;
 	margin-bottom: 140px;
@@ -2201,7 +2215,7 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	position: relative;
 }
 .trapezoid:after {
-	content: "";
+	/* content: "";
 	border: 36px solid rgba(0,0,0,0);
 	border-top-color: rgba(0, 0, 0, 0);
 	border-top-style: solid;
@@ -2215,7 +2229,7 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	position: absolute;
 	right: -38px;
 	border-left: 0px solid;
-	width: calc(25% + 36px);
+	width: calc(25% + 36px); */
 }
 .trapezoid p.x-small{
 	position: absolute;
