@@ -26,6 +26,7 @@
  */
 function transformationspace_setup() {
 
+
 	function remove_admin_login_header() {
 		remove_action('wp_head', '_admin_bar_bump_cb');
 	}
@@ -391,37 +392,6 @@ add_action( 'after_setup_theme', 'transformationspace_setup' );
  *
  * @global int $content_width
  */
-function transformationspace_content_width() {
-
-	$content_width = $GLOBALS['content_width'];
-
-	// Get layout.
-	$page_layout = get_theme_mod( 'page_layout' );
-
-	// Check if layout is one column.
-	if ( 'one-column' === $page_layout ) {
-		if ( transformationspace_is_frontpage() ) {
-			$content_width = 644;
-		} elseif ( is_page() ) {
-			$content_width = 740;
-		}
-	}
-
-	// Check if is single post and there is no sidebar.
-	if ( is_single() && ! is_active_sidebar( 'sidebar-1' ) ) {
-		$content_width = 740;
-	}
-
-	/**
-	 * Filter Twenty Seventeen content width of the theme.
-	 *
-	 * @since Twenty Seventeen 1.0
-	 *
-	 * @param int $content_width Content width in pixels.
-	 */
-	$GLOBALS['content_width'] = apply_filters( 'transformationspace_content_width', $content_width );
-}
-add_action( 'template_redirect', 'transformationspace_content_width', 0 );
 
 /**
  * Register custom fonts.
@@ -582,8 +552,7 @@ add_action( 'wp_head', 'transformationspace_pingback_header' );
  * Enqueue scripts and styles.
  */
 function transformationspace_scripts() {
-	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'transformationspace-fonts', transformationspace_fonts_url(), array(), null );
+
 
 	// Theme stylesheet.
 	wp_enqueue_style( 'transformationspace-style', get_stylesheet_uri() );
@@ -610,16 +579,10 @@ function transformationspace_scripts() {
 	wp_enqueue_script( 'transformationspace-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '1.0', true );
 
 	$transformationspace_l10n = array(
-		'quote'          => transformationspace_get_svg( array( 'icon' => 'quote-right' ) ),
+		'quote'      => transformationspace_get_svg( array( 'icon' => 'quote-right' ) ),
 	);
 
-
-	function menu_link_classes($classes, $item, $args) {
-
-		$classes['class'] = 'menu-item-link menu-item-js';
-		return $classes;
-	  }
-	  add_filter('nav_menu_link_attributes', 'menu_link_classes', 1, 3);
+	wp_enqueue_script( 'transformationspace-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '1.0', true );
 
 
 	wp_localize_script( 'transformationspace-skip-link-focus-fix', 'transformationspaceScreenReaderText', $transformationspace_l10n );
@@ -629,6 +592,14 @@ function transformationspace_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'transformationspace_scripts' );
+
+
+function menu_link_classes($classes, $item, $args) {
+
+	$classes['class'] = 'menu-item-link menu-item-js';
+	return $classes;
+	}
+	add_filter('nav_menu_link_attributes', 'menu_link_classes', 1, 3);
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -758,7 +729,7 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 
 function my_assets() {
-	$ts_theme_version = '5.3.9';
+	$ts_theme_version = '5.4';
 	wp_enqueue_style( 'Raleway-font', 'https://fonts.googleapis.com/css?family=Raleway:400,700,900' );
 	wp_enqueue_style( 'Abhaya-font', 'https://fonts.googleapis.com/css?family=Abhaya+Libre:400,600' );
 	wp_enqueue_style( 'Work-Sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,700' );

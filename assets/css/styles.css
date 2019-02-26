@@ -713,13 +713,13 @@ span.circle-line{
 	border-bottom: 2px solid var(--color-1);
 }
 
-
-.social-navigation a {
-	background-color: transparent;
+.social-navigation a:hover {
+	border-bottom: none;
 }
 
-.social-navigation a:hover {
-	background-color: transparent;
+.social-links-menu {
+	display: flex;
+	flex-direction: row;
 }
 
 .footer-bottom-menu .menu-item-link,
@@ -826,12 +826,14 @@ span.circle-line{
 	-moz-box-shadow: -4px 0px 20px rgba(0, 0, 0, 0.2);	
 }
 
-.right-nav .newsletter-box{
-	padding: 29px;
+.right-nav .search,
+.right-nav .newsletter-box {
+	max-width: 520px;
+	width: 100%;
 }
 
-.right-nav .social-navigation a{
-	background-color:transparent;
+.right-nav .newsletter-box{
+	padding: 20px;
 }
 
 .theme--dark-alt.scrolled-nav .top-menu .enroll-btn {
@@ -918,24 +920,26 @@ span.circle-line{
 	overflow: hidden;
 	z-index: -2;
 	background-color: #fff;
-	padding-top: 130px;
 }
-.overlay .container{
+.overlay .container {
 	position: relative;
-} 
+	height: 100%;
+}
+
 .logo-menu-overlay{
 	position: absolute;
-	top: -105px;
-	left: -31px;
+	top: 0;
+	left: 0;
 }
+
 .overlay.open {
 	opacity: 1;
 	visibility: visible;
 	height: 100%;
 }
 .menu-right-nav-menu{
-	margin: 0;	
-	border-right: 1px solid;
+	margin: 0;	 
+	border-right: 1px solid var(--color-1);
 }
 .menu-right-nav-menu .menu-item-link{
 	color: #010203;
@@ -961,6 +965,7 @@ span.circle-line{
 	background-repeat: no-repeat;
 	background-position: 28px center;
 	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+	border: none;
 }
 
 
@@ -1045,6 +1050,7 @@ input:-moz-placeholder { /* Firefox 18- */
 	text-transform: lowercase;
 }
 .right-nav form.search{
+	position: relative;
 	margin-bottom: 42px;	
 }
 
@@ -1451,13 +1457,6 @@ input[type="submit"].btn-black:hover {
 	border: 2px solid var(--yellow);
 	color: #000;
 }
-.overlay-footer{
-	position: fixed;
-	bottom: 0;
-	height: 154px;
-	width: 100%;
-	background: #000;
-}
 .btn-lines:before{
 	content: "";
 	position: absolute;
@@ -1841,7 +1840,16 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	align-items: flex-start;
 }
 
-/*OVERLAY FOOTER*/
+/* overlay footer */
+
+.overlay-footer{
+	position: fixed;
+	bottom: 0;
+	height: 154px;
+	width: 100%;
+	background: #000;
+}
+
 .overlay-footer{
 	color: #fff;
 }
@@ -1849,9 +1857,8 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	position: relative;
 }
 .overlay-footer .logo-spaces{
-	position: absolute;
-	right: 44px;
-	top: 53px;
+	flex: 1;
+    text-align: right;
 }
 .social-links li a{
 	background-repeat: no-repeat;
@@ -2398,6 +2405,7 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 .align-vertical{
 	display: flex;
 	align-items: center;
+	height: 100%;
 }
 .vertical-nav-right ul.slick-dots{
 	top: 50%;
@@ -3444,23 +3452,14 @@ span.twitter-typeahead {
 .footer-bottom-menu .menu {
 	display: inline-block;
 }
-.footer .social-navigation a {
-	background-color: transparent;
+.social-navigation .menu-item {
+	padding: 0;
 }
-.footer .social-navigation a:hover{
-	background: transparent;
+
+.social-navigation .menu-item-link:hover {
+	color: var(--blue);
 }
-.footer .social-navigation{
-	float: none;
-	width: auto;
-}
-.footer .menu-social-container{
-	text-align: center;
-}
-.footer #menu-social{
-	display: inline-block;
-	margin-bottom: 40px;	
-}
+
 h2.widget-title{
 	color: #fff;
 	font-weight: bold;
@@ -4103,15 +4102,7 @@ body.category .scrolled-nav .top-menu .enroll-btn .menu-item-link{
 .blog-header .social-navigation ul li a:hover{
 	color: #000;
 }
-.blog-header .social-navigation a:link,
-.blog-header .social-navigation a:visited,
-.blog-header .social-navigation a:hover,
-.blog-header .social-navigation a:active
-{
-	background-color: transparent;
-	-webkit-border-radius: 40px;
-	border-radius: 0;
-}
+
 .blog-header form.search {
 	margin-bottom: 42px;
 	position: relative;

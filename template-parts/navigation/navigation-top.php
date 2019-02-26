@@ -56,7 +56,7 @@ if(!empty( $categories)) {
 <div class="right-nav <?php echo $nav_theme; ?>">
     <div class="logo-menu-mobile visible-xs">
         <a href="<?php echo bloginfo('url'); ?>">
-        <img class="logo-mobile" src="<?php echo _wp_upload_dir_baseurl(); ?>/logo-mobile.svg">
+            <img class="logo-mobile" src="<?php echo _wp_upload_dir_baseurl(); ?>/logo-mobile.svg">
         </a>
     </div>
     <button class="hamburger hamburger--collapse" type="button">
@@ -65,20 +65,23 @@ if(!empty( $categories)) {
         </span>
     </button>
 
-    <div class="overlay">
+    <div class="overlay theme--light">
         <div class="container">
-            <div class="logo-menu-overlay hidden-xs"><img src="<?php echo esc_url( $logo[0] ); ?>"></div>
             <div class="row">
-                <div class="col-md-6">
+                <a href="<?php echo bloginfo('url'); ?>" class="col-xs-2 logo-menu-overlay hidden-xs">
+                    <span class="custom-logo"></span>
+                </a>
+            </div>
+            <div class="row flex-container">
+                <div class="col-md-6 col-sm-12">
                     <nav class="overlay-menu">
                         <?php wp_nav_menu( array(
 						'menu' => 'Right Nav Menu',
 						'menu_class' => 'menu-right-nav-menu'
 						) ); ?>
-
                     </nav>
                 </div>
-                <div class="col-md-6 hidden-xs">
+                <div class="col-md-6 hidden-xs clearfix">
                     <form class="search" action="/" method="get">
                         <input class="borderless-input" type="text" name="s" id="search" placeholder="Search"
                             value="<?php the_search_query(); ?>" />
@@ -118,11 +121,9 @@ if(!empty( $categories)) {
         <div class="overlay-footer">
             <div class="container">
                 <div class="row align-vertical" style="padding: 13px;">
-                    <div class="col-md-5">
+                    <div class="col-md-5 flex-container">
                         <?php
-			
-
-				if ( has_nav_menu( 'social' ) ) : ?>
+				        if ( has_nav_menu( 'social' ) ) : ?>
                         <nav class="social-navigation" role="navigation"
                             aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'transformationspace' ); ?>">
                             <?php

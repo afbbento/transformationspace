@@ -90,25 +90,6 @@
                 </div>
             </div>
         </div>
-
-        <?php
-		//temporarly disabled, to enable remove ==0
-		if ( has_nav_menu( 'social' ) == '0') : 
-            ?>
-        <nav class="social-navigation" role="navigation"
-            aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'transformationspace' ); ?>">
-            <?php
-            wp_nav_menu( array(
-                'theme_location' => 'social',
-                'menu_class'     => 'social-links-menu',
-                'depth'          => 1,
-                'link_before'    => '<span class="screen-reader-text">',
-                'link_after'     => '</span>' . transformationspace_get_svg( array( 'icon' => 'chain' ) ),
-				) );
-                ?>
-        </nav><!-- .social-navigation -->
-        <?php endif; ?>
-
         <?php get_template_part( 'template-parts/footer/footer', 'bottom' ); ?>
     </div><!-- .wrap -->
 </footer><!-- #footer -->

@@ -7,11 +7,24 @@
     }
 }   
 
-/* custom breakpoint */
-@media only screen and (min-width : 991px) {
+/* all desktop devices */
+@media only screen and (min-width : 993px) {
 	.single-post .main-container,
     .single-blog .main-container {
         margin-top: -450px;
+	}
+
+	.overlay .flex-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	} 
+
+	.overlay .col-md-6.hidden-xs {
+		display: flex;
+		flex-direction: column;
+		align-items: center;	
 	}
 }
 
@@ -25,6 +38,7 @@
 
 /* only large and medium devices */
 @media only screen and (min-width : 769px) {
+
     
 	.row.foot {
 		margin-right: 10px;
@@ -35,7 +49,7 @@
 }
 
 /* custom breakpoint */
-@media only screen and (max-height: 768px) {
+@media only screen and (max-height: 650px) {
 	.overlay-footer {
 		display: none;
 	}
@@ -109,6 +123,10 @@
 /* Medium Devices */
 @media only screen and (max-width : 992px) {
 
+	.overlay-menu {
+		padding-bottom: 20px;
+	}
+
 	.custom-sidebar {
 		padding-left: 0;
 	}
@@ -134,7 +152,6 @@
 	}
 	.logo-menu-overlay {
 		position: relative;
-		top: 20px;
 		left: 0;
 	}
 	.menu-right-nav-menu .menu-item{

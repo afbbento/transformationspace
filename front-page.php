@@ -15,15 +15,6 @@ get_header(); ?>
 <div class="header-section" style="background-image:url('<?php echo get_field('header_background');  ?>');">
     <div class="home-slider-container">
         <div class="container">
-            <div class="row visible-xs visible-sm">
-                <div class="col-md-12">
-                    <?php
-                    if ( has_custom_logo() ) {
-                        echo '<a href="/"><div class="custom-logo"></div></a>';
-                    }
-                    ?>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="slick-nav col-xs-1 hidden-xs"></div>
