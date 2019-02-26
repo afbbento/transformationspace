@@ -1009,7 +1009,7 @@ input[type="tel"] {
 
 
 input.big{
-	height: 60px;
+	height: 50px;
 	padding: 20px 27px;
 }
 input.borderless-input{
@@ -1428,7 +1428,7 @@ input[type="submit"].btn-black:hover {
 	position: relative;
 }
 .btn-big{
-	height: 60px;
+	height: 50px;
 	padding: 20px 40px;
 	font-size: 16px;
 }
@@ -2008,7 +2008,7 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	margin-top: 60px;
 	margin-bottom: 80px;
 }
-.breadcrumbs .level0{
+.level0{
 	font-weight: 900;
 	font-size: 30px;
 }
@@ -3829,8 +3829,7 @@ aside li a{
 	right: 0;
 }
 .newsletter-sidebar input.big{
-	height: 50px !important;
-	padding: 17px 25px !important;
+	padding: 17px 25px;
 }
 .newsletter-sidebar .input-container{
 	position: relative;

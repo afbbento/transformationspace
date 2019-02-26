@@ -34,7 +34,7 @@ get_header();
 						</nav><!-- .social-navigation -->
 						
 					</div>	
-					<div class="col-md-5 newsletter">
+					<div class="col-md-5 col-sm-12 newsletter">
 						<p class="normal bold">Get fresh news, always!</p>
 						<p>Receive all our articles and know more about related themes.</p>
 						<div id="mc_embed_signup">

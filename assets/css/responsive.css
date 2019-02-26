@@ -123,6 +123,10 @@
 /* Medium Devices */
 @media only screen and (max-width : 992px) {
 
+	.bootcamp-box .schedule:after {
+		content: none;
+	}
+
 	.overlay-menu {
 		padding-bottom: 20px;
 	}
@@ -376,7 +380,11 @@
 }
 
 /* Small Devices, iPad */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+
+	.article-slider .sup-title {
+		font-size: 12px;
+	}
 
 	.bootcamp-desc-image:before,
 	.bootcamp-desc-image:after {
@@ -447,6 +455,16 @@
 
 /* all extra small devices */
 @media only screen and (max-width : 767px) {
+
+	.theme--dark ~ header,
+	.theme--light ~ header {
+		padding-top: 30px;
+	}
+
+	.separator .btn, 
+	.separator-left .btn {
+		font-size: 25px;
+	}
 
 	.bootcamp-box .schedule:after {
 		content: none;
@@ -582,7 +600,7 @@
 		width: 80%;
 	}
 	.breadcrumbs {
-		margin-bottom: 31px;
+		margin-bottom: 30px;
 	}
 	.home-slider .button-wrapper.visible-xs.visible-sm{
 		margin-top: 25px;
@@ -724,10 +742,7 @@
 	.text-slider p {
 		margin-top: 10px;
 	}
-	.text-slider .container{
-		padding: 0;
-		margin: 0;
-	}
+
 	.text-slider .button-container {
 		margin-top: 40px;
 		transform: none;
@@ -1084,6 +1099,17 @@
 
 /* extra small devices, iPhones */ 
 @media only screen and (max-width: 480px) {
+
+
+	.circle-line:before,
+	.circle-line:after {
+		border-width: 2px;
+	}
+
+
+	.circle-line:after {
+		width: 25px;
+	}
 
 	.level0,
 	.lead1 {
