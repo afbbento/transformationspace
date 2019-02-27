@@ -117,7 +117,7 @@ if(!empty( $categories)) {
             </div>
         </div>
 
-        <div class="overlay-footer">
+        <div class="overlay-footer hidden-sm hidden-xs">
             <div class="container">
                 <div class="row align-vertical" style="padding: 13px;">
                     <div class="col-md-5 flex-container">

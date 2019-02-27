@@ -30,9 +30,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-11">
+            <div class="col-sm-11 col-xs-12">
                 <dir class="row header-text">
-                    <div class="col-md-9">
+                    <div class="col-sm-9">
                         <p class="x-small upper yellow-text"><strong>Agile methodologies</strong></p>
                         <h1 class="blog-title"><?php echo get_the_title(); ?></h1>
                         <div class="post-meta">
@@ -58,7 +58,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 author-col">
+                    <div class="col-sm-3 author-col">
                         <img src="<?php echo _wp_upload_dir_baseurl(); ?>/blog-author.png" alt="Avatar">
                         <p><?php 
 
@@ -77,26 +77,26 @@
         </div>
     </div>
 </header>
-<div class="container-fluid">
-<div class="sticky-top">
-    <div class="left-sidebar hidden-xs hidden-sm">
-        <div>
-            <?php echo do_shortcode('[wp_ulike]');?>
-        </div>
-        <div>
-            <a class="round-btn bookmark" id="bookmarkme" href="#"></a>
-        </div>
-        <div class="social-share">
-            <?php echo do_shortcode( '[social_warfare button_shape="flat_fresh"]' ); ?>
+<div class="container-fluid pb-40">
+    <div class="sticky-top hidden-xs hidden-sm">
+        <div class="left-sidebar">
+            <div>
+                <?php echo do_shortcode('[wp_ulike]');?>
+            </div>
+            <div>
+                <a class="round-btn bookmark" id="bookmarkme" href="#"></a>
+            </div>
+            <div class="social-share">
+                <?php echo do_shortcode( '[social_warfare button_shape="flat_fresh"]' ); ?>
+            </div>
         </div>
     </div>
-</div>
-<div class="container main-container">
-    <div class="row">
-        <div class="col-md-7 col-md-offset-1">
-            <main id="main" class="site-main" role="main">
+    <div class="container main-container">
+        <div class="row">
+            <div class="col-md-7 col-md-offset-1">
+                <main id="main" class="site-main" role="main">
 
-                <?php
+                    <?php
 					if ( have_posts() ) :
 
 						/* Start the Loop */
@@ -124,56 +124,52 @@
 					endif;
 
 					?>
-                <div class="left-sidebar visible-xs visible-sm" style="position:relative;">
-                    <div>
-                        <?php echo do_shortcode('[wp_ulike]');?>
-                    </div>
-                    <div>
-                        <a class="round-btn bookmark" id="bookmarkme" href="#"></a>
-                    </div>
-                    <div class="social-share">
-                        <?php echo do_shortcode( '[social_warfare button_shape="flat_fresh"]' ); ?>
-                    </div>
-                </div>
-                <div class="blog-bottom">
-                    <img src="<?php echo _wp_upload_dir_baseurl(); ?>/blog-bottom-1.png">
-                </div>
-                <div class="author-meta">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="author-img">
-                                <?php echo do_shortcode( '[avatar]' ); ?>
-                            </div>
-                        </div>
-                        <div class="col-md-10">
-                            <div class="author-text">
-                                <p><?php echo $fname." ".$lname; ?></p>
-                                <p class="x-small"><?php echo $author_bio; ?></p>
-                                <ul class="social-links">
-                                    <li><a target="_blank"
-                                            href="<?php the_field('facebook_link', 'user_'. $author_id ); ?>"
-                                            class=""><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a target="_blank" href="http://linkedin.com" class=""><i
-                                                class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a target="_blank" href="http://twitter.com" class=""><i
-                                                class="fab fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
+                    <div class="left-sidebar visible-xs visible-sm">
+                        <div class="social-wrapper">
+                            <?php echo do_shortcode('[wp_ulike]');?>
+                            <a class="round-btn bookmark" id="bookmarkme" href="#"></a>
+                            <?php echo do_shortcode( '[social_warfare button_shape="flat_fresh"]' ); ?>
                         </div>
                     </div>
+                    <div class="blog-bottom">
+                        <img src="<?php echo _wp_upload_dir_baseurl(); ?>/blog-bottom-1.png">
+                    </div>
+                    <div class="author-meta">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="author-img">
+                                    <?php echo do_shortcode( '[avatar]' ); ?>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="author-text">
+                                    <p><?php echo $fname." ".$lname; ?></p>
+                                    <p class="x-small"><?php echo $author_bio; ?></p>
+                                    <ul class="social-links">
+                                        <li><a target="_blank"
+                                                href="<?php the_field('facebook_link', 'user_'. $author_id ); ?>"
+                                                class=""><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a target="_blank" href="http://linkedin.com" class=""><i
+                                                    class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a target="_blank" href="http://twitter.com" class=""><i
+                                                    class="fab fa-twitter"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
 
-                </div>
-            </main><!-- #main -->
-        </div><!-- #col -->
-        <div class="col-md-4 custom-sidebar">
-            <?php get_sidebar(); ?>
+                    </div>
+                </main><!-- #main -->
+            </div><!-- #col -->
+            <div class="col-md-4 custom-sidebar hidden-sm hidden-xs">
+                <?php get_sidebar(); ?>
+            </div>
         </div>
-    </div>
     </div><!-- .container -->
-    </div><!-- .container-fluid -->
-    
-    <div class="container theme--light">
+</div><!-- .container-fluid -->
+
+<div class="container theme--light hidden-sm hidden-xs">
     <div class="row related-posts-row">
         <div class="col-md-11">
             <h1>where you can<br><span class="blue">find more</span></h1>

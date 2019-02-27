@@ -4086,8 +4086,6 @@ header.blog p.x-small {
 	padding: 0;
 	margin-bottom: 4px;
 	max-width: 400px;
-	max-height: 106px;
-	overflow: hidden;
 }
 
 .post-meta {
@@ -4554,10 +4552,6 @@ html body .swp_social_panel.swp_individual_full_color .nc_tweetContainer:hover a
 
 .swp_social_panel .nc_tweetContainer:not(.total_shares):not(.total_sharesalt) {
 	margin-bottom: 11px;
-}
-
-.left-sidebar>div {
-	margin-bottom: 24px;
 }
 
 .left-sidebar .social-share {
