@@ -4075,6 +4075,7 @@ header.blog p.x-small {
 }
 
 .blog-title {
+	display: inline-block;
 	font-family: Abhaya Libre;
 	font-style: normal;
 	font-weight: 500;
@@ -4084,7 +4085,9 @@ header.blog p.x-small {
 	margin-top: 0;
 	padding: 0;
 	margin-bottom: 4px;
-	max-width: 372px;
+	max-width: 400px;
+	max-height: 106px;
+	overflow: hidden;
 }
 
 .post-meta {
