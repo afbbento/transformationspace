@@ -16,9 +16,8 @@ get_header(); ?>
                     <div class="col-md-8 col-md-offset-2">
                         <div class="row">
                             <div class="col-md-12">
-                                <p class="white-text text-center">You can find the perfect bootcamp for you here and
-                                    start the transformation
-                                    that will make you career thrive.</p>
+                                <p class="white-text text-center pb-40 reset">
+                                    You can find the perfect bootcamp for you here and start the transformation that will make you career thrive.</p>
                             </div>
                         </div>
                         <div class="row row-filter">

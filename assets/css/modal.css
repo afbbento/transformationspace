@@ -1120,21 +1120,11 @@ label.phone {
   cursor: pointer;
 }
 
-/*style select items, on bootcamp page */
-.category-select .select-items div,
-.category-select .select-selected {
-  height: 50px;
-  padding: 16px 22px;
-  cursor: pointer;
-}
+
 
 .select-selected {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
-
-.category-select .select-selected {
-    margin-bottom: 0;
-  }
 
 /*style items (options):*/
 .select-items {
