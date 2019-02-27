@@ -2594,7 +2594,7 @@ input+input[type="submit"] {
 
 .post,
 .blog {
-	background-image: url('../images/abstract-dark-bg.jpg');
+	/* background-image: url('../images/abstract-dark-bg.jpg'); */
 	padding: 59px 0;
 	background-size: cover;
 	background-position: center;
@@ -4051,7 +4051,6 @@ header.blog {
 	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7) 33%, rgba(0, 0, 0, 0) 100%, transparent), url("http://localhost/transformation-space/wp-content/uploads/header-blog.jpg") no-repeat center;
 	/* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 33%, rgba(0, 0, 0, 0) 100%, transparent), url("http://localhost/transformation-space/wp-content/uploads/header-blog.jpg") no-repeat center;
-	;
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000', GradientType=0);
 	/* IE6-9 */
