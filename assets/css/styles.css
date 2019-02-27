@@ -1135,6 +1135,7 @@ input:-moz-placeholder {
 	padding: 2px;
 }
 
+.newsletter-menu input[type="email"],
 .newsletter-header input[type="email"],
 .newsletter-footer input[type="email"] {
 	float: left;
@@ -1143,6 +1144,18 @@ input:-moz-placeholder {
 	width: 70%;
 	margin-right: 1%;
 	background-color: #fff;
+}
+
+
+.newsletter-menu input[type="submit"],
+.newsletter-header input[type="submit"],
+.newsletter-footer input[type="submit"] {
+	width: 29%;
+}
+
+.form-newsletter-js .btn {
+	height: 40px;
+	font-family: "Work Sans";
 }
 
 .btn-yellow {
@@ -1169,16 +1182,7 @@ input:-moz-placeholder {
 	color: #000;
 }
 
-.footer input[type="submit"],
-#newsletter-menu input[type="submit"],
-#newsletter-header input[type="submit"] {
-	width: 29%;
-}
 
-.form-newsletter-js .btn {
-	height: 40px;
-	font-family: "Work Sans";
-}
 
 
 .form-inline .btn {
@@ -1599,7 +1603,7 @@ input[type="submit"].btn-black:hover {
 	width: 40px;
 	height: 40px;
 	left: -18px;
-	bottom: 25px;
+	bottom: 30px;
 	transform: rotate(38deg);
 	border-left: 2px solid #000;
 }
@@ -1609,8 +1613,8 @@ input[type="submit"].btn-black:hover {
 	position: absolute;
 	width: 40px;
 	height: 40px;
-	right: -19px;
-	bottom: 25px;
+	right: -18px;
+	bottom: 30px;
 	transform: rotate(52deg);
 	border-top: 2px solid #000;
 }
@@ -3129,23 +3133,23 @@ header.bootcamp .circle-line.white::after {
 	margin-bottom: 40px;
 }
 
-.bs-wizard>.bs-wizard-step {
+.bs-wizard .bs-wizard-step {
 	padding: 0;
 	position: relative;
 }
 
-.bs-wizard>.bs-wizard-step .bs-wizard-stepnum {
+.bs-wizard .bs-wizard-step .bs-wizard-stepnum {
 	color: #595959;
 	font-size: 16px;
 	margin-bottom: 5px;
 }
 
-.bs-wizard>.bs-wizard-step .bs-wizard-info {
+.bs-wizard .bs-wizard-step .bs-wizard-info {
 	color: #999;
 	font-size: 14px;
 }
 
-.bs-wizard>.bs-wizard-step>.bs-wizard-dot {
+.bs-wizard .bs-wizard-step .bs-wizard-dot {
 	padding: 5px;
 	text-align: center;
 	font-family: Abhaya Libre;
@@ -3169,56 +3173,52 @@ header.bootcamp .circle-line.white::after {
 	border-radius: 50%;
 }
 
-.bs-wizard>.bs-wizard-step>.progress {
+.bs-wizard .bs-wizard-step .progress {
 	position: relative;
 	border-radius: 0px;
-	height: 8px;
+	height: 3px;
 	box-shadow: none;
-	margin: 20px 0;
+	margin: 23px 0;
 }
 
-.bs-wizard>.bs-wizard-step>.progress>.progress-bar {
+.bs-wizard .bs-wizard-step .progress .progress-bar {
 	width: 0px;
 	box-shadow: none;
 	background: #fff;
 }
 
-.bs-wizard>.bs-wizard-step.complete>.progress>.progress-bar {
+.bs-wizard .bs-wizard-step.complete .progress .progress-bar {
 	width: 100%;
 }
 
-.bs-wizard>.bs-wizard-step.active>.progress>.progress-bar {
+.bs-wizard .bs-wizard-step.active .progress .progress-bar {
 	width: 50%;
 }
 
-.bs-wizard>.bs-wizard-step:first-child.active>.progress>.progress-bar {
+.bs-wizard .bs-wizard-step:first-child.active .progress .progress-bar {
 	width: 0%;
 }
 
-.bs-wizard>.bs-wizard-step:last-child.active>.progress>.progress-bar {
+.bs-wizard .bs-wizard-step:last-child.active .progress .progress-bar {
 	width: 100%;
 }
 
-.bs-wizard>.bs-wizard-step.disabled>.bs-wizard-dot {
+.bs-wizard .bs-wizard-step.active .bs-wizard-dot {
 	background-color: var(--yellow);
 	color: #000;
 }
 
-.bs-wizard>.bs-wizard-step.disabled>.bs-wizard-dot:after {
+.bs-wizard .bs-wizard-step.active .bs-wizard-dot:after {
 	opacity: 0;
 }
 
-.bs-wizard>.bs-wizard-step:first-child>.progress {
+.bs-wizard .bs-wizard-step:first-child>.progress {
 	left: 50%;
 	width: 50%;
 }
 
-.bs-wizard>.bs-wizard-step:last-child>.progress {
+.bs-wizard .bs-wizard-step:last-child>.progress {
 	width: 50%;
-}
-
-.bs-wizard>.bs-wizard-step.disabled a.bs-wizard-dot {
-	pointer-events: none;
 }
 
 /*END Form Wizard*/
@@ -4422,6 +4422,7 @@ aside li a {
 .newsletter-sidebar .input-container {
 	position: relative;
 }
+
 
 .newsletter-sidebar input[type="submit"] {
 	position: absolute;

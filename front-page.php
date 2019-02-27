@@ -246,16 +246,14 @@ if( $bootcamps_section ):
                             </a>
                         </li>
                         <?php
-                                    endif;
-                                    if (!get_sub_field('twitter')): ?>
+                        endif;
+                        if (!get_sub_field('twitter')): ?>
                         <li>
                             <a target="_blank" href="<?php the_sub_field('twitter'); ?>" class="white-text">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </li>
-                        <?php
-                                    endif;
-                                    ?>
+                        <?php endif; ?>
                     </ul>
                     <?php   if(get_sub_field('link')): ?>
                     <a target="_blank" href="<?php the_sub_field('link'); ?>"
@@ -263,25 +261,17 @@ if( $bootcamps_section ):
                     <?php endif; ?>
                 </div>
             </div>
-            <?php
-                    endwhile;
-                    ?>
+            <?php endwhile; ?>
         </div>
-        <!-- <div class="row">
-                <div class="col-md-12 text-center">
-                    <a href="#" class="btn btn-yellow bordered">see more</a>
-                </div>
-            </div> -->
     </div>
 </section>
 <?php endif; ?>
-<?php
-get_template_part( 'template-parts/transformation_space/stories');
-?>
+<?php get_template_part( 'template-parts/transformation_space/stories'); ?>
+
 <?php
 $blog_section = get_field('blog_section');
 if( $blog_section ):
-    ?>
+?>
 <div class="separator">
     <div class="button-container pb-40">
         <div class="line"></div>
@@ -296,21 +286,17 @@ if( $blog_section ):
     </div>
 </div>
 <?php endif; ?>
+
 <section class="blog">
     <div class="container">
-        <?php
-        get_template_part( 'template-parts/transformation_space/article-slider');
-        ?>
+        <?php get_template_part( 'template-parts/transformation_space/article-slider'); ?>
     </div>
 </section>
-<?php
+
+<?php 
 get_template_part( 'template-parts/transformation_space/text-slider');
-?>
-<?php
 $banner_color = 'yellow';
 include(locate_template('template-parts/transformation_space/more-info-banner.php'));
+get_template_part( 'template-parts/transformation_space/events'); 
+get_footer();
 ?>
-<?php
-get_template_part( 'template-parts/transformation_space/events');
-?>
-<?php get_footer();

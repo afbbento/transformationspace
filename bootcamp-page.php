@@ -56,7 +56,8 @@ if( $bootcamp_description ):
                         <div class="col-md-6 ">
                             <div class="col-md-10 col-md-offset-1 banner-image__text">
                                 <div class="row visible-xs person__overlay">
-                                    <img class="banner-image__img--blended" src="<?php echo bloginfo('url'); ?>/wp-content/uploads/student-half.jpg">	
+                                    <img class="banner-image__img--blended"
+                                        src="<?php echo bloginfo('url'); ?>/wp-content/uploads/student-half.jpg">
                                 </div>
                                 <h3>We have the right path to your future job</h3>
                                 <div class="simple-line"></div>
@@ -122,32 +123,29 @@ if( $bootcamp_description ):
         <p class="small white-text"><?php echo $typical_day_title['paragraph']; ?></p>
         <?php endif; ?>
         <div class="row bs-wizard" style="border-bottom:0;">
-            <div class="col-xs-3 bs-wizard-step disabled">
+            <div class="col-xs-3 bs-wizard-step active">
                 <div class="progress">
                     <div class="progress-bar"></div>
                 </div>
-                <a href="#" class="bs-wizard-dot">1</a>
+                <a href="#" class="bs-wizard-dot" data-slide="1">1</a>
             </div>
             <div class="col-xs-3 bs-wizard-step">
-                <!-- complete -->
                 <div class="progress">
                     <div class="progress-bar"></div>
                 </div>
-                <a href="#" class="bs-wizard-dot">2</a>
+                <a href="#" class="bs-wizard-dot" data-slide="2">2</a>
             </div>
             <div class="col-xs-3 bs-wizard-step">
-                <!-- complete -->
                 <div class="progress">
                     <div class="progress-bar"></div>
                 </div>
-                <a href="#" class="bs-wizard-dot">3</a>
+                <a href="#" class="bs-wizard-dot" data-slide="3">3</a>
             </div>
             <div class="col-xs-3 bs-wizard-step">
-                <!-- active -->
                 <div class="progress">
                     <div class="progress-bar"></div>
                 </div>
-                <a href="#" class="bs-wizard-dot">4</a>
+                <a href="#" class="bs-wizard-dot" data-slide="4">4</a>
             </div>
         </div>
         <div class="article-slider vertical-nav-right white-text">
@@ -180,32 +178,24 @@ if( $bootcamp_description ):
         </div>
     </div>
 </section>
-<script type="text/javascript">
-jQuery('.article-slider').on('afterChange', function(event, slick, currentSlide, nextSlide) {
-    var current = currentSlide + 1;
-    jQuery('.row.bs-wizard div').removeClass('disabled');
-    jQuery('.row.bs-wizard div:nth-child(' + current + ')').addClass('disabled');
-});
-</script>
+
 
 <section class="who theme--light">
-    <div class="container-fluid separator separator--mobile">
-        <div class="row line"></div>
-        <div class="col-sm-12 button-container">
+    <div class="separator separator--two-lines">
+        <div class="button-container">
+            <div class="line"></div>
             <button class="btn btn-black btn-large btn-shadow btn-lines">
                 education team & partners
             </button>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 col-md-offset-3">
-                    <p>transformation.space is a Global EDTECH & Career Acceleration Company with campuses in São Paulo,
-                        Barcelona, Madrid, Lisbon & Oporto. </p>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-md-offset-3">
+                <p>transformation.space is a Global EDTECH & Career Acceleration Company with campuses in São Paulo,
+                    Barcelona, Madrid, Lisbon & Oporto. </p>
+            </div>
+        </div>
         <div class="col-md-10 col-md-offset-1">
             <div class="row">
                 <h1>your<span class="blue"><br> facilitator</span></h1>
@@ -274,7 +264,7 @@ get_template_part( 'template-parts/transformation_space/stories');
 ?>
 <div class="container-fluid separator separator--two-lines">
     <div class="row line"></div>
-    <div class="col-sm-12 button-container">
+    <div class="button-container">
         <button class="btn btn-black btn-large btn-shadow btn-lines">dates & investiment</button>
     </div>
     <div class="container">

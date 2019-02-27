@@ -99,8 +99,7 @@ if(!empty( $categories)) {
                             <input id="mce-EMAIL" name="EMAIL" type="email" required=""
                                 placeholder="<?php pll_e('Your e-mail here'); ?>">
                             <input class="btn btn-big btn-yellow submit" name="subscribe" type="submit"
-                                value="
-					    	<?php pll_e('Get started'); ?>">
+                                value="<?php pll_e('Get started'); ?>">
                             <div id="mce-responses" class="clear">
                                 <p class="response"></p>
                             </div>

@@ -107,35 +107,6 @@
 		$( transformationspaceScreenReaderText.quote ).prependTo( $formatQuote );
 	}
 
-	// Add 'below-entry-meta' class to elements.
-	function belowEntryMetaClass( param ) {
-		var sidebarPos, sidebarPosBottom;
-
-		if ( ! $body.hasClass( 'has-sidebar' ) || (
-			$body.hasClass( 'search' ) ||
-			$body.hasClass( 'single-attachment' ) ||
-			$body.hasClass( 'error404' ) ||
-			$body.hasClass( 'transformationspace-front-page' )
-		) ) {
-			return;
-		}
-
-		sidebarPos       = $sidebar.offset();
-		sidebarPosBottom = sidebarPos.top + ( $sidebar.height() + 28 );
-
-		$entryContent.find( param ).each( function() {
-			var $element = $( this ),
-				elementPos = $element.offset(),
-				elementPosTop = elementPos.top;
-
-			// Add 'below-entry-meta' to elements below the entry meta.
-			if ( elementPosTop > sidebarPosBottom ) {
-				$element.addClass( 'below-entry-meta' );
-			} else {
-				$element.removeClass( 'below-entry-meta' );
-			}
-		});
-	}
 
 	/*
 	 * Test if inline SVGs are supported.
@@ -233,13 +204,6 @@
 		});
 	}
 
-	$( window ).resize( function() {
-		clearTimeout( resizeTimer );
-		resizeTimer = setTimeout( function() {
-			belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );
-		}, 300 );
-		setTimeout( adjustHeaderHeight, 1000 );
-	});
 
 	// Add header video class after the video is loaded.
 	$( document ).on( 'wp-custom-header-video-loaded', function() {
