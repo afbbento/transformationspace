@@ -172,7 +172,7 @@ if( $bootcamps_section ):
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-7 col-md-offset-3">
+            <div class="col-md-7 center-block text-center pb-20">
                 <p><?php echo $bootcamps_section['paragraph']; ?></p>
             </div>
         </div>
@@ -194,7 +194,7 @@ if( $bootcamps_section ):
     $education_section = get_field('education_section');
     if( $education_section ):
         ?>
-<div class="separator separator--two-lines separator--education">
+<div class="separator separator--two-lines pb-20 separator--education">
     <div class="button-container">
         <div class="line"></div>
         <button class="btn btn-black btn-large btn-shadow btn-lines">
@@ -204,7 +204,7 @@ if( $bootcamps_section ):
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-md-7 col-md-offset-3">
+        <div class="col-md-7 center-block text-center pb-20">
             <p><?php echo $education_section['paragraph']; ?></p>
         </div>
     </div>
@@ -279,7 +279,7 @@ if( $blog_section ):
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-7 col-md-offset-3">
+            <div class="col-md-7 center-block text-center pb-20">
                 <p><?php echo $blog_section['paragraph']; ?></p>
             </div>
         </div>

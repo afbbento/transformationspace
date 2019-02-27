@@ -181,7 +181,7 @@ if( $bootcamp_description ):
 
 
 <section class="who theme--light">
-    <div class="separator separator--two-lines">
+    <div class="separator separator--two-lines pb-40">
         <div class="button-container">
             <div class="line"></div>
             <button class="btn btn-black btn-large btn-shadow btn-lines">
@@ -191,7 +191,7 @@ if( $bootcamp_description ):
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-7 col-md-offset-3">
+            <div class="col-md-7 center-block text-center pb-20">
                 <p>transformation.space is a Global EDTECH & Career Acceleration Company with campuses in São Paulo,
                     Barcelona, Madrid, Lisbon & Oporto. </p>
             </div>
@@ -262,17 +262,20 @@ if( $bootcamp_description ):
 <?php
 get_template_part( 'template-parts/transformation_space/stories');
 ?>
-<div class="container-fluid separator separator--two-lines">
-    <div class="row line"></div>
+
+<div class="separator separator--two-lines pb-40">
     <div class="button-container">
-        <button class="btn btn-black btn-large btn-shadow btn-lines">dates & investiment</button>
+        <div class="line"></div>
+        <button class="btn btn-black btn-large btn-shadow btn-lines">
+            dates & investiment
+        </button>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7 col-md-offset-3">
-                <p>transformation.space is a Global EDTECH & Career Acceleration Company with campuses in São Paulo,
-                    Barcelona, Madrid, Lisbon & Oporto. </p>
-            </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 center-block text-center pb-20">
+            <p>transformation.space is a Global EDTECH & Career Acceleration Company with campuses in São Paulo,
+                Barcelona, Madrid, Lisbon & Oporto. </p>
         </div>
     </div>
 </div>
