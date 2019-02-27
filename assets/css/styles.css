@@ -3808,13 +3808,15 @@ aside li a{
 .newsletter-sidebar .input-container{
 	position: relative;
 }
+
 .newsletter-sidebar input[type="submit"]{
+	position: absolute;
+	top: 0;
+	right: 0;
 	width: 110px;
-	height: 40px;
+	height: 100%;
 	font-size: 13px;
 	padding: 0;
-	position: absolute;
-	right: 0;
 }
 
 .get-started-widget h1{
