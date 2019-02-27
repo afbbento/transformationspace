@@ -1074,7 +1074,7 @@ input:-moz-placeholder { /* Firefox 18- */
 	font-weight:bold;
 	padding:2px;
 }
-.form-newsletter-js input[type="email"] {
+.newsletter-header input[type="email"] {
 	float: left;
 	height: 40px;
 	padding: 12px 16px;

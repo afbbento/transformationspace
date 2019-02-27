@@ -38,7 +38,7 @@ get_header();
                             <form
                                 action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?"
                                 method="get" id="newsletter-blog" name="mc-embedded-subscribe-form"
-                                class="form-inline validate newsletter-sidebar newsletter-blog" target="_blank">
+                                class="form-inline validate newsletter-sidebar newsletter-blog form-newsletter-js" target="_blank">
                                 <div class="input-container">
                                     <input id="mce-EMAIL" class="big" name="EMAIL" required="" type="email"
                                         placeholder="Your e-mail address">
