@@ -451,6 +451,14 @@ span.circle-line{
 	padding-bottom: 5rem !important;
 }
 
+.pb-40 {
+	padding-bottom: 4rem !important;
+}
+
+.pb-30 {
+	padding-bottom: 3rem !important;
+}
+
 .pl-50 {
 	padding-left: 5rem !important;
 }
@@ -466,11 +474,6 @@ span.circle-line{
 .pr-80 {
 	padding-right: 8rem !important;
 }
-
-.pb-40 {
-	padding-bottom: 4rem !important;
-}
-
 
 .d-flex {
 	display: flex;
@@ -925,6 +928,10 @@ span.circle-line{
 .overlay .container {
 	position: relative;
 	height: 100%;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 .logo-menu-overlay{
@@ -1472,7 +1479,7 @@ input[type="submit"].btn-black:hover {
 	border: 2px solid var(--yellow);
 	color: #000;
 }
-.btn-lines:before{
+.btn-lines::before{
 	content: "";
 	position: absolute;
 	width: 40px;
@@ -1482,7 +1489,7 @@ input[type="submit"].btn-black:hover {
 	transform: rotate(38deg);
 	border-left: 2px solid #000;
 }
-.btn-lines:after{
+.btn-lines::after{
 	content: "";
 	position: absolute;
 	width: 40px;
@@ -1796,7 +1803,6 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 /*SEPARATOR*/
 .separator{
 	position: relative;
-	margin-bottom: 25px;
 }
 
 .separator .btn {
@@ -1811,10 +1817,10 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-	height: 0;
+    transform: translateY(33px);
 }
+
 .button-container{
-	transform: translateY(-33px);
 	text-align: center;
 }
 .separator .btn, 
@@ -1826,25 +1832,9 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	font-weight: 900;
 	font-size: 30px;
 }
-.separator button::before{
-	content: "";
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	left: -18px;
-	bottom: 30px;
-	transform: rotate(38deg);	
-	border-left: 2px solid #000;
-}
-.separator button::after{
-	content: "";
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	right: -19px;
-	bottom: 30px;
-	transform: rotate(52deg);
-	border-top: 2px solid #000;
+
+.separator--education {
+	transform: translateY(-33px);
 }
 
 /* Footer menu */
@@ -2216,23 +2206,7 @@ input + button, input + input[type="button"], input + input[type="submit"] {
 	text-overflow: clip;
 	position: relative;
 }
-.trapezoid:after {
-	/* content: "";
-	border: 36px solid rgba(0,0,0,0);
-	border-top-color: rgba(0, 0, 0, 0);
-	border-top-style: solid;
-	border-top-width: 32px;
-	border-left-color: rgba(0, 0, 0, 0);
-	border-left-style: solid;
-	border-left-width: 32px;
-	border-bottom: 0px solid;
-	border-top: 36px solid var(--yellow);
-	bottom: 0px;
-	position: absolute;
-	right: -38px;
-	border-left: 0px solid;
-	width: calc(25% + 36px); */
-}
+
 .trapezoid p.x-small{
 	position: absolute;
 	bottom: -12px;
@@ -3459,9 +3433,7 @@ span.twitter-typeahead {
 .footer{
 	padding-top: 62px;
 }
-.footer-bottom{
-	margin-top: 30px;
-}
+
 .footer-bottom-menu .menu-main-container{
 	text-align: center;
 }

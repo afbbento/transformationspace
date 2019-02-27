@@ -885,7 +885,7 @@ add_shortcode( 'newsletter_sidebar', 'get_newsletter_sidebar' );
 
 
 function get_career_sidebar( $atts ) {
-	$output ='<div class="widget-career"><h1>looking for a new career?</h1><img src="'.get_template_directory_uri().'/assets/images/widget-career-bg.png" /><div class="button-container"><a class="btn btn-black shadow" tabindex="0" href="#">get your chance</a></div></div>';
+	$output ='<div class="widget-career"><h1>looking for a new career?</h1><img src="'.get_template_directory_uri().'/assets/images/widget-career-bg.png" /><div class="button-container pb-40"><a class="btn btn-black shadow" tabindex="0" href="#">get your chance</a></div></div>';
 	return $output;
 }
 
@@ -898,7 +898,7 @@ function get_started_sidebar( $atts ) {
 				<img src="'.get_template_directory_uri().'/assets/images/get-started.jpg" />
 				<h1>Get Started</h1>
 				<p>15-Day free trial. Get set up in 5 minutes.</p>
-				<div class="button-container">
+				<div class="button-container pb-40">
 					<a class="round-button yellow" tabindex="0" href="#">get more info</a>
 				</div>
 			</div>';

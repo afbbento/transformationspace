@@ -223,7 +223,7 @@ if( $image_banner ):
                 </div>
             </div>
         </div>
-        <div class="button-container">
+        <div class="button-container pb-40">
             <a href="#" class="btn btn-yellow btn-shadow"><strong>get courses guide</strong></a>
         </div>
         <div class="col-md-6 col-image hidden-xs"

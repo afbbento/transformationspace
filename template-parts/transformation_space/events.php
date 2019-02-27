@@ -16,7 +16,7 @@
 	<div class="container">
 		<div class="bordered-box">
 			<div class="button-container separator-left">
-				<button class="btn btn-black btn-large btn-shadow btn-lines">events</button>
+				<button class="btn btn-black btn-large btn-shadow btn-lines btn-lines">events</button>
 			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">

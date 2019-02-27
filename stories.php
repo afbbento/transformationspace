@@ -96,7 +96,7 @@ get_header();
                             </p>
                         </div>
                         <div class="col-md-2">
-                            <div class="button-container">
+                            <div class="button-container pb-40">
                                 <a href="#" class="btn btn-white btn-shadow button-stories">see stories
                                     <span class="Button__textWrapper">
                                         <span class="Button__icon" aria-hidden="true">

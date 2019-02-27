@@ -23,12 +23,14 @@ jQuery(document).ready(function(){
 
 jQuery(document).ready(function(){
   
-  /*Hamburger Menu*/
+  /* Hamburger Menu */
   jQuery('.hamburger').click(function(){
     jQuery('.hamburger').toggleClass('is-active');
     jQuery('.overlay').toggleClass('open');
+    jQuery('body').toggleClass('no-scroll');
   });
   
+  /* close menu when click on anchor */
   jQuery('.close-menu-js').click(function(){
     jQuery('.hamburger').removeClass('is-active');
     jQuery('.overlay').removeClass('open');

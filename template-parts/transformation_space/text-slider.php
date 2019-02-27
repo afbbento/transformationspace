@@ -62,7 +62,7 @@ if (!empty($terms)):
 				<h3><?php echo the_title(); ?></h3>
 				<div class="simple-line"></div>
 				<p class="normal"><?php echo get_excerpt(150); ?></p>
-				<div class="button-container">
+				<div class="button-container pb-40">
 					<a href="<?php the_permalink(); ?>" class="btn btn-black shadow">read more</a>
 				</div>				
 			</div>

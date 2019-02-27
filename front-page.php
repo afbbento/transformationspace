@@ -103,7 +103,10 @@ get_header(); ?>
                         <?php pll_e('Looking for the right career move?'); ?>
                     </div>
                     <label><?php pll_e('Enter your email'); ?></label>
-                    <form action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?" method="get" id="newsletter-header" name="mc-embedded-subscribe-form" class="form-inline validate form-newsletter-js newsletter-header" >
+                    <form
+                        action="https://space.us19.list-manage.com/subscribe/post-json?u=f8fa948d2036f4f4fef049cfc&id=7aa7fb0215&c=?"
+                        method="get" id="newsletter-header" name="mc-embedded-subscribe-form"
+                        class="form-inline validate form-newsletter-js newsletter-header">
                         <input id="mce-EMAIL" name="EMAIL" type="email" required=""
                             placeholder="<?php pll_e('Your e-mail here'); ?>">
                         <input class="btn btn-black submit" name="subscribe" type="submit"
@@ -161,9 +164,10 @@ $bootcamps_section = get_field('bootcamps_section');
 if( $bootcamps_section ):
     ?>
 <div class="separator pt-40">
-    <div class="line"></div>
-    <div class="button-container">
-        <button class="btn btn-black btn-large btn-shadow">
+
+    <div class="button-container pb-40">
+        <div class="line"></div>
+        <button class="btn btn-black btn-large btn-shadow btn-lines">
             <?php echo $bootcamps_section['title']; ?></button>
     </div>
     <div class="container">
@@ -190,18 +194,18 @@ if( $bootcamps_section ):
     $education_section = get_field('education_section');
     if( $education_section ):
         ?>
-<div class="separator container-fluid separator--two-lines">
-    <div class="row line"></div>
-    <div class="col-sm-12 button-container">
-        <button class="btn btn-black btn-large btn-shadow">
+<div class="separator separator--two-lines separator--education">
+    <div class="button-container">
+        <div class="line"></div>
+        <button class="btn btn-black btn-large btn-shadow btn-lines">
             <?php echo $education_section['title']; ?>
         </button>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7 col-md-offset-3">
-                <p><?php echo $education_section['paragraph']; ?></p>
-            </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 col-md-offset-3">
+            <p><?php echo $education_section['paragraph']; ?></p>
         </div>
     </div>
 </div>
@@ -279,9 +283,9 @@ $blog_section = get_field('blog_section');
 if( $blog_section ):
     ?>
 <div class="separator">
-    <div class="line"></div>
-    <div class="button-container">
-        <button class="btn btn-black btn-large btn-shadow"><?php echo $blog_section['title']; ?></button>
+    <div class="button-container pb-40">
+        <div class="line"></div>
+        <button class="btn btn-black btn-large btn-shadow btn-lines"><?php echo $blog_section['title']; ?></button>
     </div>
     <div class="container">
         <div class="row">

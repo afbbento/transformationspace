@@ -110,7 +110,7 @@ get_header();
 									</li>
 								</ul>							
 							</div>						
-						<div class="button-container">
+						<div class="button-container pb-40">
 							<a class="btn btn-yellow shadow" tabindex="0" href="<?php echo get_permalink($recent["ID"])?>">
 								<strong>read more</strong>
 							</a>
@@ -150,7 +150,7 @@ get_header();
 							<h3><?php echo $featured["post_title"];  ?></h3>
 							<p><?php echo create_excerpt($featured["post_content"], 120);  ?></p>						
 						</div>
-						<div class="button-container"><a class="btn btn-black read-more shadow" tabindex="0" href="<?php echo esc_url( get_permalink($featured['ID'])); ?>">read more</a></div>
+						<div class="button-container pb-40"><a class="btn btn-black read-more shadow" tabindex="0" href="<?php echo esc_url( get_permalink($featured['ID'])); ?>">read more</a></div>
 					</div>
 					<?php } ?>
 				</div>

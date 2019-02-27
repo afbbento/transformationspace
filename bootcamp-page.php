@@ -192,7 +192,7 @@ jQuery('.article-slider').on('afterChange', function(event, slick, currentSlide,
     <div class="container-fluid separator separator--mobile">
         <div class="row line"></div>
         <div class="col-sm-12 button-container">
-            <button class="btn btn-black btn-large btn-shadow">
+            <button class="btn btn-black btn-large btn-shadow btn-lines">
                 education team & partners
             </button>
         </div>
@@ -275,7 +275,7 @@ get_template_part( 'template-parts/transformation_space/stories');
 <div class="container-fluid separator separator--two-lines">
     <div class="row line"></div>
     <div class="col-sm-12 button-container">
-        <button class="btn btn-black btn-large btn-shadow">dates & investiment</button>
+        <button class="btn btn-black btn-large btn-shadow btn-lines">dates & investiment</button>
     </div>
     <div class="container">
         <div class="row">
@@ -334,7 +334,7 @@ get_template_part( 'template-parts/transformation_space/stories');
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="bordered-box main-box">
-                    <div class="button-container">
+                    <div class="button-container pb-40">
                         <button class="btn btn-yellow btn-large btn-shadow btn-lines-yellow vertical-btn">financial
                             agreements</button>
                     </div>
