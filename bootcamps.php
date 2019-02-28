@@ -5,7 +5,7 @@ Template Post Type: post, page, event
 */
 
 get_header(); ?>
-<header style="background-image: url('<?php bloginfo('template_url'); ?>/assets/images/bg-events.jpg');">
+<header class="header-bootcamps">
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
@@ -28,7 +28,7 @@ get_header(); ?>
                                             <option value="0" selected>Bootcamp</option>
                                             <?php 
 											$args = array(
-												'post_type' => 'Bootcamps',
+												'post_type' => 'Bootcamps-tipo',
 												'post_status' => 'publish',
 											);
 											$the_query = new WP_Query( $args );

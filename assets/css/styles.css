@@ -2910,6 +2910,10 @@ input+input[type="submit"] {
 }
 
 /*BOOTCAMPS PAGE*/
+.header-bootcamps {
+	background-image: url('../images/bg-events.jpg');
+	background-attachment: fixed;
+}
 header.bootcamp .circle-line.white::before {
 	background: #fff;
 	border: 3px solid #000;

@@ -21,9 +21,18 @@ $args = array(
 $the_query = new WP_Query( $args );
 
 if( $the_query->have_posts() ):     
-while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+    while( $the_query->have_posts() ) : $the_query->the_post(); 
+
+    $bootcamp_type = '';
+    $tipos = get_field('bootcamp_type');
+    foreach ( $tipos as $tipo ){
+        //var_dump($tipo);
+        $bootcamp_type = $tipo->ID;
+    }
+?>
 <div class="bordered-box bootcamp-box" data-id="<?php echo get_the_ID(); ?>"
-    data-location="<?php the_field('bootcamp_location'); ?>" data-title="<?php the_field('title'); ?>">
+    data-location="<?php the_field('bootcamp_location'); ?>" 
+    data-tipo="<?php echo $bootcamp_type; ?>">
     <div class="row display-flex">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
             <div class="box title">

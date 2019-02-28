@@ -127,10 +127,22 @@ function register(item) {
 }
 
 /* filter bootcamps */
-jQuery(function() {
+jQuery(function($) {
   /* check if Custom Select Box changed and filter */
+
+  $(".row-filter .select-selected").change(function() {
+    var a = $("#bootcamp-filter").val();
+    var b = $("#bootcamp-location-filter").val();
+
+    //falta verificar se cada box tem um ou ambos os filtros    
+    // if(a === b) {          // Use strict comparison operator as a best practice
+    //     alert(a + ' matches ' + b);
+    // }
+});
+
   jQuery("#category-select .select-selected").on('DOMSubtreeModified', function() {
     console.log("changed")
+    
     
     var bootcamp = jQuery("#bootcamp-filter").val();
     console.log(bootcamp)
@@ -138,8 +150,8 @@ jQuery(function() {
     if (bootcamp=='0'){
       jQuery('.bootcamp-box').show("fast");
     }else{
-      jQuery('.bootcamp-box').not('[data-id='+bootcamp+']').fadeOut("fast");
-      jQuery('.bootcamp-box').filter('[data-id='+bootcamp+']').fadeIn("fast");    
+      jQuery('.bootcamp-box').not('[data-tipo='+bootcamp+']').fadeOut("fast");
+      jQuery('.bootcamp-box').filter('[data-tipo='+bootcamp+']').fadeIn("fast");    
     }
   });
   
