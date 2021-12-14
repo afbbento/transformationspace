@@ -34,7 +34,7 @@ get_header(); ?>
 			<?php
 			if ( have_posts() ) :
 
-				/* Start the Loop */
+				/* Stahjrt the Loop */
 				while ( have_posts() ) : the_post();
 
 					/*
